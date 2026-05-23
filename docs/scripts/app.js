@@ -11,7 +11,8 @@ function getThemeIndex(themeCount) {
   const parsed = stored !== null ? Number(stored) : NaN;
 
   if (!Number.isNaN(parsed) && parsed >= 0 && parsed < themeCount) {
-    return parsed;
+    //uncomment below line for same theme for the session
+    //return parsed;
   }
 
   const index = Math.floor(Math.random() * themeCount);

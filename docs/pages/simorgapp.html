@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l3v3.com simorg simulated enterprise view</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+            background-color: #0b0f19;
+            color: #c9d1d9;
+            font-family: system-ui, -apple-system, sans-serif;
+            user-select: none;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+        }
+        canvas:active {
+            cursor: grabbing;
+        }
+        #ui-layer {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            pointer-events: none;
+            background: rgba(11, 15, 25, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+        h1 { margin: 0 0 5px 0; font-size: 1.1rem; color: #fff; }
+        p { margin: 0; font-size: 0.85rem; color: #8b949e; }
+        
+        /* Optimized Container Panel - Guaranteed No Cutoffs */
+        #team-popup {
+            position: absolute;
+            background: rgba(13, 18, 30, 0.98);
+            border: 2px solid #38bdf8;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            display: none;
+            color: #e2e8f0;
+            width: 360px; 
+            height: 390px; 
+            pointer-events: auto;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+        #team-popup h3 { margin: 0 0 4px 0; font-size: 13px; color: #38bdf8; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        #team-popup .meta { color: #64748b; font-size: 11px; text-align: center; margin-bottom: 12px; }
+        #popupCanvas {
+            background: #070a12;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            width: 100%;
+            height: 240px; 
+            display: block;
+            box-sizing: border-box;
+        }
+        #team-popup button {
+            background: #1e293b;
+            border: 1px solid #475569;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 14px;
+            width: 100%;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        #team-popup button:hover { background: #334155; }
+    </style>
+</head>
+<body>
+
+    <div id="ui-layer">
+        <h1>simorg simulated enterprise view</h1>
+        <p>➔ <b>Drag canvas</b> to pan | <b>Scroll wheel</b> to zoom</p>
+    </div>
+
+    <!-- Stabilized Team Radar Canvas View -->
+    <div id="team-popup">
+        <h3 id="pop-title">Team Radar</h3>
+        <div class="meta" id="pop-type">Level</div>
+        <canvas id="popupCanvas"></canvas>
+        <button onclick="closePopup()">Close Radar View</button>
+    </div>
+
+    <canvas id="simCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        const popup = document.getElementById('team-popup');
+        const pCanvas = document.getElementById('popupCanvas');
+        const pCtx = pCanvas.getContext('2d');
+
+        let width, height;
+        let transform = { x: 0, y: 0, k: 1 };
+        let isDragging = false;
+        let dragStart = { x: 0, y: 0 };
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            ctx.scale(dpr, dpr);
+            
+            // Fixed relative bounding box sizes match physical design
+            pCanvas.width = 326 * dpr;
+            pCanvas.height = 240 * dpr; 
+            pCtx.scale(dpr, dpr);
+
+            if (root) updateTreeLayout();
+        }
+        window.addEventListener('resize', resize);
+
+        // ----------------------------------------------------
+        // DESIGNATED OPERATIONAL DEPARTMENT ROLES DEFINITIONS
+        // ----------------------------------------------------
+        const roleRegistry = {
+            CTO:  ["Dev Lead", "Cloud Engineer", "Data Scientist", "Backend Dev", "Systems QA"],
+            CFO:  ["Treasury Director", "Financial Analyst", "Tax Auditor", "Risk Analyst", "Accountant"],
+            COO:  ["Operations Manager", "Supply Chain Planner", "Logistics Analyst", "Procurement Specialist", "Facility Supervisor"],
+            CHRO: ["HR Director", "Talent Acquisition", "Comp & Benefits", "L&D Specialist", "HR Generalist"],
+            CMO:  ["Brand Manager", "Growth Marketer", "Content Strategist", "SEO Specialist", "PR Coordinator"],
+            CISO: ["SecOps Manager", "Penetration Tester", "IAM Engineer", "SOC Analyst", "Compliance Auditor"],
+            CLO:  ["Senior Counsel", "Legal Analyst", "Corporate Paralegal", "IP Specialist", "Contracts Manager"],
+            CPO:  ["Product Director", "Product Manager", "UX Researcher", "Product Analyst", "Technical Writer"],
+            CSO:  ["Strategy Director", "Market Intelligence", "M&A Analyst", "Planning Associate", "Research Associate"],
+            SUST: ["Sustainability Lead", "ESG Auditor", "Carbon Accountant", "Environmental Eng", "EHS Specialist"],
+            RISK: ["Risk Controller", "Credit Analyst", "Fraud Investigator", "Audit Associate", "Policy Specialist"],
+            DEFAULT: ["Team Lead", "Associate 1", "Associate 2", "Associate 3", "Operations Analyst"]
+        };
+
+        // ----------------------------------------------------
+        // SYSTEM CONFIGURATION & DATA ENGINE
+        // ----------------------------------------------------
+        const coreTrunk = {
+            name: "Enterprise Ecosystem", isGroupRoot: true,
+            children: [
+                { name: "Board of Directors", type: "L1: Governance", color: "#eab308", sideBySide: "left" },
+                { 
+                    name: "Office of the CEO (Chief Executive Officer)", type: "L1: Executive Management", color: "#d2a8ff", sideBySide: "right",
+                    children: [
+                        { name: "CTO (Technology & R&D)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CTO" },
+                        { name: "CFO (Capital & Allocation)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CFO" },
+                        { name: "COO (Global Operations)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "COO" },
+                        { name: "CHRO (Human Capital)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CHRO" },
+                        { name: "CMO (Brand & Marketing)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CMO" },
+                        { name: "CISO (Enterprise Security)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CISO" },
+                        { name: "CLO (Legal & Regulatory)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CLO" },
+                        { name: "CPO (Product Lifecycle)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CPO" },
+                        { name: "CSO (Corporate Strategy)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "CSO" },
+                        { name: "Chief Sustainability Officer", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "SUST" },
+                        { name: "CRO (Risk & Governance)", type: "L2: C-Suite", color: "#a855f7", hasMassiveSubtree: true, key: "RISK" }
+                    ]
+                }
+            ]
+        };
+
+        const linesOfBusiness = [
+            { name: "NextGen Quantum Compute Cloud", code: "NQC" },
+            { name: "Autonomous Systems & Mechanics", code: "ASM" },
+            { name: "Consumer Software Ecosystems", code: "CSE" },
+            { name: "Global Digital Market Logistics", code: "GDM" }
+        ];
+
+        const operationalTiers = ["VP", "Director", "SVP", "Operations Manager"];
+
+        function generateProceduralSubtree(node, tierIndex, executiveKey) {
+            if (tierIndex >= operationalTiers.length) return;
+            const currentTier = operationalTiers[tierIndex];
+            
+            node.children = linesOfBusiness.map((lob, idx) => {
+                const isFinalManager = (tierIndex === operationalTiers.length - 1);
+                let deepNodeCount = isFinalManager ? " [Sub-Pod]" : " [...]";
+                
+                return {
+                    name: `${currentTier} - ${lob.code}-${idx+1}${deepNodeCount}`,
+                    type: `L${tierIndex + 3}: Operational Management`,
+                    color: isFinalManager ? "#0ea5e9" : "#3b82f6",
+                    key: executiveKey,
+                    tierIdx: tierIndex + 1,
+                    isTeamManager: isFinalManager
+                };
+            });
+        }
+
+        // ----------------------------------------------------
+        // INITIALIZATION & TREE LAYOUT MATH
+        // ----------------------------------------------------
+        let root;
+        let activeNodes = [];
+        let activeLinks = [];
+        let crossLinks = [];
+        let globalPackets = [];
+        let microPackets = [];
+        let activeMicroTeam = null;
+
+        function init() {
+            root = d3.hierarchy(coreTrunk);
+            root.descendants().forEach((d, i) => {
+                d.id = "root_" + i;
+                d.x = 0;
+                d.y = 50;
+                
+                if (d.data.hasMassiveSubtree) {
+                    generateProceduralSubtree(d.data, 0, d.data.key);
+                    d.children = d.data.children.map((c, idx) => {
+                        let childNode = d3.hierarchy(c);
+                        childNode.id = `proc_${d.data.key}_0_${idx}`;
+                        childNode.parent = d;
+                        childNode.depth = d.depth + 1;
+                        
+                        if (c.hasMassiveSubtree || c.children || c.isTeamManager) {
+                            childNode._children = null; 
+                        }
+                        return childNode;
+                    });
+                    d._children = d.children;
+                    d.children = null; 
+                }
+            });
+            transform.x = window.innerWidth / 2;
+            transform.y = 80;
+            updateTreeLayout();
+        }
+
+        function updateTreeLayout() {
+            // Tightened vertical coordinate map to decrease connecting lines cleanly
+            const treeLayout = d3.tree().nodeSize([115, 75]); 
+            treeLayout(root);
+
+            activeNodes = root.descendants();
+            
+            activeNodes.forEach(d => {
+                if (d.data.isGroupRoot) {
+                    d.targetY = -500; 
+                } else if (d.data.sideBySide) {
+                    d.targetY = 20;
+                    d.targetX = d.data.sideBySide === "left" ? -140 : 140;
+                } else {
+                    d.targetY = d.y + 110; 
+                    d.targetX = d.x;
+                }
+            });
+
+            activeLinks = [];
+            activeNodes.forEach(n => {
+                if(n.parent && !n.parent.data.isGroupRoot) {
+                    activeLinks.push({ source: n.parent, target: n });
+                }
+            });
+
+            const boardNode = activeNodes.find(n => n.data.sideBySide === "left");
+            const ceoNode = activeNodes.find(n => n.data.sideBySide === "right");
+            if (boardNode && ceoNode) {
+                activeLinks.push({ source: boardNode, target: ceoNode });
+            }
+
+            crossLinks = [];
+            for (let i = 0; i < activeNodes.length; i++) {
+                for (let j = i + 1; j < activeNodes.length; j++) {
+                    let n1 = activeNodes[i];
+                    let n2 = activeNodes[j];
+                    if (n1.depth === n2.depth && n1.parent !== n2.parent && Math.abs(n1.targetX - n2.targetX) < 260) {
+                        crossLinks.push({ source: n1, target: n2 });
+                    }
+                }
+            }
+
+            activeNodes = activeNodes.filter(d => !d.data.isGroupRoot);
+        }
+
+        // ----------------------------------------------------
+        // TELEMETRY PACKET CONTROLS
+        // ----------------------------------------------------
+        function drawEmailToken(context, x, y) {
+            context.fillStyle = '#e2e8f0';
+            context.fillRect(x - 5, y - 3, 10, 6);
+            context.strokeStyle = '#0b0f19';
+            context.lineWidth = 0.6;
+            context.beginPath(); context.moveTo(x - 5, y - 3); context.lineTo(x, y); context.lineTo(x + 5, y - 3); context.stroke();
+        }
+
+        function drawChatToken(context, x, y) {
+            context.fillStyle = '#38bdf8';
+            context.beginPath(); context.arc(x, y, 3.5, 0, Math.PI * 2); context.fill();
+        }
+
+        function stepGlobalCommunication() {
+            if (Math.random() < 0.015 && activeLinks.length > 0) {
+                const link = activeLinks[Math.floor(Math.random() * activeLinks.length)];
+                const reversed = Math.random() > 0.5;
+                globalPackets.push({
+                    source: reversed ? link.target : link.source,
+                    target: reversed ? link.source : link.target,
+                    progress: 0, 
+                    speed: 0.0015 + Math.random() * 0.001, 
+                    type: Math.random() > 0.5 ? 'email' : 'chat'
+                });
+            }
+            if (Math.random() < 0.007 && crossLinks.length > 0) {
+                const link = crossLinks[Math.floor(Math.random() * crossLinks.length)];
+                const reversed = Math.random() > 0.5;
+                globalPackets.push({
+                    source: reversed ? link.target : link.source,
+                    target: reversed ? link.source : link.target,
+                    progress: 0, 
+                    speed: 0.0012, 
+                    type: 'chat'
+                });
+            }
+
+            for (let i = globalPackets.length - 1; i >= 0; i--) {
+                let p = globalPackets[i];
+                p.progress += p.speed;
+                if (p.progress >= 1 || !activeNodes.includes(p.source) || !activeNodes.includes(p.target)) {
+                    globalPackets.splice(i, 1); continue;
+                }
+                let cx = p.source.x + (p.target.x - p.source.x) * p.progress;
+                let cy = p.source.y + (p.target.y - p.source.y) * p.progress;
+                
+                if (p.type === 'email') drawEmailToken(ctx, cx, cy); else drawChatToken(ctx, cx, cy);
+            }
+        }
+
+        // ----------------------------------------------------
+        // RE-CALIBRATED ANTI-OVERLAP RADAR ENGINE
+        // ----------------------------------------------------
+        function processAndRenderMicroTeam() {
+            if (!activeMicroTeam) return;
+            
+            const cw = 326;
+            const ch = 240;
+            pCtx.clearRect(0, 0, cw, ch); 
+
+            const nodes = activeMicroTeam.nodes;
+            const links = activeMicroTeam.links;
+
+            pCtx.font = '9px system-ui';
+
+            // Balanced spring bindings
+            links.forEach(l => {
+                let dx = l.target.x - l.source.x; let dy = l.target.y - l.source.y;
+                let dist = Math.sqrt(dx*dx + dy*dy) || 1;
+                let force = (dist - 60) * 0.02; 
+                l.source.vx += (dx/dist)*force; l.source.vy += (dy/dist)*force;
+                l.target.vx -= (dx/dist)*force; l.target.vy -= (dy/dist)*force;
+            });
+
+            // Dynamic String-Width Repulsion calculations completely eliminate text overlap
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    let n1 = nodes[i]; let n2 = nodes[j];
+                    let dx = n2.x - n1.x; let dy = n2.y - n1.y;
+                    
+                    let w1 = pCtx.measureText(n1.role).width;
+                    let w2 = pCtx.measureText(n2.role).width;
+                    
+                    // Add safety cushions based directly on label lengths
+                    let minDistX = (w1 / 2 + w2 / 2) + 16; 
+                    let minDistY = 24; 
+
+                    if (Math.abs(dx) < minDistX && Math.abs(dy) < minDistY) {
+                        let forceX = (minDistX - Math.abs(dx)) * 0.05 * (dx >= 0 ? 1 : -1);
+                        let forceY = (minDistY - Math.abs(dy)) * 0.05 * (dy >= 0 ? 1 : -1);
+                        
+                        // Apply instant vector pushback
+                        n1.vx -= forceX; n1.vy -= forceY;
+                        n2.vx += forceX; n2.vy += forceY;
+                    }
+                }
+            }
+
+            nodes.forEach((n, idx) => {
+                // Structural home anchors center gravity cleanly within safety layout coordinates
+                n.vx += (cw / 2 - n.x) * 0.006; n.vy += (90 - n.y) * 0.006;
+                n.x += n.vx; n.y += n.vy;
+                n.vx *= 0.6; n.vy *= 0.6;
+
+                // Elevated safety ceilings guarantee long roles never hit panel bounds
+                let txtWidth = pCtx.measureText(n.role).width;
+                let paddingX = (txtWidth / 2) + 4;
+                
+                n.x = Math.max(paddingX, Math.min(cw - paddingX, n.x));
+                n.y = Math.max(20, Math.min(120, n.y)); // Nodes remain high, giving titles space below
+
+                pCtx.strokeStyle = '#1e293b'; pCtx.lineWidth = 1;
+                links.forEach(link => {
+                    pCtx.beginPath(); pCtx.moveTo(link.source.x, link.source.y); pCtx.lineTo(link.target.x, link.target.y); pCtx.stroke();
+                });
+
+                // Micro radar communication tokens
+                if (Math.random() < 0.01 && links.length > 0) {
+                    let rLink = links[Math.floor(Math.random() * links.length)];
+                    const rev = Math.random() > 0.5;
+                    microPackets.push({ 
+                        s: rev ? rLink.target : rLink.source, 
+                        t: rev ? rLink.source : rLink.target, 
+                        prog: 0, 
+                        spd: 0.007, 
+                        type: Math.random() > 0.5 ? 'mEmail' : 'mChat' 
+                    });
+                }
+                for(let i = microPackets.length - 1; i >= 0; i--) {
+                    let mp = microPackets[i]; mp.prog += mp.spd;
+                    if(mp.prog >= 1) { microPackets.splice(i, 1); continue; }
+                    let mx = mp.s.x + (mp.t.x - mp.s.x) * mp.prog; let my = mp.s.y + (mp.t.y - mp.s.y) * mp.prog;
+                    if (mp.type === 'mEmail') drawEmailToken(pCtx, mx, my); else drawChatToken(pCtx, mx, my);
+                }
+
+                pCtx.beginPath(); pCtx.arc(n.x, n.y, 6, 0, Math.PI*2);
+                pCtx.fillStyle = idx === 0 ? '#38bdf8' : '#3fb950'; pCtx.fill();
+                pCtx.strokeStyle = '#070a12'; pCtx.lineWidth = 1; pCtx.stroke();
+
+                pCtx.fillStyle = '#94a3b8'; pCtx.textAlign = 'center';
+                pCtx.fillText(n.role, n.x, n.y + 14);
+            });
+        }
+
+        // ----------------------------------------------------
+        // MAIN RENDERING ENGINE WORKSPACE
+        // ----------------------------------------------------
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+
+            ctx.save();
+            ctx.translate(transform.x, transform.y);
+            ctx.scale(transform.k, transform.k);
+
+            activeNodes.forEach(n => {
+                n.x += (n.targetX - n.x) * 0.08; n.y += (n.targetY - n.y) * 0.08;
+            });
+
+            ctx.lineWidth = 1 / transform.k; ctx.strokeStyle = '#1e293b';
+            activeLinks.forEach(l => {
+                ctx.beginPath(); ctx.moveTo(l.source.x, l.source.y); ctx.lineTo(l.target.x, l.target.y); ctx.stroke();
+            });
+
+            ctx.lineWidth = 0.5 / transform.k; ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
+            ctx.setLineDash([4, 4]);
+            crossLinks.forEach(cl => {
+                ctx.beginPath(); ctx.moveTo(cl.source.x, cl.source.y); ctx.lineTo(cl.target.x, cl.target.y); ctx.stroke();
+            });
+            ctx.setLineDash([]);
+
+            stepGlobalCommunication();
+
+            activeNodes.forEach(n => {
+                const canExpand = n._children || n.children || n.data.hasMassiveSubtree || (!n.data.isTeamManager && n.depth >= 2 && n.depth < 5);
+                const isCurrentlyExpanded = n.children && n.children.length > 0;
+
+                ctx.beginPath(); ctx.arc(n.x, n.y, 10, 0, Math.PI * 2);
+                ctx.fillStyle = '#0f172a'; ctx.fill();
+                ctx.lineWidth = 2 / transform.k; ctx.strokeStyle = n.data.color; ctx.stroke();
+
+                if (canExpand) {
+                    ctx.fillStyle = '#fff';
+                    ctx.font = 'bold 11px monospace';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(isCurrentlyExpanded ? '-' : '+', n.x, n.y);
+                }
+
+                ctx.fillStyle = '#94a3b8'; ctx.font = `${9 / transform.k}px system-ui`; ctx.textAlign = 'center';
+                ctx.textBaseline = 'top';
+                let renderedText = n.data.name.length > 20 ? n.data.name.substring(0, 18) + "..." : n.data.name;
+                ctx.fillText(renderedText, n.x, n.y + 14);
+            });
+
+            ctx.restore(); 
+
+            processAndRenderMicroTeam();
+            requestAnimationFrame(draw);
+        }
+
+        // ----------------------------------------------------
+        // INTERACTION READERS & WORKSPACE INPUTS
+        // ----------------------------------------------------
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                transform.x = e.clientX - dragStart.x;
+                transform.y = e.clientY - dragStart.y;
+                return;
+            }
+
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.clientX - rect.left;
+            const clientY = e.clientY - rect.top;
+
+            const localMX = (clientX - transform.x) / transform.k;
+            const localMY = (clientY - transform.y) / transform.k;
+
+            const hoverTarget = activeNodes.find(n => Math.sqrt((n.x - localMX)**2 + (n.y - localMY)**2) <= (14 / transform.k));
+            canvas.style.cursor = hoverTarget ? 'pointer' : 'grab';
+        });
+
+        canvas.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.clientX - rect.left;
+            const clientY = e.clientY - rect.top;
+            const localMX = (clientX - transform.x) / transform.k;
+            const localMY = (clientY - transform.y) / transform.k;
+            
+            const clickedNode = activeNodes.find(n => Math.sqrt((n.x - localMX)**2 + (n.y - localMY)**2) <= (14 / transform.k));
+            if (clickedNode) return; 
+
+            isDragging = true;
+            canvas.style.cursor = 'grabbing';
+            dragStart.x = e.clientX - transform.x;
+            dragStart.y = e.clientY - transform.y;
+        });
+
+        window.addEventListener('mouseup', () => { isDragging = false; });
+
+        canvas.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const zoomIntensity = 0.05;
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            const wheelFactor = e.deltaY < 0 ? 1 + zoomIntensity : 1 - zoomIntensity;
+            const nextScale = Math.max(0.15, Math.min(4, transform.k * wheelFactor));
+
+            transform.x = mouseX - (mouseX - transform.x) * (nextScale / transform.k);
+            transform.y = mouseY - (mouseY - transform.y) * (nextScale / transform.k);
+            transform.k = nextScale;
+        }, { passive: false });
+
+        canvas.addEventListener('click', (e) => {
+            if (isDragging) return;
+            if (dragStart.x !== 0 && (Math.abs(e.clientX - (dragStart.x + transform.x)) > 5 || Math.abs(e.clientY - (dragStart.y + transform.y)) > 5)) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.clientX - rect.left;
+            const clientY = e.clientY - rect.top;
+
+            const localMX = (clientX - transform.x) / transform.k;
+            const localMY = (clientY - transform.y) / transform.k;
+
+            const selected = activeNodes.find(n => Math.sqrt((n.x - localMX)**2 + (n.y - localMY)**2) <= (16 / transform.k));
+
+            if (selected) {
+                if (!selected.children && !selected._children && !selected.data.isTeamManager && selected.depth < 5) {
+                    generateProceduralSubtree(selected.data, selected.data.tierIdx || 0, selected.data.key);
+                    if (selected.data.children) {
+                        selected.children = selected.data.children.map((c, idx) => {
+                            let nodeWrap = d3.hierarchy(c);
+                            nodeWrap.id = `proc_${selected.data.key}_${selected.data.tierIdx || 0}_${idx}_${Math.random()}`;
+                            nodeWrap.parent = selected; nodeWrap.depth = selected.depth + 1;
+                            return nodeWrap;
+                        });
+                    }
+                }
+
+                if (selected.children || selected._children) {
+                    if (selected.children) { selected._children = selected.children; selected.children = null; }
+                    else { selected.children = selected._children; selected._children = null; }
+                    updateTreeLayout();
+                }
+
+                // Inject department-specific roles dynamically
+                if (selected.data.isTeamManager || selected.depth >= 4) {
+                    popup.style.display = 'block';
+                    popup.style.left = `${Math.min(e.clientX + 20, window.innerWidth - 380)}px`;
+                    popup.style.top = `${Math.min(e.clientY + 20, window.innerHeight - 410)}px`;
+                    
+                    document.getElementById('pop-title').innerText = selected.data.name.split(" [")[0];
+                    document.getElementById('pop-type').innerText = `Executive Branch: ${selected.data.key || "Operations"}`;
+
+                    const depKey = selected.data.key || "DEFAULT";
+                    const rolesList = roleRegistry[depKey] || roleRegistry.DEFAULT;
+
+                    // Relaxed physics targets give text complete breathing space across coordinates
+                    let tNodes = [
+                        { x: 163, y: 30,  vx: 0, vy: 0, role: rolesList[0] },
+                        { x: 60,  y: 75,  vx: 0, vy: 0, role: rolesList[1] },
+                        { x: 110, y: 120, vx: 0, vy: 0, role: rolesList[2] },
+                        { x: 215, y: 120, vx: 0, vy: 0, role: rolesList[3] },
+                        { x: 265, y: 75,  vx: 0, vy: 0, role: rolesList[4] }
+                    ];
+                    let tLinks = [
+                        { source: tNodes[0], target: tNodes[1] }, { source: tNodes[0], target: tNodes[2] },
+                        { source: tNodes[0], target: tNodes[3] }, { source: tNodes[0], target: tNodes[4] },
+                        { source: tNodes[1], target: tNodes[2] }, { source: tNodes[3], target: tNodes[4] }
+                    ];
+                    microPackets = [];
+                    activeMicroTeam = { nodes: tNodes, links: tLinks };
+                }
+            } else {
+                if(e.target.tagName !== "BUTTON" && e.target.id !== "popupCanvas") closePopup();
+            }
+            dragStart = { x: 0, y: 0 };
+        });
+
+        function closePopup() { popup.style.display = 'none'; activeMicroTeam = null; }
+
+        resize(); init(); draw();
+    </script>
+</body>
+</html>

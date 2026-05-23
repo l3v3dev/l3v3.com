@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WYLWYL app page showing a learning progression from kindergarten through advanced topics." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>l3v3.com WYLWYL app</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .app-main { padding: 2rem 0; }
+      .timeline { display: grid; gap: 1rem; margin-top: 2rem; }
+      .timeline-card { background: rgba(15, 23, 42, 0.92); border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 1.5rem; padding: 1.75rem; }
+      .timeline-card h3 { margin-top: 0; }
+      .timeline-card p { color: #cbd5e1; margin: 0.75rem 0 0; }
+      .chart-grid { display: grid; gap: 1rem; margin-top: 2rem; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+      .chart-card { background: rgba(15, 23, 42, 0.92); border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 1.5rem; padding: 1.5rem; }
+      .chart-bar { width: 100%; height: 0.8rem; background: rgba(148, 163, 184, 0.14); border-radius: 999px; margin-top: 1rem; }
+      .chart-bar span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">
+          <img src="../images/logob.png" alt="l3v3 logo" class="brand-logo" width="48" height="32" />
+          <span class="brand-name">l3v3.com</span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="siteNav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html" class="button button-secondary">Platform</a>
+        </nav>
+      </div>
+    </header>
+    <main class="app-main">
+      <div class="container">
+        <img src="../images/wylwyl-icon.svg" alt="WYLWYL icon" class="app-icon" />
+        <p class="eyebrow">Educational progression</p>
+        <h1>WYLWYL</h1>
+        <p class="hero-text">A sample learning path from early counting to advanced mathematical tools used in modern machine learning.</p>
+        <div class="timeline">
+          <div class="timeline-card">
+            <h3>Counting and patterns</h3>
+            <p>Counting helps humans track quantities, compare sets, and solve practical problems like sharing and keeping score.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>Arithmetic and measurement</h3>
+            <p>Basic addition, subtraction, and measurement support tasks like budgeting, cooking, and navigation.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>Ratios and early algebra</h3>
+            <p>Understanding relationships, proportions, and simple equations helps model simple systems and reason about change.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>Geometry and functions</h3>
+            <p>Geometry and functions describe shapes, motion, and systems; they become useful for engineering and data analysis.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>Calculus and statistics</h3>
+            <p>Calculus describes continuous change, and statistics helps make sense of data, both of which are used in training neural networks.</p>
+          </div>
+        </div>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h3>Counting</h3>
+            <p>Problem solved: tracking discrete objects and quantities.</p>
+            <div class="chart-bar"><span style="width: 80%;"></span></div>
+          </div>
+          <div class="chart-card">
+            <h3>Algebra</h3>
+            <p>Problem solved: finding unknown values and expressing relationships.</p>
+            <div class="chart-bar"><span style="width: 70%;"></span></div>
+          </div>
+          <div class="chart-card">
+            <h3>Calculus</h3>
+            <p>Problem solved: modeling continuous systems and optimization in machine learning.</p>
+            <div class="chart-bar"><span style="width: 90%;"></span></div>
+          </div>
+          <div class="chart-card">
+            <h3>Statistics</h3>
+            <p>Problem solved: interpreting uncertain information and improving predictions.</p>
+            <div class="chart-bar"><span style="width: 85%;"></span></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>WYLWYL app page.</p>
+        <a href="https://l3v3.com/">l3v3.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

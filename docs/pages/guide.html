@@ -1,16 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GuIDE is a programming environment for agent-style workflows and prompt-based editing." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>GuIDE | l3v3.com</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home">
+          <img src="../images/logob.png" alt="l3v3 logo" class="brand-logo" width="48" height="32" />
+          <span class="brand-name">l3v3.com</span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="siteNav">
+          <a href="#product">Apps</a>
+          <a href="#features">Overview</a>
+          <a href="#why">Notes</a>
+          <a href="#cta" class="button button-secondary">GuIDE App</a>
+        </nav>
+      </div>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>l3v3.com GuIDE</title>
-</head>
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <img src="../images/guide-icon.svg" alt="GuIDE icon" class="app-icon" />
+            <p class="eyebrow">Language model driven IDE</p>
+            <h1>Build apps with GuIDE.</h1>
+            <p class="hero-text">GuIDE is a modern language model driven programming IDE from l3v3.com that helps you design, iterate, and automate solutions in a single unified workspace.</p>
+            <div class="hero-actions">
+              <a href="#product" class="button button-primary">View sections</a>
+              <a href="../index.html" class="button button-outline">Back to platform</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="device-mockup">
+              <div class="device-screen">
+                <div class="screen-header">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="screen-content">
+                  <h2>IDE workspace</h2>
+                  <p>Use the interface to work with prompts, and refine code with language-model-assisted developer tooling.</p>
+                  <div class="status-row">
+                    <span class="pill">Live Loop</span>
+                    <span class="status">Ready</span>
+                  </div>
+                  <div class="cards-grid">
+                    <div class="mini-card"><strong>Agents</strong><span>Reusable workflow pieces</span></div>
+                    <div class="mini-card"><strong>Code</strong><span>Prompt and edit logic</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<body>
-    <div class="theia-preload"></div>
-    <script type="text/javascript" src="guide/bundle.js" charset="utf-8"></script>
-</body>
+      <section class="feature-strip" id="product">
+        <div class="container">
+          <div class="strip-card">
+            <h2>GuIDE is a prototype IDE with agentic loops.</h2>
+            <p>Create apps by using loops, and smart workflows on a canvas designed for rapid iteration.</p>
+          </div>
+        </div>
+      </section>
 
+<section class="features" id="features">
+        <div class="container section-header">
+          <p class="eyebrow">What GuIDE does</p>
+          <h2>Use GuIDE to create and run agentic workflows.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Language model driven</h3>
+            <p>Build workflows that act, observe, and perform automatically. GuIDE makes iteration part of the development cycle.</p>
+          </article>
+          <article class="feature-card">
+            <h3>IDE-first experience</h3>
+            <p>Enjoy a polished environment for editing logic, previewing results, and managing AI-driven tasks within one app.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Workflow intelligence</h3>
+            <p>Capture context, monitor execution, and optimize behavior with feedback loops built for modern products.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Online preview</h3>
+            <p>Online app to experiment with agentic programming.</p>
+          </article>
+        </div>
+      </section>
+
+<section class="why" id="why">
+        <div class="container why-grid">
+          <div class="why-copy">
+            <p class="eyebrow">GuIDE</p>
+            <h2>Perform local coding loops</h2>
+            <p>Allow to run local languge models in an agentic IDE</p>
+            <ul class="why-list">
+              <li><strong>Agent-first modeling:</strong> define goals, steps, and decision flow in one place.</li>
+              <li><strong>Iterate faster:</strong> test and refine loops with real-time feedback.</li>
+              <li><strong>Unified workflow:</strong> manage logic, automation, and execution from a single workspace.</li>
+            </ul>
+          </div>
+          <div class="why-panel">
+            <div class="panel-card">
+              <h3>Designed for modern workflows</h3>
+              <p>GuIDE surfaces the complexity of agentic development while keeping the interface simple and practical.</p>
+            </div>
+            <div class="panel-card">
+              <h3>Launch prototypes quickly</h3>
+              <p>Use GuIDE to validate agent behavior, tune outcomes, and ship experiments with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" id="cta">
+        <div class="container cta-card">
+          <div>
+            <p class="eyebrow">Navigation</p>
+            <h2>Back to platform</h2>
+            <p>Use the link below to return to the main app directory page.</p>
+          </div>
+          <a href="../index.html" class="button button-primary">Return</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>l3v3.com. App page reference.</p>
+        <a href="https://l3v3.com/">l3v3.com</a>
+      </div>
+    </footer>
+
+    <script src="../scripts/app.js"></script>
+  </body>
 </html>

@@ -124,6 +124,75 @@ textarea {
   font-size: 1rem;
 }
 
+.animated-brand {
+  display: inline-flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.brand-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.3rem;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 0.3rem;
+}
+
+.letter-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.3rem;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.letter-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  width: 100%;
+  height: 100%;
+}
+
+.letter-box.flip-active {
+  animation: fullFlip 1.5s ease-in-out;
+}
+
+@keyframes fullFlip {
+  0% { transform: rotateX(0deg); }
+  50% { transform: rotateX(90deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+/* Header signal canvas */
+.animated-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+#headerSignal {
+  width: 120px;
+  height: 24px;
+  display: inline-block;
+  background: transparent;
+  margin-left: 0.25rem;
+  border-radius: 6px;
+}
+
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -334,6 +403,35 @@ textarea {
   font-size: 0.95rem;
 }
 
+.app-icon {
+  display: block;
+  width: 3rem;
+  margin: 0;
+}
+
+.feature-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card-heading .app-icon {
+  display: block;
+  width: 3rem;
+}
+
+.feature-card-heading h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-family: var(--font-heading);
+}
+
+.hero-copy .app-icon {
+  width: 3.5rem;
+  margin-bottom: 1rem;
+}
+
 .feature-strip {
   padding: 3rem 0;
 }
@@ -371,16 +469,16 @@ textarea {
 .feature-grid {
   display: grid;
   grid-template-columns: var(--feature-columns);
-  gap: 1.5rem;
-  padding: 0.5rem;
+  gap: 1rem;
+  padding: 1rem 2rem;
 }
 
 .feature-card {
   background: var(--surface);
   border: var(--card-border);
   border-radius: var(--panel-radius);
-  padding: var(--panel-padding);
-  min-height: 16rem;
+  padding: 1.5rem;
+  min-height: auto;
 }
 
 .feature-card h3 {

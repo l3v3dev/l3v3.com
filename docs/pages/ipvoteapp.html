@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="IPVote app page with IP detection, a generated question, and a simple poll result tracker." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>l3v3.com ipvote</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .app-main { padding: 2rem 0; }
+      .poll-card { max-width: 42rem; margin: 0 auto; background: rgba(15, 23, 42, 0.92); border: 1px solid rgba(148, 163, 184, 0.12); border-radius: 1.5rem; padding: 2rem; }
+      .poll-status { display: grid; gap: 1rem; margin-bottom: 1.5rem; }
+      .poll-status p { margin: 0; color: #cbd5e1; }
+      .poll-question { margin: 1rem 0; font-size: 1.15rem; color: var(--text); }
+      .poll-options { display: grid; gap: 1rem; margin: 1.5rem 0; }
+      .poll-options button { width: 100%; text-align: left; border: 1px solid rgba(148, 163, 184, 0.18); color: var(--text); background: rgba(15, 23, 42, 0.8); padding: 1rem 1.2rem; border-radius: 1rem; cursor: pointer; }
+      .poll-options button:hover { background: rgba(56, 189, 248, 0.12); }
+      .results-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.75rem; }
+      .results-list li { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; color: #cbd5e1; }
+      .results-bar { width: 100%; height: 0.8rem; background: rgba(148, 163, 184, 0.12); border-radius: 999px; overflow: hidden; }
+      .results-bar span { display: block; height: 100%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+      .info-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+      .info-row div { background: rgba(15, 23, 42, 0.9); border-radius: 1rem; padding: 1rem; flex: 1 1 12rem; border: 1px solid rgba(148, 163, 184, 0.12); }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">
+          <img src="../images/logob.png" alt="l3v3 logo" class="brand-logo" width="48" height="32" />
+          <span class="brand-name">l3v3.com</span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="siteNav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html" class="button button-secondary">Platform</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="container">
+        <div class="poll-card">
+          <img src="../images/ipvote-icon.svg" alt="IPVote icon" class="app-icon" />
+          <p class="eyebrow">Polling app</p>
+          <h1>IPVote</h1>
+          <p class="poll-question" id="pollQuestion"></p>
+          <div class="poll-status">
+            <p id="ipStatus">Detecting IP address...</p>
+            <p id="voteStatus">Loading poll status...</p>
+          </div>
+          <div class="poll-options" id="pollOptions"></div>
+          <div class="results" id="pollResults"></div>
+          <div class="info-row">
+            <div>
+              <strong>How the question is chosen</strong>
+              <p id="questionSource">This question was generated using a simple prompt-style selection method.</p>
+            </div>
+            <div>
+              <strong>Vote persistence</strong>
+              <p>Results are stored in the browser using localStorage for this sample app.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>IPVote app page.</p>
+        <a href="https://l3v3.com/">l3v3.com</a>
+      </div>
+    </footer>
+
+    <script>
+      const pollId = 'ipvote-sample';
+      const questionOptions = [
+        'What should the next app feature prioritize?',
+        'Which interface should be easier to use in a prototype app?',
+        'What is the clearest way to show vote status to users?'
+      ];
+      const pollData = {
+        question: questionOptions[Math.floor(Math.random() * questionOptions.length)],
+        options: ['More styles', 'Simpler interaction', 'Better results display', 'No change']
+      };
+      const pollQuestion = document.getElementById('pollQuestion');
+      const pollOptions = document.getElementById('pollOptions');
+      const pollResults = document.getElementById('pollResults');
+      const ipStatus = document.getElementById('ipStatus');
+      const voteStatus = document.getElementById('voteStatus');
+      function getStoredVotes() {
+        return JSON.parse(localStorage.getItem(pollId) || '{}');
+      }
+      function saveVote(vote) {
+        const data = getStoredVotes();
+        data[vote] = (data[vote] || 0) + 1;
+        localStorage.setItem(pollId, JSON.stringify(data));
+        localStorage.setItem(pollId + '-cast', 'true');
+      }
+      function hasVoted() {
+        return localStorage.getItem(pollId + '-cast') === 'true';
+      }
+      function renderResults() {
+        const data = getStoredVotes();
+        const total = Object.values(data).reduce((sum, v) => sum + v, 0);
+        pollResults.innerHTML = '<h3>Poll results</h3>';
+        const list = document.createElement('ul');
+        list.className = 'results-list';
+        pollData.options.forEach((option) => {
+          const count = data[option] || 0;
+          const percentage = total ? Math.round((count / total) * 100) : 0;
+          const item = document.createElement('li');
+          item.innerHTML = `<span>${option}</span><strong>${count} (${percentage}%)</strong><div class="results-bar"><span style="width:${percentage}%"></span></div>`;
+          list.appendChild(item);
+        });
+        pollResults.appendChild(list);
+      }
+      function renderOptions() {
+        pollOptions.innerHTML = '';
+        pollData.options.forEach((option) => {
+          const button = document.createElement('button');
+          button.textContent = option;
+          button.type = 'button';
+          button.addEventListener('click', () => {
+            saveVote(option);
+            voteStatus.textContent = 'Your vote was recorded in local storage.';
+            renderResults();
+            pollOptions.innerHTML = '';
+          });
+          pollOptions.appendChild(button);
+        });
+      }
+      function updateStatus() {
+        pollQuestion.textContent = pollData.question;
+        if (hasVoted()) {
+          voteStatus.textContent = 'You have already voted in this browser session.';
+        } else {
+          voteStatus.textContent = 'Select one option to cast your vote.';
+        }
+        if (hasVoted()) {
+          renderResults();
+          pollOptions.innerHTML = '';
+        } else {
+          renderOptions();
+          renderResults();
+        }
+      }
+      function getLocalIPs() {
+        return new Promise((resolve) => {
+          const ips = new Set();
+          const pc = new RTCPeerConnection({ iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] });
+          pc.createDataChannel('');
+          pc.onicecandidate = (event) => {
+            if (!event.candidate) {
+              pc.close();
+              return resolve(Array.from(ips));
+            }
+            const parts = event.candidate.candidate.split(' ');
+            const ip = parts[4];
+            if (ip) {
+              ips.add(ip);
+            }
+          };
+          pc.createOffer().then((offer) => pc.setLocalDescription(offer)).catch(() => resolve([]));
+        });
+      }
+      updateStatus();
+      getLocalIPs().then((ips) => {
+        if (ips.length) {
+          ipStatus.textContent = 'Detected IP address: ' + ips[0];
+        } else {
+          ipStatus.textContent = 'IP address detection is not available in this browser.';
+        }
+      }).catch(() => {
+        ipStatus.textContent = 'IP address detection failed.';
+      });
+    </script>
+  </body>
+</html>
