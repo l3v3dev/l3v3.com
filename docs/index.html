@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="l3v3.com is a collection of AI-related app pages with separate payloads for each app." />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#ffffff" />
     <title>l3v3.com</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#home">
-          <img src="images/logob.png" alt="l3v3 logo" class="brand-logo" width="48" height="32" />
-            <canvas id="headerSignal" width="160" height="28" aria-hidden="true"></canvas>
+        <a class="brand" href="#apps">
+          <img src="images/logo.png" alt="l3v3 logo" class="brand-logo" width="48" height="32" />
+          <span class="brand-name">l3v3.com</span>
+<canvas id="headerSignal" width="160" height="28" aria-hidden="true"></canvas>
           <div class="brand-name animated-brand" id="animatedBrand">
             <span class="brand-letter">L</span>
             <div class="letter-box flip-letter">
@@ -25,137 +25,74 @@
             <div class="letter-box flip-letter">
               <div class="letter-content">3</div>
             </div>
-          </div>
+          </div>          
         </a>
-        <button class="nav-toggle" aria-label="Open navigation" id="navToggle">
-          <span></span><span></span><span></span>
-        </button>
         <nav class="site-nav" id="siteNav">
           <a href="#apps">Apps</a>
-          <a href="#contact">Links</a>          
-          <a href="#about">About</a>
         </nav>
       </div>
     </header>
-
     <main>
-      <!--
-      <section class="hero" id="home">
+      <section class="app-catalog" id="apps">
         <div class="container">
-          <p class="eyebrow">Model driven prototype apps</p>
-          <h1>Prototypes with <a href="pages/llm.html">language models</a></h1>
-          <p class="hero-text"></p>
-        </div>
-      </section>
-      -->
-      <section class="features" id="apps">
-        <div class="container section-header">
-          <p class="eyebrow"><a href="pages/llm.html" target="_blank">Model driven prototype apps</a></p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-card-heading">
-              <img src="images/guide-icon.svg" alt="GuIDE icon" class="app-icon" />
+          <div class="section-header">
+            <p class="eyebrow">Prototype Apps</p>
+          </div>
+          <div class="app-grid">
+            <article class="app-card">
               <h3>GuIDE</h3>
-            </div>
-            <p>Programming environment with agent workflows.</p>
-            <a href="pages/guideapp.html" target="_blank" class="button button-secondary">Open app</a>
-            <a href="pages/guide.html" class="button button-secondary">Info</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card-heading">
-              <img src="images/wylwyl-icon.svg" alt="WYLWYL icon" class="app-icon" />
-              <h3>WYLWYL</h3>
-            </div>
-            <p>Why you learn what you learn.</p>
-            <a href="pages/wylwylapp.html" target="_blank" class="button button-secondary">Open app</a>
-            <a href="pages/wylwyl.html" class="button button-secondary">Info</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card-heading">
-              <img src="images/simsports-icon.svg" alt="SimSports icon" class="app-icon" />
-              <h3>SimSports</h3>
-            </div>
-            <p>Simulated sports content.</p>
-            <a href="pages/simsportsapp.html" target="_blank" class="button button-secondary">Open app</a>
-            <a href="pages/simsports.html" class="button button-secondary">Info</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card-heading">
-              <img src="images/simorg-icon.svg" alt="SimOrg icon" class="app-icon" />
-              <h3>SimOrg</h3>
-            </div>
-            <p>A simulated agent orchestrated organization.</p>
-            <a href="pages/simorgapp.html" target="_blank" class="button button-secondary">Open app</a>
-            <a href="pages/simorg.html" class="button button-secondary">Info</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card-heading">
-              <img src="images/simcloud-icon.svg" alt="SimCloud icon" class="app-icon" />
-              <h3>SimCloud</h3>
-            </div>
-            <p>Simulated multi-cloud environment with infrastructure and system interactions.</p>
-            <a href="pages/simcloudapp.html" target="_blank" class="button button-secondary">Open app</a>
-            <a href="pages/simcloud.html" class="button button-secondary">Info</a>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card-heading">
-              <img src="images/ipvote-icon.svg" alt="IPVote icon" class="app-icon" />
+              <p>Programming environment with agent workflows.</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="pages/guide.html">Details</a>
+                <a class="button" href="pages/guideapp.html">Open</a>
+              </div>
+            </article>
+            <article class="app-card">
               <h3>IPVote</h3>
-            </div>
-            <p>Feature voting page that accepts one vote per poll per IP address.</p>
-            <a href="pages/ipvoteapp.html" target="_blank" class="button button-secondary">Open app</a>
-            <a href="pages/ipvote.html" class="button button-secondary">Info</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="why" id="about">
-        <div class="container why-grid">
-          <div class="why-copy">
-            <p class="eyebrow">About this site</p>
-            <h2>Prototype apps not intended for real use.</h2>
-            <p>These pages are intended to show app concepts. They do not imply any service level or product offering.</p>
-            <ul class="why-list">
-              <li>LLM driven online Ide based on Eclipse Theia platform.</li>
-              <li>Generative AI content pages.</li>
-              <li>Not for real world use.</li>
-            </ul>
+              <p>Feature voting page that accepts one vote per poll per IP address.</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="pages/ipvote.html">Details</a>
+                <a class="button" href="pages/ipvoteapp.html">Open</a>
+              </div>
+            </article>
+            <article class="app-card">
+              <h3>WYLWYL</h3>
+              <p>Why you learn what you learn.</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="pages/wylwyl.html">Details</a>
+                <a class="button" href="pages/wylwylapp.html">Open</a>
+              </div>
+            </article>
+            <article class="app-card">
+              <h3>SimCloud</h3>
+              <p>Simulated multi-cloud environment with infrastructure and system interactions.</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="pages/simcloud.html">Details</a>
+                <a class="button" href="pages/simcloudapp.html">Open</a>
+              </div>
+            </article>
+            <article class="app-card">
+              <h3>SimOrg</h3>
+              <p>A simulated agent orchestrated organization.</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="pages/simorg.html">Details</a>
+                <a class="button" href="pages/simorgapp.html">Open</a>
+              </div>
+            </article>
+            <article class="app-card">
+              <h3>SimSports</h3>
+              <p>Simulated sports content.</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="pages/simsports.html">Details</a>
+                <a class="button" href="pages/simsportsapp.html">Open</a>
+              </div>
+            </article>
           </div>
-          <div class="why-panel">
-            <div class="panel-card">
-              <h3>Link to apps</h3>
-              <p>Use the app cards above to open the page for any app.</p>
-            </div>
-            <div class="panel-card">
-              <h3>Prototype apps</h3>
-              <p>Not for production use.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-section" id="contact">
-        <div class="container cta-card">
-          <div>
-            <p class="eyebrow">Apps</p>
-            <h2>Link to apps</h2>
-            <p>This site is a set of prototype app pages. Not for real use.</p>
-          </div>
-          <a href="#apps" class="button button-primary">View apps</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Live, Laugh, Love, L3v3</p>
-        <a href="https://l3v3.com/">l3v3.com</a>
-      </div>
-    </footer>
-
-    <script src="scripts/app.js"></script>
-    <script>
+       <script>
       const states = ['L3V3', 'LIVE', 'L㍳GH', 'LOVE'];
       const letterBoxes = document.querySelectorAll('.letter-box');
       let currentIndex = 0;
@@ -225,6 +162,7 @@
       initializeLetters();
       cycle();
     </script>
+ 
     <script>
       (function(){
         const canvas = document.getElementById('headerSignal');
@@ -335,6 +273,6 @@
 
         requestAnimationFrame(draw);
       })();
-    </script>
+    </script>   
   </body>
 </html>
