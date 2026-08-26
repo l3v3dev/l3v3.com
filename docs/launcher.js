@@ -21,8 +21,8 @@ async function registerServiceWorker() {
     throw new Error("This browser does not support Service Workers.");
   }
 
-  await navigator.serviceWorker.register("/service-worker.js", {
-    scope: "/"
+  await navigator.serviceWorker.register("./service-worker.js", {
+    scope: "./"
   });
 
   await navigator.serviceWorker.ready;
