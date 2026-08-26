@@ -40,7 +40,7 @@ function getMimeType(path) {
 }
 
 function gameUrl(game, filePath) {
-  return new URL(`/${game}/${filePath}`, self.location.origin).href;
+  return new URL(`${game}/${filePath}`, self.location.origin).href;
 }
 
 async function deleteOldGameCaches(game) {
