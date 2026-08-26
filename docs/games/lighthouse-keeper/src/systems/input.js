@@ -1,4 +1,4 @@
-// Tracks WASD keydown/keyup state and mouse position/button over the canvas.
+// Tracks WASD keydown/keyup state and mouse/touch position and state over the canvas.
 // Exposes a Set of currently held keys (lowercased) and a mouse object so
 // entities/systems can query them each frame.
 
@@ -19,12 +19,16 @@ function onKeyUp(e) {
   held.delete(e.key.toLowerCase());
 }
 
-function onMouseMove(e) {
+function updatePointerPosition(clientX, clientY) {
   const rect = canvas.getBoundingClientRect();
-  mouse.x = e.clientX - rect.left;
-  mouse.y = e.clientY - rect.top;
+  mouse.x = clientX - rect.left;
+  mouse.y = clientY - rect.top;
   mouse.over =
     mouse.x >= 0 && mouse.x <= canvas.width && mouse.y >= 0 && mouse.y <= canvas.height;
+}
+
+function onMouseMove(e) {
+  updatePointerPosition(e.clientX, e.clientY);
 }
 
 function onMouseDown(e) {
@@ -35,11 +39,46 @@ function onMouseUp(e) {
   if (e.button === 0) mouse.down = false;
 }
 
+// Touch Event Handlers
+function onTouchStart(e) {
+  if (e.touches.length > 0) {
+    const touch = e.touches[0];
+    updatePointerPosition(touch.clientX, touch.clientY);
+    mouse.down = true;
+    e.preventDefault(); // Prevents emulated mouse events and page scrolling
+  }
+}
+
+function onTouchMove(e) {
+  if (e.touches.length > 0) {
+    const touch = e.touches[0];
+    updatePointerPosition(touch.clientX, touch.clientY);
+    e.preventDefault();
+  }
+}
+
+function onTouchEnd(e) {
+  if (e.touches.length === 0) {
+    mouse.down = false;
+    mouse.over = false;
+  } else {
+    // If other fingers are still touching, update position to the primary touch
+    const touch = e.touches[0];
+    updatePointerPosition(touch.clientX, touch.clientY);
+  }
+}
+
 window.addEventListener("keydown", onKeyDown);
 window.addEventListener("keyup", onKeyUp);
 canvas.addEventListener("mousemove", onMouseMove);
 canvas.addEventListener("mousedown", onMouseDown);
 window.addEventListener("mouseup", onMouseUp);
+
+// Touch listeners
+canvas.addEventListener("touchstart", onTouchStart, { passive: false });
+canvas.addEventListener("touchmove", onTouchMove, { passive: false });
+window.addEventListener("touchend", onTouchEnd);
+window.addEventListener("touchcancel", onTouchEnd);
 
 export function getHeldKeys() {
   return held;
