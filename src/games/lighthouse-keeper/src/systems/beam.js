@@ -1,3 +1,4 @@
+import lighthouseAsset from "../../assets/lighthouse.svg";
 // The lighthouse beam: a 60-degree amber cone sweeping clockwise from the
 // lighthouse center at (400, 300). Activated by holding Space, drains a beam
 // meter (100 units, 25/s), and deals 5 damage per second to enemies whose
@@ -17,7 +18,7 @@ const DRAIN_RATE = 25; // units/s
 const DAMAGE_RATE = 5; // damage/s
 
 const lighthouseSprite = new Image();
-lighthouseSprite.src = "assets/lighthouse.svg";
+lighthouseSprite.src = lighthouseAsset;
 
 let active = false;
 let meter = METER_MAX;

@@ -1,3 +1,4 @@
+import boltAsset from "../../assets/lantern-bolt.svg";
 // A lantern bolt: the lantern-bolt sprite (amber core + glow) traveling in a
 // straight line at 500 px/s, with a fading motion trail behind it and a
 // subtle glow flicker while it flies. Despawned after 1.5 seconds.
@@ -10,7 +11,7 @@ const TRAIL_MAX_POINTS = 12;
 
 // Shared sprite - loaded once for all bolts.
 const boltSprite = new Image();
-boltSprite.src = "assets/lantern-bolt.svg";
+boltSprite.src = boltAsset;
 
 export class Bolt {
   constructor(x, y, angle) {

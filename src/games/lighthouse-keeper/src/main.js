@@ -1,3 +1,4 @@
+import backgroundAsset from "../assets/bg-rock.svg";
 // Entry point - boots the game and owns the top-level loop. Gameplay lives in
 // src/entities/ and src/systems/.
 
@@ -59,7 +60,7 @@ const ctx = canvas.getContext("2d");
 const gameInfo = document.getElementById("game-info");
 
 const background = new Image();
-background.src = "assets/bg-rock.svg";
+background.src = backgroundAsset;
 
 const player = new Player(400, 450);
 

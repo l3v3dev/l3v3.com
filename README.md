@@ -12,3 +12,17 @@ l3v3 is presented as an agentic workflow IDE that helps creators design, iterate
 
 ## Preview
 Open `docs/index.html` in a browser to view the landing page locally.
+
+## Build
+Install dependencies once, then create the minified browser bundle:
+
+```sh
+npm install
+npm run build
+```
+
+Add games by creating a directory under `src/games`, then registering its id and
+title in `src/games/games.json`. Each game needs an `index.html` and
+`src/main.js`. The build bundles every registered game, copies its serving HTML,
+and generates `docs/games/games.json` for the landing page. Source code and
+assets remain outside `docs`.

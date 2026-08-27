@@ -1,3 +1,4 @@
+import keeperAsset from "../../assets/keeper.svg";
 // The keeper: a 24px-diameter circle moving at 200 px/s in the combined
 // direction of held WASD keys (diagonals normalized), clamped to the
 // 800x600 play area.
@@ -13,7 +14,7 @@ export class Player {
     this.y = y;
     this.radius = RADIUS;
     this.sprite = new Image();
-    this.sprite.src = "assets/keeper.svg";
+    this.sprite.src = keeperAsset;
   }
 
   update(dt, bounds) {

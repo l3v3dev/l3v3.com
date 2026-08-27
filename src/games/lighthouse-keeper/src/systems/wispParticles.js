@@ -1,3 +1,4 @@
+import wispParticleAsset from "../../assets/fog-wisp-particle.svg";
 // Fog wisp particles: dropped when a Shroud or Maw dies. Each is a small
 // stationary pale blue glowing circle that lasts exactly 2 seconds, then
 // vanishes. While active, any enemy whose center is within 40 pixels of a
@@ -8,7 +9,7 @@ const SLOW_RADIUS = 40; // px from wisp center
 const SLOW_FACTOR = 0.5;
 
 const wispSprite = new Image();
-wispSprite.src = "assets/fog-wisp-particle.svg";
+wispSprite.src = wispParticleAsset;
 
 const particles = [];
 

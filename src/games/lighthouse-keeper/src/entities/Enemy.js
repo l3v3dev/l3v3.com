@@ -1,3 +1,6 @@
+import wispAsset from "../../assets/enemy-wisp.svg";
+import shroudAsset from "../../assets/enemy-shroud.svg";
+import mawAsset from "../../assets/enemy-maw.svg";
 // A fog enemy: a soft blob of overlapping circles that homes toward the
 // lighthouse center at (400, 300). Three types with distinct size, HP, and speed.
 
@@ -14,7 +17,7 @@ export const ENEMY_TYPES = {
     speed: WISP_SPEED,
     color: "#8899aa",
     opacity: 0.4,
-    sprite: "assets/enemy-wisp.svg",
+    sprite: wispAsset,
     spriteSize: 32, // SVG viewBox is 32x32, blob fills it
   },
   shroud: {
@@ -23,7 +26,7 @@ export const ENEMY_TYPES = {
     speed: SHROUD_SPEED,
     color: "#6b7d8e",
     opacity: 0.6,
-    sprite: "assets/enemy-shroud.svg",
+    sprite: shroudAsset,
     spriteSize: 56,
   },
   maw: {
@@ -32,7 +35,7 @@ export const ENEMY_TYPES = {
     speed: MAW_SPEED,
     color: "#4a5a6a",
     opacity: 0.75,
-    sprite: "assets/enemy-maw.svg",
+    sprite: mawAsset,
     spriteSize: 88,
   },
 };
