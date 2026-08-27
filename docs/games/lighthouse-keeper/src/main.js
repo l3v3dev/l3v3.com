@@ -37,7 +37,13 @@ import {
   isLighthouseDestroyed,
   drawLighthousePulse,
 } from "./systems/lighthouse.js";
-import { drawHUD } from "./systems/hud.js";
+import {
+  drawHUD,
+  isControlsLabelHit,
+  isHomeButtonHit,
+  isRefreshButtonHit,
+} from "./systems/hud.js";
+import { consumeClick } from "./systems/input.js";
 import {
   updateShootEffects,
   drawShootEffects,
@@ -50,6 +56,7 @@ import { updateBeaconLight, drawBeaconLight, getBeaconAngle } from "./systems/be
 
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
+const gameInfo = document.getElementById("game-info");
 
 const background = new Image();
 background.src = "assets/bg-rock.svg";
@@ -103,6 +110,14 @@ function drawScene() {
   });
 }
 
+function handleHUDClick() {
+  const click = consumeClick();
+  if (!click) return;
+  if (isControlsLabelHit(click.x, click.y)) gameInfo.showModal();
+  if (isHomeButtonHit(click.x, click.y)) window.location.href = "https://l3v3.com";
+  if (isRefreshButtonHit(click.x, click.y)) window.location.reload();
+}
+
 // Stop the loop and render the final frame with the end message centered.
 function endGame(text, color) {
   window.gameState.gameOver = true;
@@ -120,6 +135,8 @@ function loop(now) {
   // Clamp dt so a background tab doesn't cause a huge jump on return.
   const dt = Math.min((now - lastTime) / 1000, 0.1);
   lastTime = now;
+
+  handleHUDClick();
 
   player.update(dt, { width: canvas.width, height: canvas.height });
   updateBolts(dt, player);

@@ -6,6 +6,7 @@ const held = new Set();
 
 const canvas = document.getElementById("game-canvas");
 const mouse = { x: 0, y: 0, down: false, over: false };
+let clicked = false;
 
 function onKeyDown(e) {
   const key = e.key.toLowerCase();
@@ -37,6 +38,13 @@ function onMouseDown(e) {
 
 function onMouseUp(e) {
   if (e.button === 0) mouse.down = false;
+}
+
+function onClick(e) {
+  if (e.button === 0) {
+    updatePointerPosition(e.clientX, e.clientY);
+    clicked = true;
+  }
 }
 
 // Touch Event Handlers
@@ -72,6 +80,7 @@ window.addEventListener("keydown", onKeyDown);
 window.addEventListener("keyup", onKeyUp);
 canvas.addEventListener("mousemove", onMouseMove);
 canvas.addEventListener("mousedown", onMouseDown);
+canvas.addEventListener("click", onClick);
 window.addEventListener("mouseup", onMouseUp);
 
 // Touch listeners
@@ -86,4 +95,10 @@ export function getHeldKeys() {
 
 export function getMouse() {
   return mouse;
+}
+
+export function consumeClick() {
+  const wasClicked = clicked;
+  clicked = false;
+  return wasClicked ? { x: mouse.x, y: mouse.y } : null;
 }
