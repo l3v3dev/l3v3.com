@@ -13,6 +13,104 @@
       "WASD to move the keeper",
       "Hold the mouse button to fire bolts",
       "Hold Space to activate the lighthouse beam"
-    ]
+    ],
+    "href": "lighthouse-keeper/index.html?v=mtveu07l"
+  },
+  {
+    "id": "llm-train",
+    "title": "LLM Train",
+    "description": "A local model training puzzle for learning and tuning simple language behavior.",
+    "category": "Educational",
+    "tags": [
+      "AI",
+      "Training",
+      "Language"
+    ],
+    "controls": [
+      "Click through the training path",
+      "Use the interface to guide the model"
+    ],
+    "href": "llm-train/index.html?v=mtveu07l"
+  },
+  {
+    "id": "llm-inference",
+    "title": "LLM Inference",
+    "description": "Find the correct language model path through a maze of prompts and responses.",
+    "category": "Educational",
+    "tags": [
+      "AI",
+      "Maze",
+      "Language"
+    ],
+    "controls": [
+      "Move through the maze",
+      "Pick the next prompt path"
+    ],
+    "href": "llm-inference/index.html?v=mtveu07l"
+  },
+  {
+    "id": "function-runner",
+    "title": "Function Runner",
+    "description": "A short function path game focused on learning simple executable flows.",
+    "category": "Educational",
+    "tags": [
+      "Programming",
+      "Runner",
+      "Logic"
+    ],
+    "controls": [
+      "Move through the function path",
+      "Use the interface to run the next command"
+    ],
+    "href": "function-runner/index.html?v=mtveu07l"
+  },
+  {
+    "id": "function-path",
+    "title": "Function Path",
+    "description": "A math puzzle path that follows function routes through a small maze.",
+    "category": "Educational",
+    "tags": [
+      "Math",
+      "Maze",
+      "Logic"
+    ],
+    "controls": [
+      "Follow the function path",
+      "Choose the next correct route"
+    ],
+    "href": "function-path/index.html?v=mtveu07l"
+  },
+  {
+    "id": "football-playcall",
+    "title": "Football Playcall",
+    "description": "Call a football play and manage a simple field strategy through a tactical mini-game.",
+    "category": "Sports",
+    "tags": [
+      "Football",
+      "Strategy",
+      "Tactics"
+    ],
+    "controls": [
+      "Choose a play",
+      "Move through the field plan"
+    ],
+    "href": "football-playcall/index.html?v=mtveu07l"
+  },
+  {
+    "id": "football-soccer",
+    "title": "Football / Soccer",
+    "description": "Play football or soccer and manage a simple field strategy through a tactical mini-game.",
+    "category": "Sports",
+    "tags": [
+      "Football",
+      "Soccer",
+      "Strategy",
+      "Tactics"
+    ],
+    "controls": [
+      "Play soccer or football",
+      "Move through the field plan"
+    ],
+    "href": "football-soccer/index.html?v=mtveu07l"
   }
 ]

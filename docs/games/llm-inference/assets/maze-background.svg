@@ -1,0 +1,52 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <filter id="doorGlow" x="-250%" y="-250%" width="600%" height="600%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="blueprintGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 H 0 V 40" fill="none" stroke="#7fd8e8" stroke-width="1" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- dark navy background -->
+  <rect width="800" height="600" fill="#0a1a2f"/>
+  <rect width="800" height="600" fill="url(#blueprintGrid)"/>
+
+  <!-- five rooms, S-curve layout, thin soft cyan outlines, rounded corners -->
+  <g fill="none" stroke="#7fd8e8" stroke-width="2">
+    <rect x="40"  y="110" width="220" height="180" rx="14"/>
+    <rect x="300" y="110" width="220" height="180" rx="14"/>
+    <rect x="560" y="110" width="220" height="180" rx="14"/>
+    <rect x="560" y="350" width="220" height="180" rx="14"/>
+    <rect x="300" y="350" width="220" height="180" rx="14"/>
+  </g>
+
+  <!-- glowing doorway gaps between rooms -->
+  <g fill="#b9f2ff" filter="url(#doorGlow)">
+    <rect x="274" y="180" width="12" height="40" rx="6"/>
+    <rect x="534" y="180" width="12" height="40" rx="6"/>
+    <rect x="640" y="314" width="40" height="12" rx="6"/>
+    <rect x="534" y="420" width="12" height="40" rx="6"/>
+  </g>
+
+  <!-- room labels -->
+  <g fill="#ffffff" font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle">
+    <text x="150" y="205">Tokenize</text>
+    <text x="410" y="205">Position</text>
+    <text x="660" y="205">Attention</text>
+    <text x="660" y="445">Feed-Forward</text>
+    <text x="410" y="445">Output</text>
+  </g>
+
+  <!-- loop-back arrow: Output left side curving back to Tokenize -->
+  <g stroke="#8fe3f2" stroke-width="2" fill="none">
+    <circle cx="300" cy="440" r="3" fill="#8fe3f2" stroke="none"/>
+    <path d="M 300 440 C 238 440 150 408 150 304"/>
+    <polygon points="150,290 143,305 157,305" fill="#8fe3f2" stroke="none"/>
+  </g>
+</svg>

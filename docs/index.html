@@ -2,41 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>l3v3 | Games</title>
+  <title>l1v3 l0v3 l3v3</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <style>
     :root{color-scheme:dark;--bg:#121413;--panel:#1d211f;--line:#343a36;--muted:#aab4ad;--text:#e8ece9;--accent:#9fd3b0}
     *{box-sizing:border-box}html,body{margin:0;min-height:100%}
-    body{background:var(--bg);color:var(--text);font-family:Georgia,serif;display:flex;justify-content:center}
-    main{width:100%;max-width:900px;padding:clamp(36px,8vw,76px) 24px 48px}
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px}.logo{color:var(--text);font-size:30px;font-weight:700;text-decoration:none}.tagline{margin-top:8px;color:var(--muted);font:12px system-ui,sans-serif;letter-spacing:.08em}.search{width:min(240px,48vw);min-height:40px;border:1px solid var(--line);border-radius:4px;padding:0 12px;color:var(--text);background:var(--panel);font:14px system-ui,sans-serif}.search:focus{border-color:var(--accent);outline:2px solid transparent}
-    .section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}h1{margin:0;font-size:22px;font-weight:400}.filters{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}.filter-button{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);background:transparent;font:12px system-ui,sans-serif;cursor:pointer}.filter-button:hover,.filter-button.active{border-color:var(--accent);color:var(--text);background:rgb(169 223 189 / 10%)}.games{display:flex;flex-direction:column;border-top:1px solid var(--line)}.game{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:16px;padding:18px 4px;border-bottom:1px solid var(--line);color:var(--text);text-decoration:none}.game:hover{background:rgb(169 223 189 / 7%)}.game-name{font-size:19px}.arrow{color:var(--muted);font:20px system-ui,sans-serif}.game:hover .arrow{color:var(--text)}.info-button{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;color:var(--text);background:transparent;font:15px Georgia,serif;cursor:pointer}.info-button:hover{border-color:var(--accent);color:var(--accent)}.empty{padding:28px 0;color:var(--muted);font:14px system-ui,sans-serif}
-    dialog{max-width:420px;border:1px solid var(--accent);border-radius:6px;padding:24px;color:var(--text);background:var(--panel);font:15px/1.5 system-ui,sans-serif}dialog::backdrop{background:rgb(0 0 0 / 65%)}dialog h2{margin:0 0 8px;font:24px Georgia,serif}dialog .dialog-category{color:var(--accent);font-size:11px;letter-spacing:.1em;text-transform:uppercase}dialog p{color:var(--muted)}dialog ul{padding-left:20px;color:var(--muted)}dialog .dialog-tags{color:var(--muted);font-size:13px}dialog button{border:1px solid var(--line);border-radius:4px;padding:8px 13px;color:var(--text);background:#303733;cursor:pointer}#status{margin-top:20px;color:#e08f8f;font:13px system-ui,sans-serif;min-height:20px}footer{margin-top:80px;color:#77827b;font:12px system-ui,sans-serif}@media(max-width:600px){header{align-items:flex-start}.search{width:45vw}.section-heading{align-items:flex-start;flex-direction:column}.filters{justify-content:flex-start}.game{grid-template-columns:1fr auto}.game .arrow{grid-column:2;grid-row:1}.info-button{grid-column:2;grid-row:2}}
+    body{background:var(--bg);color:var(--text);font-family:Georgia,serif;display:flex;justify-content:center;min-height:100vh;overflow:hidden}
+    main{width:100%;max-width:900px;min-height:100vh;padding:clamp(10px,2vw,22px) 24px 12px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.logo{color:var(--text);font-size:30px;font-weight:700;text-decoration:none}.tagline{margin-top:4px;color:var(--muted);font:12px system-ui,sans-serif;letter-spacing:.08em}.search{width:min(240px,48vw);min-height:40px;border:1px solid var(--line);border-radius:4px;padding:0 12px;color:var(--text);background:var(--panel);font:14px system-ui,sans-serif}.search:focus{border-color:var(--accent);outline:2px solid transparent}
+    .section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}h1{margin:0;font-size:20px;font-weight:400}.filters{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}.filter-button{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);background:transparent;font:12px system-ui,sans-serif;cursor:pointer}.filter-button:hover,.filter-button.active{border-color:var(--accent);color:var(--text);background:rgb(169 223 189 / 10%)}.games{display:flex;flex-wrap:wrap;gap:8px;border-top:0px dotted var(--line);padding-top:4px}.game{display:flex;align-items:center;justify-content:space-between;gap:16px;width:calc(50% - 4px);padding:12px 14px;border:1px solid var(--line);border-radius:4px;color:var(--text);text-decoration:none}.game:hover{background:rgb(169 223 189 / 7%)}.game-name{font-size:17px}.arrow{color:var(--muted);font:20px system-ui,sans-serif}.game:hover .arrow{color:var(--text)}.info-button{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;color:var(--text);background:transparent;font:15px Georgia,serif;cursor:pointer}.info-button:hover{border-color:var(--accent);color:var(--accent)}.empty{padding:20px 0;color:var(--muted);font:14px system-ui,sans-serif}
+    dialog{max-width:420px;border:1px solid var(--accent);border-radius:6px;padding:24px;color:var(--text);background:var(--panel);font:15px/1.5 system-ui,sans-serif}dialog::backdrop{background:rgb(0 0 0 / 65%)}dialog h2{margin:0 0 8px;font:24px Georgia,serif}dialog .dialog-category{color:var(--accent);font-size:11px;letter-spacing:.1em;text-transform:uppercase}dialog p{color:var(--muted)}dialog ul{padding-left:20px;color:var(--muted)}dialog .dialog-tags{color:var(--muted);font-size:13px}dialog button{border:1px solid var(--line);border-radius:4px;padding:8px 13px;color:var(--text);background:#303733;cursor:pointer}#status{margin-top:20px;color:#e08f8f;font:13px system-ui,sans-serif;min-height:20px}.consent-banner{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;border-top:1px solid var(--line);background:var(--panel);color:var(--text);font:13px system-ui,sans-serif}.consent-banner.hidden{display:none}.consent-copy{max-width:680px;line-height:1.5}.consent-copy a{color:var(--accent)}.consent-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.consent-button{border:1px solid var(--accent);border-radius:4px;padding:8px 12px;color:var(--text);background:var(--accent);color:#121413;cursor:pointer;font:12px system-ui,sans-serif}.consent-button-secondary{border:1px solid var(--line);background:transparent;color:var(--text)}footer{margin-top:80px;color:#77827b;font:12px system-ui,sans-serif}footer .footer-links{display:inline-flex;gap:14px;margin-left:12px}footer .footer-links a{color:#aab4ad;text-decoration:none}footer .footer-links a:hover{color:var(--accent)}@media(max-width:600px){header{align-items:flex-start}.search{width:45vw}.section-heading{align-items:flex-start;flex-direction:column}.filters{justify-content:flex-start}.game{grid-template-columns:1fr auto}.game .arrow{grid-column:2;grid-row:1}.info-button{grid-column:2;grid-row:2}.consent-banner{align-items:stretch;flex-direction:column}.consent-actions{justify-content:space-between}.consent-button,.consent-button-secondary{flex:1}}
   </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FW4YV3KZ23"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FW4YV3KZ23');
-    </script>  
 </head>
 <body>
+<script>
+  const VERSION_TAG = "20260910";
+</script>
 <main>
   <header><div><a class="logo" href="/">l3v3</a><div class="tagline">l1v3 l0v3 l3v3</div></div><input class="search" id="search" type="search" placeholder="Search games" aria-label="Search games"></header>
-  <section><div class="section-heading"><h1>Games</h1><div class="filters" id="filters" aria-label="Filter games by category"></div></div><div class="games" id="games"></div><div id="status"></div></section>
-  <footer>© 2026 l3v3</footer>
+  <section><div class="section-heading"><h1 title="local produce - built by local models">Games</h1><div class="filters" id="filters" aria-label="Filter games by category"></div></div>
+    <div class="games" id="games"></div>
+    <div id="status"></div></section>
+  <footer>© 2026 l3v3<div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></footer>
 </main>
 <dialog id="game-info"><h2 id="info-title"></h2><div class="dialog-category" id="info-category"></div><p id="info-description"></p><p class="dialog-tags" id="info-tags"></p><ul id="info-controls"></ul><form method="dialog"><button>Close</button></form></dialog>
+<div class="consent-banner hidden" id="consent-banner">
+  <div class="consent-copy">
+    This site uses Google Analytics and that policy applies. <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+  </div>
+  <div class="consent-actions">
+    <button class="consent-button consent-button-secondary" id="consent-reject" type="button">No</button>
+    <button class="consent-button" id="consent-accept" type="button">Ok</button>
+  </div>
+</div>
 <script>
   const gamesElement=document.getElementById("games"),statusElement=document.getElementById("status"),searchElement=document.getElementById("search"),filtersElement=document.getElementById("filters");let catalog=[],selectedCategory="";
   function showInfo(game){document.getElementById("info-title").textContent=game.title;document.getElementById("info-category").textContent=game.category||"Game";document.getElementById("info-description").textContent=game.description||"";document.getElementById("info-tags").textContent=(game.tags||[]).join(" · ");const controls=document.getElementById("info-controls");controls.replaceChildren();for(const item of game.controls||[]){const li=document.createElement("li");li.textContent=item;controls.append(li)}document.getElementById("game-info").showModal()}
-  function render(){const query=searchElement.value.trim().toLowerCase();const visible=catalog.filter((game)=>{const text=[game.title,game.description,game.category,...(game.tags||[])].join(" ").toLowerCase();return(!selectedCategory||game.category===selectedCategory)&&(!query||text.includes(query))});gamesElement.replaceChildren();if(!visible.length){const empty=document.createElement("div");empty.className="empty";empty.textContent="No games match your search or filter.";gamesElement.append(empty);return}for(const game of visible){const link=document.createElement("a");link.className="game";link.href=`games/${encodeURIComponent(game.id)}/index.html`;link.innerHTML='<span class="game-name"></span><span class="arrow">→</span><button class="info-button" type="button" aria-label="More information">i</button>';link.querySelector(".game-name").textContent=game.title;link.querySelector(".info-button").addEventListener("click",(event)=>{event.preventDefault();event.stopPropagation();showInfo(game)});gamesElement.append(link)}}
+  function render(){const query=searchElement.value.trim().toLowerCase();const visible=catalog.filter((game)=>{const text=[game.title,game.description,game.category,...(game.tags||[])].join(" ").toLowerCase();return(!selectedCategory||game.category===selectedCategory)&&(!query||text.includes(query))});gamesElement.replaceChildren();if(!visible.length){const empty=document.createElement("div");empty.className="empty";empty.textContent="No games match your search or filter.";gamesElement.append(empty);return}for(const game of visible){const link=document.createElement("a");link.className="game";link.href=`games/${encodeURIComponent(game.id)}/index.html?v=${VERSION_TAG}`;link.innerHTML='<span class="game-name"></span><span class="arrow"></span><button class="info-button" type="button" aria-label="More information">i</button>';link.querySelector(".game-name").textContent=game.title;link.querySelector(".info-button").addEventListener("click",(event)=>{event.preventDefault();event.stopPropagation();showInfo(game)});gamesElement.append(link)}}
   function renderFilters(){filtersElement.replaceChildren();for(const name of ["","Educational","Sports","Board"]){const button=document.createElement("button");button.className=`filter-button${selectedCategory===name?" active":""}`;button.type="button";button.textContent=name||"All";button.addEventListener("click",()=>{selectedCategory=name;renderFilters();render()});filtersElement.append(button)}}
-  fetch("games/games.json").then((response)=>{if(!response.ok)throw new Error("Could not load games.");return response.json()}).then((data)=>{catalog=data;renderFilters();render();searchElement.addEventListener("input",render)}).catch((error)=>{statusElement.textContent=error.message});
+  async function loadCatalog(){const urls=[`games/games.json?v=${Date.now()}`,"games/games.json"];let error;for(const url of urls){try{const response=await fetch(url,{cache:"no-store"});if(!response.ok)throw new Error("Could not load games.");return await response.json();}catch(e){error=e}}throw error || new Error("Could not load games.");}
+  loadCatalog().then((data)=>{catalog=data;renderFilters();render();searchElement.addEventListener("input",render)}).catch((error)=>{statusElement.textContent=error.message});
+</script>
+<script>
+  (function() {
+    const KEY = "l3v3.analyticsConsent";
+    const banner = document.getElementById("consent-banner");
+    const accept = document.getElementById("consent-accept");
+    const reject = document.getElementById("consent-reject");
+
+    function hideBanner() {
+      if (banner) banner.classList.add("hidden");
+    }
+
+    function isUsVisitor() {
+      const languages = Array.isArray(navigator.languages) ? navigator.languages : [navigator.language || ""];
+      return languages.some(function(language) {
+        const languageCode = String(language || "").toLowerCase();
+        return languageCode === "en-us" || languageCode.startsWith("en-us") || languageCode.endsWith("-us");
+      });
+    }
+
+    function loadAnalytics() {
+      if (window.dataLayer) return;
+
+      const existing = document.querySelector("script[data-l3v3-gtag]");
+      if (existing) return;
+
+      const gtagScript = document.createElement("script");
+      gtagScript.async = true;
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-FW4YV3KZ23";
+      gtagScript.dataset.l3v3Gtag = "true";
+      document.head.appendChild(gtagScript);
+
+      const inline = document.createElement("script");
+      inline.dataset.l3v3Gtag = "true";
+      inline.textContent = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FW4YV3KZ23');";
+      document.head.appendChild(inline);
+    }
+
+    function saveConsent(value) {
+      try {
+        localStorage.setItem(KEY, value);
+      } catch (error) {
+        // Browsers may block storage; the site still works without analytics.
+      }
+      hideBanner();
+      if (value === "accepted") {
+        loadAnalytics();
+      }
+    }
+
+    try {
+      const consent = localStorage.getItem(KEY);
+      if (consent === "accepted") {
+        hideBanner();
+        loadAnalytics();
+      } else if (consent === "rejected") {
+        hideBanner();
+      } else if (isUsVisitor()) {
+        saveConsent("accepted");
+      } else if (banner) {
+        banner.classList.remove("hidden");
+      }
+    } catch (error) {
+      if (isUsVisitor()) {
+        saveConsent("accepted");
+      } else if (banner) {
+        banner.classList.remove("hidden");
+      }
+    }
+
+    if (accept) accept.addEventListener("click", function() {
+      saveConsent("accepted");
+    });
+
+    if (reject) reject.addEventListener("click", function() {
+      saveConsent("rejected");
+    });
+  })();
 </script>
 </body>
 </html>

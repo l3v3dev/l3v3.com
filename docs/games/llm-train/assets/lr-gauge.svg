@@ -1,0 +1,14 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="120" viewBox="0 0 16 120">
+  <defs>
+    <filter id="neon" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="8" y="9" font-family="monospace" font-size="8" fill="#00ffff" text-anchor="middle" filter="url(#neon)">LR</text>
+  <rect x="3" y="14" width="10" height="102" rx="5" ry="5" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2" filter="url(#neon)"/>
+</svg>

@@ -1,0 +1,23 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1026"/>
+      <stop offset="45%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0d1b3a"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#4a6fb5" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#2a3f6e" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#centerGlow)"/>
+  <text x="400" y="322" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-style="italic" fill="#a8c6ff" opacity="0.14">e<tspan dy="-22" font-size="44">iπ</tspan><tspan dy="22"> + 1 = 0</tspan></text>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+</svg>

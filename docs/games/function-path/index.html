@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Path</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #0a1628;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+    }
+
+    #game-container {
+      position: relative;
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #game-canvas {
+      display: block;
+      border: 2px solid #1a2a44;
+      border-radius: 4px;
+      background: #0a1628;
+    }
+
+    #top-bar {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    #top-bar button {
+      background: #2a3a54;
+      color: #fff;
+      border: 1px solid #556677;
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    #top-bar button:hover {
+      background: #3a4a64;
+    }
+
+    #help-btn {
+      width: 28px;
+      padding: 4px 0;
+      font-weight: bold;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    #help-panel {
+      display: none;
+      width: 100%;
+      box-sizing: border-box;
+      background: #101f36;
+      border: 1px solid #556677;
+      border-radius: 6px;
+      color: #cdd8e8;
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+    }
+
+    #help-panel.visible {
+      display: block;
+    }
+
+    #help-panel h3 {
+      margin: 0 0 6px;
+      color: #00e5ff;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    #help-panel ul {
+      margin: 0 0 6px;
+      padding-left: 18px;
+    }
+
+    #help-panel .keys {
+      color: #8899aa;
+    }
+
+    #hint-bar {
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 18px;
+      color: #667788;
+      font-size: 12px;
+      padding: 8px 2px 0;
+    }
+
+    #save-bar {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #101f36;
+      border: 1px solid #00e5ff;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #cdd8e8;
+    }
+
+    #save-bar .save-text {
+      color: #00e5ff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    #save-bar button {
+      margin-left: auto;
+      background: #2a3a54;
+      color: #fff;
+      border: 1px solid #556677;
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    #save-bar button:hover {
+      background: #3a4a64;
+    }
+
+    #fit-badge {
+      font-weight: bold;
+      margin-left: 10px;
+      letter-spacing: 1px;
+    }
+
+    #fit-badge.safe { color: #22cc44; }
+    #fit-badge.hit { color: #ff5555; }
+
+    #input-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      width: 100%;
+      gap: 8px;
+    }
+
+    .y-prefix {
+      color: #00e5ff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #formula-input {
+      flex: 1;
+      background: #1e2a3a;
+      border: 2px solid #00e5ff;
+      border-radius: 6px;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      padding: 10px 14px;
+      outline: none;
+    }
+
+    #formula-input:focus {
+      border-color: #00ffff;
+      box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+    }
+
+    #formula-input::placeholder {
+      color: #556677;
+    }
+
+    #go-btn {
+      background: #00e5ff;
+      color: #0a1628;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #go-btn:hover {
+      background: #00ffff;
+    }
+
+    #go-btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="800" height="400"></canvas>
+  </div>
+  <script defer src="game.min.js"></script>
+<a id="back-to-home" href="../../index.html" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
+</body>
+</html>

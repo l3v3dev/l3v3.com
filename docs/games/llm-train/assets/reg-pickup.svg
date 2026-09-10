@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <path id="shield" d="M6 10 Q6 4 12 4 L20 4 Q26 4 26 10 C26 20 22 26 16 30 C10 26 6 20 6 10 Z"/>
+    <path id="check" d="M11 16 L14 19 L21 12"/>
+  </defs>
+  <g filter="url(#glow)" opacity="0.7" fill="none" stroke="#44ff44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <use xlink:href="#shield"/>
+    <use xlink:href="#check"/>
+  </g>
+</svg>

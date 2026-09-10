@@ -1,0 +1,28 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FD3F4"/>
+      <stop offset="0.55" stop-color="#A9B8E8"/>
+      <stop offset="1" stop-color="#C9B6E4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.18" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"/>
+    </pattern>
+    <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+      <path d="M200 0H0V200" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="gridDots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="1.2" fill="#ffffff" fill-opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <rect width="800" height="600" fill="url(#gridMinor)"/>
+  <rect width="800" height="600" fill="url(#gridMajor)"/>
+  <rect width="800" height="600" fill="url(#gridDots)"/>
+</svg>

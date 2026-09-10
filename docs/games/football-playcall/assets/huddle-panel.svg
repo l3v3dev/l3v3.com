@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="280" viewBox="0 0 360 280">
+  <defs>
+    <clipPath id="panelClip">
+      <rect x="0" y="0" width="360" height="280" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#panelClip)">
+    <rect x="0" y="0" width="360" height="280" rx="12" ry="12" fill="#212121" fill-opacity="0.85"/>
+    <rect x="0" y="0" width="360" height="40" fill="#424242"/>
+    <text x="180" y="25" fill="#FFFFFF" font-family="sans-serif" font-size="14" text-anchor="middle">Huddle - Pick Your Play</text>
+
+    <rect x="15" y="60" width="100" height="70" rx="8" fill="#616161"/>
+    <text x="65" y="76" fill="#FFFFFF" font-family="sans-serif" font-size="12" text-anchor="middle">1. Quick Out</text>
+    <g transform="translate(45,84)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 25 L5 10 L35 10"/>
+    </g>
+
+    <rect x="130" y="60" width="100" height="70" rx="8" fill="#616161"/>
+    <text x="180" y="76" fill="#FFFFFF" font-family="sans-serif" font-size="12" text-anchor="middle">2. Slant</text>
+    <g transform="translate(160,84)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 25 L35 5"/>
+    </g>
+
+    <rect x="245" y="60" width="100" height="70" rx="8" fill="#616161"/>
+    <text x="295" y="76" fill="#FFFFFF" font-family="sans-serif" font-size="12" text-anchor="middle">3. Screen</text>
+    <g transform="translate(275,84)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 25 L35 20"/>
+    </g>
+
+    <rect x="15" y="150" width="100" height="70" rx="8" fill="#616161"/>
+    <text x="65" y="166" fill="#FFFFFF" font-family="sans-serif" font-size="12" text-anchor="middle">4. Play Action</text>
+    <g transform="translate(45,174)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 25 L5 15 L20 10 L35 15"/>
+    </g>
+
+    <rect x="130" y="150" width="100" height="70" rx="8" fill="#616161"/>
+    <text x="180" y="166" fill="#FFFFFF" font-family="sans-serif" font-size="12" text-anchor="middle">5. Deep Post</text>
+    <g transform="translate(160,174)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 25 L20 5"/>
+    </g>
+
+    <rect x="245" y="150" width="100" height="70" rx="8" fill="#616161"/>
+    <text x="295" y="166" fill="#FFFFFF" font-family="sans-serif" font-size="12" text-anchor="middle">6. Draw</text>
+    <g transform="translate(275,174)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 25 L5 10 L20 5 L35 10"/>
+    </g>
+
+    <rect x="0" y="250" width="360" height="30" fill="#424242"/>
+    <text x="180" y="269" fill="#FFEB3B" font-family="sans-serif" font-size="13" text-anchor="middle">DEFENSE:</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Football / Soccer</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: #111;
+      overflow: hidden;
+    }
+
+    #wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    canvas {
+      display: block;
+      background: #000;
+      max-width: 100vw;
+      max-height: 100vh;
+      aspect-ratio: 1400 / 800;
+      width: 100vw;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <canvas id="game-canvas" width="1400" height="800"></canvas>
+  </div>
+  <script defer src="game.min.js"></script>
+</body>
+
+</html>
