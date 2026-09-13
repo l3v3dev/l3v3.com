@@ -1,0 +1,37 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="96" viewBox="0 0 64 96">
+  <!-- Base platform -->
+  <rect x="12" y="88" width="40" height="7" rx="2" fill="#0f1520" stroke="#0a0e18" stroke-width="1"/>
+  <rect x="16" y="86" width="32" height="3" rx="1" fill="#1a2238" stroke="#0a0e18" stroke-width="0.5"/>
+
+  <!-- Main column -->
+  <rect x="24" y="22" width="16" height="64" rx="2" fill="#1a2238" stroke="#0a0e18" stroke-width="1"/>
+  <!-- Column steel highlight -->
+  <rect x="26" y="24" width="3" height="60" rx="1" fill="#2a3550" opacity="0.6"/>
+
+  <!-- Column detail lines -->
+  <line x1="25" y1="44" x2="39" y2="44" stroke="#2a3550" stroke-width="1"/>
+  <line x1="25" y1="58" x2="39" y2="58" stroke="#2a3550" stroke-width="1"/>
+  <line x1="25" y1="72" x2="39" y2="72" stroke="#2a3550" stroke-width="1"/>
+
+  <!-- Coil ring glow (outer soft) -->
+  <ellipse cx="32" cy="32" rx="14" ry="6" fill="none" stroke="#00e5ff" stroke-width="5" opacity="0.15"/>
+  <!-- Coil ring -->
+  <ellipse cx="32" cy="32" rx="12" ry="5" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <!-- Coil ring inner accent -->
+  <ellipse cx="32" cy="32" rx="9" ry="3.5" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Top cap / emitter housing -->
+  <rect x="21" y="16" width="22" height="7" rx="2" fill="#2a3550" stroke="#0a0e18" stroke-width="1"/>
+
+  <!-- Emitter mouth (open circle, side view) -->
+  <ellipse cx="32" cy="11" rx="11" ry="6" fill="#0a1520" stroke="#00e5ff" stroke-width="1.5"/>
+  <!-- Energy glow inside emitter -->
+  <ellipse cx="32" cy="11" rx="8" ry="4" fill="#00e5ff" opacity="0.5"/>
+  <ellipse cx="32" cy="11" rx="5" ry="2.5" fill="#80f5ff" opacity="0.7"/>
+  <ellipse cx="32" cy="11" rx="2.5" ry="1.2" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Small cyan accent dots on column -->
+  <circle cx="32" cy="50" r="1.5" fill="#00e5ff" opacity="0.7"/>
+  <circle cx="32" cy="64" r="1.5" fill="#00e5ff" opacity="0.5"/>
+</svg>

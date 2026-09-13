@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Function Path</title>
+  <title>MathPather</title>
   <style>
     html, body {
       margin: 0;
@@ -23,6 +23,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    #canvas-wrap {
+      position: relative;
     }
 
     #game-canvas {
@@ -206,13 +210,134 @@
     #go-btn:active {
       transform: scale(0.95);
     }
+
+    /* --- v6 landing screen (menu overlay) --- */
+    #menu-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 800px;
+      height: 400px;
+      box-sizing: border-box;
+      background: rgba(10, 22, 40, 0.96);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 10;
+    }
+
+    #menu-screen.hidden {
+      display: none;
+    }
+
+    /* Hide game content (bars) while the landing menu is open */
+    #game-container.menu-open #top-bar,
+    #game-container.menu-open #hint-bar,
+    #game-container.menu-open #input-bar {
+      display: none;
+    }
+
+    .menu-title {
+      margin: 0;
+      color: #00e5ff;
+      font-size: 34px;
+      letter-spacing: 6px;
+      text-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+    }
+
+    .menu-subtitle {
+      color: #8899aa;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: -8px;
+    }
+
+    .mode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 640px;
+    }
+
+    .mode-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      background: #101f36;
+      border: 1px solid #2a3a54;
+      border-radius: 8px;
+      padding: 12px 10px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+    }
+
+    .mode-card:hover {
+      border-color: #00e5ff;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .mode-card.active {
+      border-color: #00e5ff;
+      box-shadow: 0 0 8px rgba(0, 229, 255, 0.25);
+    }
+
+    .mode-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 6px;
+    }
+
+    .mode-name {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .mode-tagline {
+      color: #8899aa;
+      font-size: 11px;
+    }
+
+    .mode-meta {
+      color: #556677;
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .save-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 6px;
+      background: rgba(0, 229, 255, 0.15);
+      border: 1px solid #00e5ff;
+      border-radius: 4px;
+      color: #00e5ff;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
   </style>
+<script src="../analytics.js?v=6f7efda3-47ee-46b5-986a-c14e24f0e349"></script>
+<script src="../analytics.js?v=6f7efda3-47ee-46b5-986a-c14e24f0e349"></script>
+<script src="../analytics.js?v=6f7efda3-47ee-46b5-986a-c14e24f0e349"></script>
+<script src="../analytics.js?v=6f7efda3-47ee-46b5-986a-c14e24f0e349"></script>
 </head>
 <body>
   <div id="game-container">
-    <canvas id="game-canvas" width="800" height="400"></canvas>
+    <div id="canvas-wrap">
+      <canvas id="game-canvas" width="800" height="400"></canvas>
+    </div>
   </div>
-  <script defer src="game.min.js"></script>
-<a id="back-to-home" href="../../index.html" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
+  <script defer src="game.min.js?v=6f7efda3-47ee-46b5-986a-c14e24f0e349"></script>
+<a id="back-to-home" href="../../index.html?v=6f7efda3-47ee-46b5-986a-c14e24f0e349" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
+<a id="back-to-home" href="../../index.html?v=6f7efda3-47ee-46b5-986a-c14e24f0e349" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
+<a id="back-to-home" href="../../index.html?v=6f7efda3-47ee-46b5-986a-c14e24f0e349" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
+<a id="back-to-home" href="../../index.html?v=6f7efda3-47ee-46b5-986a-c14e24f0e349" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
 </body>
 </html>

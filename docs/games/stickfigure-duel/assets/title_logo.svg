@@ -1,0 +1,49 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="130" viewBox="0 0 420 130">
+  <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+    <!-- I -->
+    <path d="M48,31 Q49,32 48.5,45 L49.5,62 Q50,75 49,94" stroke-width="11"/>
+    <path d="M47.5,32 Q48.5,33 48,46 L49,63 Q49.5,76 48.5,93" stroke-width="9" opacity="0.3"/>
+    <!-- N -->
+    <path d="M68,33 Q69,34 68.5,50 L69.5,70 Q70,85 69,96" stroke-width="11"/>
+    <path d="M69,33 Q80,45 90,58 Q100,72 104,95" stroke-width="10"/>
+    <path d="M104,34 Q105,35 104.5,50 L105.5,70 Q106,85 105,96" stroke-width="11"/>
+    <path d="M68.5,34 Q69.5,35 69,51 L70,71 Q70.5,86 69.5,95" stroke-width="8" opacity="0.25"/>
+    <path d="M104.5,35 Q105.5,36 105,51 L106,71 Q106.5,86 105.5,95" stroke-width="8" opacity="0.25"/>
+    <!-- K -->
+    <path d="M120,32 Q121,33 120.5,48 L121.5,68 Q122,83 121,93" stroke-width="11"/>
+    <path d="M121,60 Q130,50 138,42 Q146,35 154,33" stroke-width="10"/>
+    <path d="M121,62 Q130,72 138,80 Q146,88 155,94" stroke-width="10"/>
+    <path d="M120.5,33 Q121.5,34 121,49 L122,69 Q122.5,84 121.5,92" stroke-width="8" opacity="0.25"/>
+    <!-- D -->
+    <path d="M178,33 Q179,34 178.5,50 L179.5,72 Q180,88 179,95" stroke-width="11"/>
+    <path d="M179,33 Q195,32 208,40 Q220,50 221,64 Q220,78 208,87 Q195,95 179,95" stroke-width="10"/>
+    <path d="M178.5,34 Q179.5,35 179,51 L180,73 Q180.5,89 179.5,94" stroke-width="8" opacity="0.25"/>
+    <path d="M180,34 Q196,33 209,41 Q221,51 222,65 Q221,79 209,88 Q196,96 180,96" stroke-width="7" opacity="0.2"/>
+    <!-- U -->
+    <path d="M234,34 Q235,35 234.5,50 L235.5,72 Q236,82 240,88 Q245,95 252,97" stroke-width="11"/>
+    <path d="M252,97 Q259,95 264,88 Q268,82 269,72 L270,50 Q270.5,35 271,35" stroke-width="11"/>
+    <path d="M234.5,35 Q235.5,36 235,51 L236,73 Q237,83 241,89 Q246,96 253,98" stroke-width="8" opacity="0.25"/>
+    <path d="M253,98 Q260,96 265,89 Q269,83 270,73 L271,51 Q271.5,36 272,36" stroke-width="8" opacity="0.25"/>
+    <!-- E -->
+    <path d="M284,33 Q285,34 284.5,48 L285.5,68 Q286,84 285,94" stroke-width="11"/>
+    <path d="M285,33 Q295,32 305,33 Q312,33.5 318,34" stroke-width="10"/>
+    <path d="M285,63 Q293,62.5 302,63 Q308,63.5 313,64" stroke-width="9"/>
+    <path d="M285,94 Q295,94.5 305,95 Q312,95.5 318,96" stroke-width="10"/>
+    <path d="M284.5,34 Q285.5,35 285,49 L286,69 Q286.5,85 285.5,93" stroke-width="8" opacity="0.25"/>
+    <path d="M286,34 Q296,33 306,34 Q313,34.5 319,35" stroke-width="7" opacity="0.2"/>
+    <!-- L -->
+    <path d="M334,34 Q335,35 334.5,50 L335.5,72 Q336,86 335,96" stroke-width="11"/>
+    <path d="M335,96 Q345,96.5 355,97 Q362,97.5 368,98" stroke-width="10"/>
+    <path d="M334.5,35 Q335.5,36 335,51 L336,73 Q336.5,87 335.5,95" stroke-width="8" opacity="0.25"/>
+    <path d="M336,97 Q346,97.5 356,98 Q363,98.5 369,99" stroke-width="7" opacity="0.2"/>
+    <!-- Rough ink splatter accents -->
+    <circle cx="52" cy="28" r="1.5" fill="#000" stroke="none" opacity="0.6"/>
+    <circle cx="108" cy="99" r="1.2" fill="#000" stroke="none" opacity="0.5"/>
+    <circle cx="224" cy="62" r="1.8" fill="#000" stroke="none" opacity="0.4"/>
+    <circle cx="272" cy="31" r="1.3" fill="#000" stroke="none" opacity="0.5"/>
+    <circle cx="370" cy="100" r="1.5" fill="#000" stroke="none" opacity="0.4"/>
+    <circle cx="155" cy="30" r="1" fill="#000" stroke="none" opacity="0.5"/>
+    <circle cx="318" cy="97" r="1.4" fill="#000" stroke="none" opacity="0.45"/>
+  </g>
+</svg>

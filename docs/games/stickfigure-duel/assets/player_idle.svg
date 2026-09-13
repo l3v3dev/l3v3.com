@@ -1,0 +1,45 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Head - rough circle facing right -->
+  <path d="M62,18 Q68,16 72,20 Q75,25 73,31 Q70,35 64,35 Q58,34 56,29 Q55,23 58,19 Q60,17 62,18" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M63,19 Q69,17 72,21 Q74,26 72,30 Q69,34 64,34 Q59,33 57,28 Q56,23 59,19" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+  <!-- Eye dot -->
+  <circle cx="69" cy="25" r="1.5" fill="black"/>
+
+  <!-- Neck -->
+  <path d="M63,35 Q62,38 61,41" fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Torso - slight forward lean -->
+  <path d="M61,41 Q59,50 57,58 Q56,65 55,72" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
+  <path d="M62,42 Q60,51 58,59 Q57,66 56,71" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Front arm (right) - raised guard, fist up -->
+  <path d="M61,42 Q68,44 74,48 Q78,50 80,46 Q82,42 80,37" fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62,43 Q69,45 75,49 Q79,51 81,47 Q83,43 81,38" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+  <!-- Front fist -->
+  <path d="M79,36 Q82,34 84,36 Q85,39 83,41 Q80,42 78,40 Q77,38 79,36" fill="none" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Back arm (left) - raised guard, slightly lower -->
+  <path d="M60,43 Q55,48 52,54 Q50,58 52,55 Q54,52 56,48 Q58,44 57,40" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M59,44 Q54,49 51,55 Q49,59 51,56 Q53,53 55,49 Q57,45 56,41" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- Back fist -->
+  <path d="M55,39 Q58,37 60,39 Q61,42 59,44 Q56,45 54,43 Q53,41 55,39" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Front leg (right) - stepping forward -->
+  <path d="M55,72 Q58,80 62,88 Q65,95 68,103 Q70,108 72,112" fill="none" stroke="black" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56,73 Q59,81 63,89 Q66,96 69,104 Q71,109 73,113" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Front foot -->
+  <path d="M72,112 Q76,113 80,114 Q82,115 80,116 Q76,116 72,115" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Back leg (left) - planted back -->
+  <path d="M55,72 Q50,80 45,88 Q42,95 38,103 Q36,108 34,112" fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54,73 Q49,81 44,89 Q41,96 37,104 Q35,109 33,113" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+  <!-- Back foot -->
+  <path d="M34,112 Q30,113 26,114 Q24,115 26,116 Q30,116 34,115" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Extra rough ink splatter accents -->
+  <path d="M60,41 Q61,42 60,43" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M55,71 Q54,73 55,74" fill="none" stroke="black" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M68,47 Q70,48 71,49" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M62,87 Q63,89 64,91" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

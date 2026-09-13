@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#ffffff"/>
+  <!-- Body -->
+  <circle cx="32" cy="33" r="22" fill="#E53935"/>
+  <!-- Belly patch -->
+  <ellipse cx="32" cy="44" rx="11" ry="8" fill="#FFFFFF"/>
+  <!-- Glossy highlight -->
+  <circle cx="23" cy="21" r="5" fill="#FFFFFF" opacity="0.35"/>
+  <!-- Left eye -->
+  <circle cx="23" cy="27" r="7" fill="#FFFFFF"/>
+  <circle cx="24" cy="28" r="3" fill="#1A1A1A"/>
+  <!-- Right eye -->
+  <circle cx="41" cy="27" r="7" fill="#FFFFFF"/>
+  <circle cx="40" cy="28" r="3" fill="#1A1A1A"/>
+  <!-- Beak -->
+  <polygon points="28,32 36,32 32,37" fill="#FFC107"/>
+  <!-- Left angry eyebrow -->
+  <line x1="17" y1="21" x2="26" y2="24" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Right angry eyebrow -->
+  <line x1="47" y1="21" x2="38" y2="24" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

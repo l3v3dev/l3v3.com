@@ -1,0 +1,32 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+  <!-- PUNCH button -->
+  <path d="M 69,44 C 70,30 62,16 48,15 C 34,14 20,22 18,36 C 16,50 24,64 38,66 C 52,68 66,58 69,44 Z" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 68,45 C 69,31 61,17 47,16 C 33,15 21,23 19,37 C 17,51 25,63 39,65 C 53,67 65,57 68,45 Z" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="40" y="48" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="black" text-anchor="middle" letter-spacing="0.5" transform="rotate(-1,40,48)">PUNCH</text>
+
+  <!-- KICK button -->
+  <path d="M 149,43 C 151,29 143,15 129,14 C 115,13 101,21 99,35 C 97,49 105,63 119,65 C 133,67 147,57 149,43 Z" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 148,44 C 150,30 142,16 128,15 C 114,14 102,22 100,36 C 98,50 106,62 120,64 C 134,66 146,56 148,44 Z" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="120" y="48" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="black" text-anchor="middle" letter-spacing="0.5" transform="rotate(1,120,48)">KICK</text>
+
+  <!-- BLOCK button -->
+  <path d="M 229,44 C 230,30 222,16 208,15 C 194,14 180,22 178,36 C 176,50 184,64 198,66 C 212,68 226,58 229,44 Z" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 228,45 C 229,31 221,17 207,16 C 193,15 181,23 179,37 C 177,51 185,63 199,65 C 213,67 225,57 228,45 Z" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="200" y="48" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="black" text-anchor="middle" letter-spacing="0.5" transform="rotate(-1,200,48)">BLOCK</text>
+
+  <!-- DASH button -->
+  <path d="M 69,114 C 71,100 63,86 49,85 C 35,84 21,92 19,106 C 17,120 25,134 39,136 C 53,138 67,128 69,114 Z" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 68,115 C 70,101 62,87 48,86 C 34,85 22,93 20,107 C 18,121 26,133 40,135 C 54,137 66,127 68,115 Z" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="40" y="118" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="black" text-anchor="middle" letter-spacing="0.5" transform="rotate(1,40,118)">DASH</text>
+
+  <!-- SMUDGE button -->
+  <path d="M 149,113 C 151,99 143,85 129,84 C 115,83 101,91 99,105 C 97,119 105,133 119,135 C 133,137 147,127 149,113 Z" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 148,114 C 150,100 142,86 128,85 C 114,84 102,92 100,106 C 98,120 106,132 120,134 C 134,136 146,126 148,114 Z" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="120" y="118" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="black" text-anchor="middle" letter-spacing="0.5" transform="rotate(-1,120,118)">SMUDGE</text>
+
+  <!-- END button -->
+  <path d="M 229,114 C 231,100 223,86 209,85 C 195,84 181,92 179,106 C 177,120 185,134 199,136 C 213,138 227,128 229,114 Z" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 228,115 C 230,101 222,87 208,86 C 194,85 182,93 180,107 C 178,121 186,133 200,135 C 214,137 226,127 228,115 Z" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="200" y="118" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="black" text-anchor="middle" letter-spacing="0.5" transform="rotate(1,200,118)">END</text>
+</svg>

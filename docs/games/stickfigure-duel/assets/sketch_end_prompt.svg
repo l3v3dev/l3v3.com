@@ -1,0 +1,19 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="70" viewBox="0 0 240 70">
+  <defs>
+    <filter id="rough" x="-5%" y="-10%" width="110%" height="120%">
+      <feTurbulence type="turbulence" baseFrequency="0.065" numOctaves="4" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rough2" x="-5%" y="-10%" width="110%" height="120%">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" seed="13" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)" transform="rotate(-1.2, 120, 35)">
+    <text x="120" y="44" text-anchor="middle" font-family="'Comic Sans MS','Marker Felt','Segoe Print',cursive" font-size="26" font-weight="bold" fill="#cc1111" stroke="#8b0000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" letter-spacing="1">END SKETCH?</text>
+  </g>
+  <g filter="url(#rough2)" transform="rotate(-0.8, 120, 35)" opacity="0.55">
+    <text x="121" y="45" text-anchor="middle" font-family="'Comic Sans MS','Marker Felt','Segoe Print',cursive" font-size="26" font-weight="bold" fill="none" stroke="#aa0000" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" letter-spacing="1">END SKETCH?</text>
+  </g>
+</svg>

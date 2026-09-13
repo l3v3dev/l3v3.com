@@ -1,0 +1,9 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="0 0 120 60">
+  <!-- Left arrow - hand-drawn marker style -->
+  <path d="M 12 30 Q 11.5 29.5 12 30 L 24 18.5 Q 24.5 18 25 19 L 24.5 30 Q 24.5 30.5 25 31 L 24 41.5 Q 23.5 42 23 41 L 12 30" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 24.5 30 Q 30 29.5 36 30 Q 42 30.5 48 30" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- Right arrow - hand-drawn marker style -->
+  <path d="M 108 30 Q 108.5 29.5 108 30 L 96 18.5 Q 95.5 18 95 19 L 95.5 30 Q 95.5 30.5 95 31 L 96 41.5 Q 96.5 42 97 41 L 108 30" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 95.5 30 Q 90 29.5 84 30 Q 78 30.5 72 30" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

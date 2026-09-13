@@ -1,0 +1,51 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Head - rough hand-drawn circle -->
+  <path d="M 46 10 C 51 8, 57 9, 59 14 C 61 19, 60 25, 57 28 C 54 31, 48 31, 45 28 C 42 25, 42 19, 44 14 C 45 11, 46 10, 46 10" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Head roughness overlay -->
+  <path d="M 47 11 C 52 9, 56 10, 58 15 C 60 20, 59 25, 56 28" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Torso - slight forward lean -->
+  <path d="M 50 30 C 49 38, 48 48, 46 60" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 51 31 C 50 40, 49 50, 47 59" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Right arm (JAB) - extended forward to the right -->
+  <path d="M 50 34 C 58 35, 68 36, 78 37 C 85 37, 92 38, 97 38" fill="none" stroke="black" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M 51 35 C 60 36, 70 37, 80 38 C 86 38, 93 38, 96 38" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Jab fist - rough knuckle shape -->
+  <path d="M 95 34 C 99 33, 103 35, 104 38 C 104 41, 101 43, 98 43 C 95 43, 93 41, 93 38 C 93 35, 94 34, 95 34" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 96 35 C 100 34, 103 36, 103 39" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Left arm (guard) - pulled back near chest -->
+  <path d="M 50 34 C 46 38, 42 44, 38 49 C 36 51, 35 53, 34 53" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- Left guard fist -->
+  <path d="M 32 51 C 30 50, 28 52, 29 54 C 30 56, 32 56, 33 54 C 34 52, 33 51, 32 51" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right leg (forward lunge) -->
+  <path d="M 46 60 C 50 68, 56 78, 62 88 C 64 92, 66 96, 67 100" fill="none" stroke="black" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M 47 61 C 51 70, 57 80, 63 90" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Left leg (back leg) -->
+  <path d="M 46 60 C 42 68, 35 78, 28 88 C 26 92, 24 96, 22 100" fill="none" stroke="black" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M 45 61 C 41 70, 34 80, 27 90" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Right foot -->
+  <path d="M 67 100 C 71 101, 75 101, 78 100" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- Left foot -->
+  <path d="M 22 100 C 18 101, 15 101, 12 100" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Motion arc - quick jab swoosh near fist -->
+  <path d="M 106 32 C 110 35, 112 40, 110 45" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 108 29 C 113 33, 115 40, 112 47" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 110 26 C 115 31, 117 39, 114 48" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Small speed lines behind jab arm -->
+  <path d="M 72 33 C 76 33, 80 33, 84 33" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 70 42 C 74 42, 78 42, 82 42" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Extra rough ink splatter marks for hand-drawn feel -->
+  <circle cx="105" cy="30" r="1" fill="black" opacity="0.7"/>
+  <circle cx="112" cy="50" r="0.8" fill="black" opacity="0.5"/>
+  <circle cx="79" cy="32" r="0.7" fill="black" opacity="0.6"/>
+</svg>

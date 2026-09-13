@@ -1,0 +1,27 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#00e5ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#80f5ff"/>
+      <stop offset="70%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#00b8cc"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ccf8ff"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" fill="#0f1520"/>
+  <circle cx="32" cy="32" r="30" fill="url(#halo)"/>
+  <circle cx="32" cy="32" r="18" fill="url(#orb)"/>
+  <circle cx="32" cy="32" r="8" fill="url(#core)"/>
+  <polyline points="14,22 17,25 15,28 18,31 16,34" fill="none" stroke="#00e5ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <polyline points="50,20 47,24 49,27 46,30 48,34" fill="none" stroke="#00e5ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>

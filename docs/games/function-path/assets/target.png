@@ -1,0 +1,16 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#ffffff"/>
+  <!-- Subtle shadow for 3D tilt -->
+  <ellipse cx="32" cy="33.5" rx="28" ry="24.5" fill="#d0d0d0" opacity="0.3"/>
+  <!-- Outer red ring -->
+  <ellipse cx="32" cy="32" rx="28" ry="24.5" fill="#cc3333"/>
+  <!-- White ring -->
+  <ellipse cx="32" cy="32" rx="22" ry="19.2" fill="#ffffff"/>
+  <!-- Red ring -->
+  <ellipse cx="32" cy="32" rx="16" ry="14" fill="#cc3333"/>
+  <!-- White ring -->
+  <ellipse cx="32" cy="32" rx="10" ry="8.8" fill="#ffffff"/>
+  <!-- Center yellow star -->
+  <polygon points="32,27 33.5,30 36.8,30.5 34.4,32.8 34.9,36 32,34.5 29.1,36 29.6,32.8 27.2,30.5 30.5,30" fill="#ffc832"/>
+</svg>

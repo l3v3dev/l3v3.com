@@ -1,0 +1,39 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Head -->
+  <circle cx="43" cy="23" r="8" fill="none" stroke="black" stroke-width="3.5"/>
+  <path d="M36 20 Q43 14 50 20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Body -->
+  <path d="M43 31 Q42.5 45 42 64" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M43.5 32 Q43 46 42.5 64" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Right arm - overhand punch fully extended to the right -->
+  <path d="M45 36 Q58 28 75 27 Q90 28 104 33" fill="none" stroke="black" stroke-width="5" stroke-linecap="round"/>
+  <path d="M45.5 37 Q60 29 76 28 Q91 29 105 33.5" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Fist - large and heavy -->
+  <circle cx="107" cy="33" r="6" fill="black"/>
+  <circle cx="107" cy="33" r="4" fill="none" stroke="black" stroke-width="1.5" opacity="0.4"/>
+  <!-- Left arm - pulled back tight -->
+  <path d="M43 38 Q34 44 26 54" fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M43.5 38.5 Q35 45 27 54.5" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- Front leg (right) - lunging forward -->
+  <path d="M42 64 Q54 78 66 92 Q71 100 74 110" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M42.5 64.5 Q55 79 67 93 Q71.5 101 74.5 110" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <!-- Back leg (left) - bent and pushing off -->
+  <path d="M42 64 Q33 78 27 90 Q24 99 20 110" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
+  <path d="M42.5 64.5 Q33.5 79 27.5 91 Q24.5 100 20.5 110" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- Motion arc - overhand swing trajectory -->
+  <path d="M48 12 Q65 2 88 10 Q102 17 107 28" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 4"/>
+  <path d="M50 14 Q66 5 87 12 Q100 18 105 27" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4" opacity="0.5"/>
+  <!-- Impact lines radiating from fist -->
+  <line x1="113" y1="26" x2="119" y2="19" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  <line x1="114" y1="33" x2="120" y2="33" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="113" y1="40" x2="119" y2="47" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  <line x1="111" y1="22" x2="115" y2="15" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <line x1="111" y1="44" x2="115" y2="51" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Speed lines behind the arm -->
+  <path d="M55 30 Q65 26 78 26" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M52 34 Q64 30 80 30" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Extra rough marker texture strokes -->
+  <path d="M44 31.5 Q43 44 42.5 63" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  <path d="M46 35.5 Q62 27 80 26.5 Q93 27.5 103 32" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+</svg>

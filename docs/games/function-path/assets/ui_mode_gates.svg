@@ -1,0 +1,100 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="checker" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="16" height="16" fill="#0e2240"/>
+      <rect x="16" y="0" width="16" height="16" fill="#0b1a2e"/>
+      <rect x="0" y="16" width="16" height="16" fill="#0b1a2e"/>
+      <rect x="16" y="16" width="16" height="16" fill="#0e2240"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" fill="#0a1628"/>
+
+  <!-- Checkerboard grid -->
+  <rect x="8" y="8" width="112" height="112" fill="url(#checker)" rx="4"/>
+  <rect x="8" y="8" width="112" height="112" fill="none" stroke="#1a3a5c" stroke-width="1" rx="4"/>
+
+  <!-- Grid lines subtle -->
+  <g stroke="#122844" stroke-width="0.5" opacity="0.6">
+    <line x1="24" y1="8" x2="24" y2="120"/>
+    <line x1="40" y1="8" x2="40" y2="120"/>
+    <line x1="56" y1="8" x2="56" y2="120"/>
+    <line x1="72" y1="8" x2="72" y2="120"/>
+    <line x1="88" y1="8" x2="88" y2="120"/>
+    <line x1="104" y1="8" x2="104" y2="120"/>
+    <line x1="8" y1="24" x2="120" y2="24"/>
+    <line x1="8" y1="40" x2="120" y2="40"/>
+    <line x1="8" y1="56" x2="120" y2="56"/>
+    <line x1="8" y1="72" x2="120" y2="72"/>
+    <line x1="8" y1="88" x2="120" y2="88"/>
+    <line x1="8" y1="104" x2="120" y2="104"/>
+  </g>
+
+  <!-- Gate 1: x=32, centered y=64 -->
+  <g filter="url(#glow)">
+    <rect x="30" y="36" width="4" height="56" rx="2" fill="#00e5ff" opacity="0.9"/>
+    <rect x="31" y="38" width="2" height="52" rx="1" fill="#aaffff" opacity="0.7"/>
+  </g>
+
+  <!-- Gate 2: x=64, centered y=44 -->
+  <g filter="url(#glow)">
+    <rect x="62" y="16" width="4" height="56" rx="2" fill="#00e5ff" opacity="0.9"/>
+    <rect x="63" y="18" width="2" height="52" rx="1" fill="#aaffff" opacity="0.7"/>
+  </g>
+
+  <!-- Gate 3: x=96, centered y=72 -->
+  <g filter="url(#glow)">
+    <rect x="94" y="44" width="4" height="56" rx="2" fill="#00e5ff" opacity="0.9"/>
+    <rect x="95" y="46" width="2" height="52" rx="1" fill="#aaffff" opacity="0.7"/>
+  </g>
+
+  <!-- Glowing cyan curve through all three gates -->
+  <g filter="url(#glow)">
+    <path d="M 12,72 C 20,68 28,64 32,64 C 40,64 56,44 64,44 C 72,44 88,72 96,72 C 104,72 112,66 120,62"
+          fill="none" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" opacity="0.95"/>
+  </g>
+  <path d="M 12,72 C 20,68 28,64 32,64 C 40,64 56,44 64,44 C 72,44 88,72 96,72 C 104,72 112,66 120,62"
+        fill="none" stroke="#aaffff" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Cute rounded robot on the curve (positioned around x=48, y=52) -->
+  <g transform="translate(48,52) rotate(-8)">
+    <!-- Body -->
+    <rect x="-5" y="-2" width="10" height="11" rx="3" fill="#4a90d9"/>
+    <rect x="-4" y="-1" width="8" height="9" rx="2.5" fill="#5ba3e8"/>
+    <!-- Head -->
+    <rect x="-4.5" y="-9" width="9" height="8" rx="3.5" fill="#5ba3e8"/>
+    <rect x="-3.5" y="-8" width="7" height="6" rx="3" fill="#6db3f0"/>
+    <!-- Eyes -->
+    <circle cx="-1.8" cy="-5" r="1.2" fill="#ffffff"/>
+    <circle cx="1.8" cy="-5" r="1.2" fill="#ffffff"/>
+    <circle cx="-1.8" cy="-5" r="0.6" fill="#1a2a4a"/>
+    <circle cx="1.8" cy="-5" r="0.6" fill="#1a2a4a"/>
+    <!-- Antenna -->
+    <line x1="0" y1="-9" x2="0" y2="-12" stroke="#6db3f0" stroke-width="1" stroke-linecap="round"/>
+    <circle cx="0" cy="-12.5" r="1.2" fill="#00e5ff" filter="url(#softglow)"/>
+    <!-- Little feet -->
+    <rect x="-3.5" y="8.5" width="3" height="2" rx="1" fill="#3a78b8"/>
+    <rect x="0.5" y="8.5" width="3" height="2" rx="1" fill="#3a78b8"/>
+    <!-- Chest light -->
+    <circle cx="0" cy="3" r="1.5" fill="#00e5ff" opacity="0.8" filter="url(#softglow)"/>
+  </g>
+
+  <!-- Subtle vignette overlay -->
+  <rect width="128" height="128" fill="none" stroke="#0a1628" stroke-width="6" rx="4" opacity="0.5"/>
+</svg>

@@ -1,0 +1,47 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Head - rough wobbly circle -->
+  <path d="M 53,16 C 51,10 56,6 61,7 C 67,6 71,11 70,17 C 71,23 66,28 60,28 C 54,28 52,22 53,16 Z" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 54,17 C 52,11 57,7 61,8 C 66,7 70,12 69,17" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Torso - slightly wobbly -->
+  <path d="M 59,28 C 58,34 58,40 59,48 C 59,56 60,64 60,72" fill="none" stroke="black" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M 60,30 C 59,38 59,46 60,54 C 60,62 60,68 60,72" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left upper arm -->
+  <path d="M 50,34 C 47,38 44,44 41,50 C 40,52 39,53 39,54" fill="none" stroke="black" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M 51,35 C 48,40 45,45 42,51" fill="none" stroke="black" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- Right upper arm -->
+  <path d="M 70,34 C 73,38 76,44 79,50 C 80,52 81,53 81,54" fill="none" stroke="black" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M 69,35 C 72,40 75,45 78,51" fill="none" stroke="black" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- Left forearm crossing in front of face (left elbow to right side of face) -->
+  <path d="M 39,54 C 44,50 50,44 56,38 C 60,34 65,30 70,28 C 72,27 74,27 75,28" fill="none" stroke="black" stroke-width="4.8" stroke-linecap="round"/>
+  <path d="M 40,53 C 46,48 52,42 58,36 C 62,33 67,29 72,28" fill="none" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Right forearm crossing in front of face (right elbow to left side of face) -->
+  <path d="M 81,54 C 76,50 70,44 64,38 C 60,34 55,30 50,28 C 48,27 46,27 45,28" fill="none" stroke="black" stroke-width="4.8" stroke-linecap="round"/>
+  <path d="M 80,53 C 74,48 68,42 62,36 C 58,33 53,29 48,28" fill="none" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Left leg - slightly bent knee -->
+  <path d="M 55,72 C 53,78 50,84 48,90 C 46,96 44,102 42,108 C 41,110 41,111 41,112" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 56,73 C 54,79 51,85 49,91 C 47,97 45,103 43,109" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right leg - slightly bent knee -->
+  <path d="M 65,72 C 67,78 70,84 72,90 C 74,96 76,102 78,108 C 79,110 79,111 79,112" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 64,73 C 66,79 69,85 71,91 C 73,97 75,103 77,109" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left foot -->
+  <path d="M 41,112 C 39,113 36,114 33,114" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Right foot -->
+  <path d="M 79,112 C 81,113 84,114 87,114" fill="none" stroke="black" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Extra rough marker texture strokes -->
+  <path d="M 58,29 C 57,36 58,44 59,52" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 42,52 C 48,47 54,41 60,35" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 78,52 C 72,47 66,41 60,35" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 50,35 C 48,39 46,43 44,47" fill="none" stroke="black" stroke-width="1.6" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 70,35 C 72,39 74,43 76,47" fill="none" stroke="black" stroke-width="1.6" stroke-linecap="round" opacity="0.5"/>
+</svg>

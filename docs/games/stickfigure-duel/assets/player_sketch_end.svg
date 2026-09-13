@@ -1,0 +1,50 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="130" viewBox="0 0 120 130">
+  <!-- Head - rough circle with multiple strokes -->
+  <circle cx="55" cy="22" r="7" fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="55.5" cy="21.5" r="6.5" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="12 3"/>
+
+  <!-- Body - leaning back, thick marker stroke -->
+  <path d="M55 29 Q53 50 50 72" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M55.5 30 Q53.5 51 50.5 71" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Raised right arm - going up high -->
+  <path d="M55 38 Q65 28 78 10" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
+  <path d="M55.5 38.5 Q66 27 78.5 10.5" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Big X in the air - dramatic finisher mark -->
+  <path d="M76 1 Q90 14 104 27" fill="none" stroke="black" stroke-width="5" stroke-linecap="round"/>
+  <path d="M76.5 1.5 Q90.5 14.5 103.5 26.5" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  <path d="M104 1 Q90 14 76 27" fill="none" stroke="black" stroke-width="5" stroke-linecap="round"/>
+  <path d="M103.5 1.5 Q89.5 14.5 76.5 26.5" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  <!-- Extra roughness on X -->
+  <path d="M77 2 Q91 15 103 26" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8 4"/>
+  <path d="M103 2 Q89 15 77 26" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8 4"/>
+
+  <!-- Left arm - extended out for balance -->
+  <path d="M55 38 Q42 45 24 54" fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M55.5 38.5 Q42.5 45.5 24.5 54.5" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Left leg - wide stance -->
+  <path d="M50 72 Q40 95 27 122" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M50.5 72.5 Q40.5 95.5 27.5 121.5" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right leg - wide stance -->
+  <path d="M50 72 Q62 95 74 122" fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M50.5 72.5 Q62.5 95.5 74.5 121.5" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Feet - small rough marks -->
+  <path d="M27 122 Q22 124 18 123" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+  <path d="M74 122 Q79 124 83 123" fill="none" stroke="black" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Extra roughness / ink splatter accents -->
+  <path d="M54 30 Q52 52 49 70" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+  <path d="M56 39 Q67 26 79 9" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 5"/>
+  <path d="M49 73 Q39 96 26 121" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="7 4"/>
+  <path d="M51 73 Q63 96 75 121" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="7 4"/>
+
+  <!-- Small motion lines near the X for dynamism -->
+  <path d="M108 8 L112 5" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M110 18 L115 16" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M106 28 L110 32" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg>
