@@ -3,7 +3,7 @@
 This repository hosts the website for **l3v3.com**
 
 ## Website
-- `docs/index.html` � main landing page
+- `docs/index.html` main landing page
 
 ## About l3v3
 l3v3 hosts static pages.

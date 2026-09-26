@@ -7,39 +7,67 @@
   <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>l3v3 | Login</title>
-  <link rel="icon" href="../favicon.png?v=0c96334a-0528-407e-b0f5-52feb1e3c486" type="image/png">
+  <link rel="icon" href="../favicon.png?v=176a3774-7b7e-45d8-a668-d147da5c53cc" type="image/png">
   <style>
     :root{color-scheme:dark;--bg:#121413;--panel:#1d211f;--line:#343a36;--muted:#aab4ad;--text:#e8ece9;--accent:#9fd3b0;--soft:#263127}
     *{box-sizing:border-box}html,body{margin:0;min-height:100%}
     body{background:var(--bg);color:var(--text);font-family:Georgia,serif;display:flex;justify-content:center;min-height:100vh;overflow-x:hidden}
     main{width:100%;max-width:900px;min-height:100vh;padding:clamp(10px,2vw,22px) 24px 12px}
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.logo{color:var(--text);font-size:30px;font-weight:700;text-decoration:none}.tagline{margin-top:4px;color:var(--muted);font:12px system-ui,sans-serif;letter-spacing:.08em}
-    .under-shell{max-width:680px;margin:50px auto 0;padding:0}.under-card{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:24px}.under-title{font-size:34px;margin:0 0 12px}.under-subtitle{color:var(--muted);font:16px system-ui,sans-serif;line-height:1.65}.under-message{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;color:var(--text);font:14px system-ui,sans-serif}.under-links{margin-top:20px}.under-links a{color:var(--accent);text-decoration:none}.back-row{margin-top:20px}.back-link{color:var(--muted);font:12px system-ui,sans-serif;text-decoration:none}.back-link:hover{color:var(--accent)}
+    .under-shell{max-width:680px;margin:50px auto 0;padding:0}.under-card{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:24px}.under-title{font-size:16px;margin:0 0 12px}.under-subtitle{color:var(--muted);font:16px system-ui,sans-serif;line-height:1.65}.under-message{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;color:var(--text);font:14px system-ui,sans-serif}.under-links{margin-top:20px}.under-links a{color:var(--accent);text-decoration:none}.back-row{margin-top:20px}.back-link{color:var(--muted);font:12px system-ui,sans-serif;text-decoration:none}.back-link:hover{color:var(--accent)}
   .games{display:flex;flex-wrap:wrap;gap:8px;border-top:0px dotted var(--line);padding-top:4px}.game-card{width:calc(50% - 4px);border:1px solid var(--line);border-radius:4px;background:transparent}.game-card:hover{background:rgb(169 223 189 / 7%)}.game-card.hidden{display:none}.game-card .game{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:12px 14px;color:var(--text);text-decoration:none}.game-card .game:hover{background:transparent}.game-name{font-size:17px}.arrow{color:var(--muted);font:20px system-ui,sans-serif}.game-card:hover .arrow{color:var(--text)}.info-button{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;color:var(--text);background:transparent;font:15px Georgia,serif;cursor:pointer}.info-button:hover{border-color:var(--accent);color:var(--accent)}.empty{padding:20px 0;color:var(--muted);font:14px system-ui,sans-serif}
-  </style>
+  </style>  <meta name="description" content="Learn about the l3v3 login experience and explore the site’s browser game catalog.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.l3v3.com/oauth/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="l3v3">
+  <meta property="og:title" content="l3v3 | Login">
+  <meta property="og:description" content="Learn about the l3v3 login experience and explore the site’s browser game catalog.">
+  <meta property="og:url" content="https://www.l3v3.com/oauth/">
+  <meta property="og:image" content="https://www.l3v3.com/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="l3v3 | Login">
+  <meta name="twitter:description" content="Learn about the l3v3 login experience and explore the site’s browser game catalog.">
+  <meta name="twitter:image" content="https://www.l3v3.com/favicon.png">
 </head>
 <body>
 <main>
-  <header><div><a class="logo" href="../index.html?v=0c96334a-0528-407e-b0f5-52feb1e3c486">l3v3</a><div class="tagline">l1v3 l0v3 l3v3</div></div></header>
+  <header><div><a class="logo" href="../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc">l3v3</a><div class="tagline">l1v3 l0v3 l3v3</div></div></header>
   <section class="under-shell">
     <div class="under-card">
       <div class="under-title">Under construction</div>
       <div class="under-subtitle">Thank you for your interest. 
-        Google / Microsoft integration is not yet enabled.</div>
+        Sign-in integration and related features are not yet enabled.</div>
       <div class="under-message">&nbsp;</div>
-      <div class="under-title">Samples</div>
+      <div class="under-title">Games in development</div>
       <div class="games" id="games">
+        <div class="game-card" data-category="Educational"><a class="game" href="../games/function-path-3d/index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc"><span
+            class="game-name">Math Path 3D</span><span class="arrow"></span><button class="info-button" type="button"
+            aria-label="More information">i</button></a>
+        </div>
+        <div class="game-card" data-category="Educational"><a class="game" href="../games/wylwyl/index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc"><span
+            class="game-name">wylwyl <span style="font-size: 0.5em;">why you learn what you learn</span></span><span class="arrow"></span><button class="info-button" type="button"
+            aria-label="More information">i</button></a>
+        </div>
+        <div class="game-card" data-category="Educational"><a class="game" href="../games/llm-inference-3d/index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc"><span
+            class="game-name">Token Predictor 3D</span><span class="arrow"></span><button class="info-button" type="button"
+            aria-label="More information">i</button></a>
+        </div>
+        <div class="game-card" data-category="Educational"><a class="game" href="../games/llm-train/index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc"><span
+            class="game-name">Gradient Descent</span><span class="arrow"></span><button class="info-button" type="button"
+            aria-label="More information">i</button></a>
+        </div>
         <div class="game-card" data-category="Action"><a class="game"
-            href="../games/stickfigure-duel/index.html?v=0c96334a-0528-407e-b0f5-52feb1e3c486"><span class="game-name">Stick errr</span><span
+            href="../games/rush-hour/index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc"><span class="game-name">Rush Hour</span><span
               class="arrow"></span><button class="info-button" type="button" aria-label="More information">i</button></a>
         </div>
         <div class="game-card" data-category="Sports"><a class="game"
-            href="../games/cricket-batting/index.html?v=0c96334a-0528-407e-b0f5-52feb1e3c486"><span class="game-name">Cricket</span><span
+            href="../games/cricket-batting/index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc"><span class="game-name">Cricket</span><span
               class="arrow"></span><button class="info-button" type="button" aria-label="More information">i</button></a>
         </div>
       </div>
       <div class="under-links">
-        <a href="../index.html?v=0c96334a-0528-407e-b0f5-52feb1e3c486">← Back to Default Games</a>
+        <a href="../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc">← Back to Default Games</a>
       </div>
     </div>
   </section>
