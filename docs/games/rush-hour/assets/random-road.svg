@@ -1,0 +1,55 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <pattern id="grain" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#2b2b2b"/>
+      <circle cx="1" cy="2" r="0.6" fill="#262626"/>
+      <circle cx="5" cy="1" r="0.5" fill="#303030"/>
+      <circle cx="3" cy="4" r="0.7" fill="#272727"/>
+      <circle cx="7" cy="3" r="0.4" fill="#313131"/>
+      <circle cx="2" cy="6" r="0.5" fill="#252525"/>
+      <circle cx="6" cy="6" r="0.6" fill="#2e2e2e"/>
+      <circle cx="4" cy="7" r="0.4" fill="#282828"/>
+      <circle cx="0.5" cy="5" r="0.3" fill="#333333"/>
+      <circle cx="7.5" cy="7.5" r="0.5" fill="#292929"/>
+    </pattern>
+    <pattern id="grain2" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="transparent"/>
+      <circle cx="2" cy="3" r="0.8" fill="#242424" opacity="0.5"/>
+      <circle cx="8" cy="1" r="0.6" fill="#343434" opacity="0.4"/>
+      <circle cx="5" cy="7" r="0.9" fill="#232323" opacity="0.5"/>
+      <circle cx="10" cy="9" r="0.5" fill="#323232" opacity="0.4"/>
+      <circle cx="1" cy="10" r="0.7" fill="#262626" opacity="0.5"/>
+      <circle cx="7" cy="5" r="0.4" fill="#353535" opacity="0.3"/>
+      <circle cx="11" cy="4" r="0.6" fill="#252525" opacity="0.4"/>
+      <circle cx="4" cy="11" r="0.5" fill="#2f2f2f" opacity="0.4"/>
+    </pattern>
+    <linearGradient id="tireWear1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e1e1e" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#1e1e1e" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#1a1a1a" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#1e1e1e" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1e1e1e" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tireWear2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1c1c1c" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#1c1c1c" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#181818" stop-opacity="0.18"/>
+      <stop offset="75%" stop-color="#1c1c1c" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1c1c1c" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="wearPatch" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1d1d1d" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1d1d1d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" fill="#2b2b2b"/>
+  <rect width="128" height="128" fill="url(#grain)"/>
+  <rect width="128" height="128" fill="url(#grain2)"/>
+  <rect x="18" y="0" width="22" height="128" fill="url(#tireWear1)"/>
+  <rect x="88" y="0" width="22" height="128" fill="url(#tireWear2)"/>
+  <ellipse cx="39" cy="35" rx="14" ry="22" fill="url(#wearPatch)"/>
+  <ellipse cx="99" cy="85" rx="12" ry="20" fill="url(#wearPatch)"/>
+  <ellipse cx="64" cy="64" rx="18" ry="14" fill="url(#wearPatch)" opacity="0.6"/>
+  <rect x="0" y="0" width="128" height="128" fill="none" stroke="#222222" stroke-width="1"/>
+</svg>

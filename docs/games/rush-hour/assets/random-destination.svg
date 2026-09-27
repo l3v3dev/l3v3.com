@@ -1,0 +1,37 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Drop shadow for game asset depth -->
+  <rect x="26" y="24" width="80" height="88" rx="3" fill="rgba(0,0,0,0.25)"/>
+  <!-- Light walls / eaves -->
+  <rect x="22" y="18" width="84" height="92" rx="2" fill="#f5e6c8" stroke="#d4b896" stroke-width="1.5"/>
+  <!-- Roof left slope (darker) -->
+  <rect x="28" y="24" width="36" height="80" fill="#b52a1f"/>
+  <!-- Roof right slope (lighter) -->
+  <rect x="64" y="24" width="36" height="80" fill="#d94030"/>
+  <!-- Ridge line -->
+  <line x1="64" y1="24" x2="64" y2="104" stroke="#7a1510" stroke-width="2.5"/>
+  <!-- Roof edge highlights -->
+  <rect x="28" y="24" width="72" height="80" fill="none" stroke="#8b1a1a" stroke-width="1.5"/>
+  <!-- Gable end accents (top) -->
+  <polygon points="28,24 64,24 100,24" fill="none" stroke="#8b1a1a" stroke-width="1"/>
+  <!-- Gable end accents (bottom) -->
+  <polygon points="28,104 64,104 100,104" fill="none" stroke="#8b1a1a" stroke-width="1"/>
+  <!-- Chimney base -->
+  <rect x="72" y="34" width="16" height="16" rx="1" fill="#5a5a5a" stroke="#3a3a3a" stroke-width="1.5"/>
+  <!-- Chimney inner opening -->
+  <rect x="76" y="38" width="8" height="8" rx="1" fill="#2a2a2a"/>
+  <!-- Chimney cap highlight -->
+  <rect x="72" y="34" width="16" height="3" rx="1" fill="#7a7a7a"/>
+  <!-- Subtle roof texture lines -->
+  <line x1="34" y1="24" x2="34" y2="104" stroke="#9a2018" stroke-width="0.5" opacity="0.4"/>
+  <line x1="42" y1="24" x2="42" y2="104" stroke="#9a2018" stroke-width="0.5" opacity="0.4"/>
+  <line x1="50" y1="24" x2="50" y2="104" stroke="#9a2018" stroke-width="0.5" opacity="0.4"/>
+  <line x1="72" y1="24" x2="72" y2="104" stroke="#e85a48" stroke-width="0.5" opacity="0.4"/>
+  <line x1="80" y1="24" x2="80" y2="104" stroke="#e85a48" stroke-width="0.5" opacity="0.4"/>
+  <line x1="88" y1="24" x2="88" y2="104" stroke="#e85a48" stroke-width="0.5" opacity="0.4"/>
+  <!-- Eave shadow lines -->
+  <line x1="28" y1="24" x2="28" y2="104" stroke="#c4a878" stroke-width="1" opacity="0.6"/>
+  <line x1="100" y1="24" x2="100" y2="104" stroke="#c4a878" stroke-width="1" opacity="0.6"/>
+  <line x1="28" y1="24" x2="100" y2="24" stroke="#c4a878" stroke-width="1" opacity="0.6"/>
+  <line x1="28" y1="104" x2="100" y2="104" stroke="#c4a878" stroke-width="1" opacity="0.6"/>
+</svg>

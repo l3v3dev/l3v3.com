@@ -1,0 +1,44 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <rect width="400" height="400" fill="#0a1628"/>
+  <g stroke="#1a2a44" stroke-width="1" fill="none">
+    <line x1="0" y1="0" x2="0" y2="400"/>
+    <line x1="50" y1="0" x2="50" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="250" y1="0" x2="250" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="350" y1="0" x2="350" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="0" y1="0" x2="400" y2="0"/>
+    <line x1="0" y1="50" x2="400" y2="50"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="250" x2="400" y2="250"/>
+    <line x1="0" y1="300" x2="400" y2="300"/>
+    <line x1="0" y1="350" x2="400" y2="350"/>
+    <line x1="0" y1="400" x2="400" y2="400"/>
+  </g>
+  <g stroke="#1e3a5f" stroke-width="1" fill="none" stroke-linecap="square">
+    <polyline points="25,25 25,125 125,125 125,225"/>
+    <polyline points="375,25 275,25 275,75 175,75"/>
+    <polyline points="25,375 125,375 125,275 225,275 225,175"/>
+    <polyline points="375,375 325,375 325,275 225,275"/>
+    <polyline points="175,25 175,75 275,75 275,175"/>
+    <polyline points="75,325 75,225 175,225 175,325"/>
+    <polyline points="325,125 325,225 225,225"/>
+    <polyline points="75,75 175,75 175,175 275,175"/>
+    <polyline points="225,375 225,325 325,325"/>
+    <polyline points="375,175 275,175 275,275"/>
+    <polyline points="125,325 125,375 75,375"/>
+    <polyline points="325,75 325,125 375,125"/>
+    <polyline points="75,175 75,225 25,225"/>
+    <polyline points="375,325 325,325 325,375"/>
+    <polyline points="225,25 225,75 175,75"/>
+    <polyline points="125,75 125,125 75,125"/>
+    <polyline points="275,325 275,375 225,375"/>
+    <polyline points="325,225 325,175 375,175"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="300" viewBox="0 0 360 300">
+  <!-- Main panel -->
+  <rect x="0.5" y="0.5" width="359" height="299" rx="12" ry="12" fill="#0d1a30" stroke="#00e5ff" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- Top title -->
+  <text x="180" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00ff88">SIGNAL DELIVERED</text>
+
+  <!-- Middle empty area (reserved for dynamic text) -->
+  <rect x="30" y="75" width="300" height="140" rx="6" ry="6" fill="none" stroke="none"/>
+
+  <!-- Bottom button -->
+  <rect x="120" y="240" width="120" height="36" rx="8" ry="8" fill="#00e5ff"/>
+  <text x="180" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0d1a30">BACK TO MENU</text>
+</svg>

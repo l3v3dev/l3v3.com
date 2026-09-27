@@ -7,22 +7,26 @@ const versionTag = randomUUID();
 const siteUrl = "https://www.l3v3.com";
 
 const gameTitles = {
-  "cricket-batting": "Cricket Game | Browser Arcade Batting",
-  "football-playcall": "Gridiron Playcall | Football Strategy Game",
-  "football-soccer": "Football / Soccer Game | Quick Browser Match",
-  "function-path": "Math Path | Educational Puzzle Game",
-  "function-runner": "Function Runner | Coding Challenge Game",
-  "lighthouse-keeper": "Lighthouse Keeper | Survival Browser Game",
-  "llm-inference": "The GPT Language Model Maze | AI Puzzle Game",
-  "llm-train": "Gradient Descent: Token Trainer | ML Education Game",
-  "stickfigure-duel": "Ink Duel | Stick Figure Battle Game",
+  "cricket-batting": "Cricket | Chase the score",
+  "football-playcall": "Gridiron Playcall | Call the play",
+  "football-soccer": "Football | Sevens soccer",
+  "function-path": "Math Path | Algebra and function graph puzzle",
+  "function-path-3d": "Math Path 3D | 3D math puzzle game",
+  "function-runner": "Function Runner | Function graph math game",
+  "lighthouse-keeper": "Lighthouse Keeper | Keep lights on",
+  "llm-inference": "LLM Inference | Token prediction AI maze",
+  "llm-inference-3d": "LLM Inference 3D | GPT model visualization",
+  "llm-train": "LLM Trainer | Learn gradient descent and AI",
+  "rush-hour": "Rush Hour | Traffic logic puzzle game",
+  "stickfigure-duel": "Ink Duel | Stick Figure Battle",
+  "wylwyl": "wylwyl | Why you learn what you learn",
 };
 
 const staticPageMeta = {
   "docs/index.html": {
     title: "l3v3 | Local browser games",
-    description: "Play free browser games and educational experiments from l3v3, built for quick local play in the browser.",
-    keywords: "free browser games, educational games, math games, coding games, AI games, sports games, action games",
+    description: "Play browser games and interactive learning games covering algebra, function graphs, physics, probability, AI and machine learning, alongside sports and logic puzzles.",
+    keywords: "browser games, educational browser games, STEM games, algebra games, function graph games, physics games, probability games, AI education games, machine learning games, logic puzzles, sports games",
     url: `${siteUrl}/`
   },
   "docs/oauth/index.html": {
@@ -265,16 +269,36 @@ for (const game of catalog) {
     "cricket-batting": "Play Cricket, a fast browser batting game on l3v3 with arcade timing, simple controls, and quick replayability.",
     "football-playcall": "Play Gridiron Playcall, a football strategy game on l3v3 with tactical decisions, play calling, and replayable matchups.",
     "football-soccer": "Play Football / Soccer, a quick browser match game on l3v3 built for instant arcade action and simple controls.",
-    "function-path": "Play Math Path, an educational puzzle game on l3v3 that turns algebraic reasoning into a visual pathfinding challenge.",
-    "function-runner": "Play Function Runner, a browser coding challenge game on l3v3 that mixes logic, timing, and speed-run strategy.",
+    "function-path": "Practice algebra, function graphs, slopes, parabolas, trigonometry, projectile motion, probability and expected value in Math Path, an interactive browser math game.",
+    "function-path-3d": "Explore 3D math challenges and spatial reasoning in Math Path 3D, an interactive browser puzzle built around navigating a three-dimensional path.",
+    "function-runner": "Explore function graphs through trigonometric, polynomial and exponential curves, Fourier series, signal processing and physics in Function Runner, a browser math game.",
     "lighthouse-keeper": "Play Lighthouse Keeper, a survival browser game on l3v3 where you manage light, safety, and endurance through shifting conditions.",
-    "llm-inference": "Play The GPT Language Model Maze, an AI puzzle game on l3v3 where token prediction and maze navigation meet.",
-    "llm-train": "Play Gradient Descent: Token Trainer, an educational ML game on l3v3 that teaches model learning through interactive choices.",
-    "stickfigure-duel": "Play Ink Duel, a minimalist stick figure battle game on l3v3 with fast duels and satisfying timing-based combat."
+    "llm-inference": "Explore tokenization, next-token prediction and language-model concepts in The GPT Language Model Maze, an interactive browser AI game.",
+    "llm-inference-3d": "Explore tokens, transformer layers and language-model inference in an interactive 3D AI visualization built for browser play.",
+    "llm-train": "Learn machine-learning concepts through play, including gradient descent, loss curves, learning rates, local minima, cross-entropy, masked-token prediction and backpropagation.",
+    "rush-hour": "Solve a timed traffic puzzle by planning routes around moving vehicles and obstacles in Rush Hour, a browser game that builds logic and spatial reasoning.",
+    "stickfigure-duel": "Play Ink Duel, a minimalist stick figure battle game on l3v3 with fast duels and satisfying timing-based combat.",
+    "wylwyl": "Explore why you learn what you learn in Wylwyl, an educational browser game about learning and knowledge."
+  };
+  const gameKeywords = {
+    "cricket-batting": "cricket game, cricket batting game, browser cricket game, arcade batting game",
+    "football-playcall": "football strategy game, football play calling game, American football tactics, browser football game",
+    "football-soccer": "soccer game, football game, browser soccer game, arcade soccer match",
+    "function-path": "algebra game, function graph game, graphing functions, linear equations, quadratic functions, trigonometry, projectile motion, probability, expected value, interactive math game",
+    "function-path-3d": "3D math game, 3D math puzzle, spatial reasoning game, function puzzle game, interactive math game, browser puzzle game",
+    "function-runner": "function graph game, trigonometry, polynomial functions, exponential functions, Fourier series, signal processing, physics game, interactive math game",
+    "lighthouse-keeper": "lighthouse survival game, browser survival game, arcade action game",
+    "llm-inference": "AI game, language model game, tokenization, next-token prediction, artificial intelligence education, browser AI puzzle",
+    "llm-inference-3d": "3D AI visualization, transformer model, language model inference, token embeddings, neural network visualization, AI education game",
+    "llm-train": "machine learning game, gradient descent, loss function, learning rate, local minima, cross-entropy, masked language model, backpropagation, neural network education",
+    "rush-hour": "traffic puzzle game, logic puzzle, spatial reasoning game, route planning puzzle, browser puzzle game",
+    "stickfigure-duel": "stick figure fighting game, browser fighting game, arcade duel game",
+    "wylwyl": "educational browser game, learning game, learning and knowledge, interactive education"
   };
   const htmlWithSeo = addSeoMetadata(htmlWithVersionedReferences, {
     title: `l3v3 | ${gameTitle}`,
     description: gameDescriptions[game.id] || `Play ${gameTitle} on l3v3, a quick browser game and creative challenge built for local play.`,
+    keywords: gameKeywords[game.id],
     url: `${siteUrl}/games/${game.id}/`,
     image: `${siteUrl}/favicon.png`
   });

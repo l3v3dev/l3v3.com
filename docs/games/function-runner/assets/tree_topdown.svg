@@ -1,0 +1,72 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <!-- Base canopy shape - deep forest green -->
+  <path d="M22,18 C18,14 12,16 10,22 C7,28 8,34 11,38 C8,42 6,48 8,54 C6,60 8,66 12,70 C10,76 14,82 20,84 C24,88 32,90 38,88 C42,92 50,93 56,90 C62,92 70,90 74,86 C80,84 84,78 82,72 C86,68 88,62 86,56 C88,50 86,44 82,40 C84,34 82,28 78,24 C76,18 70,14 64,16 C58,12 50,12 44,15 C38,12 30,14 26,18 Z" fill="#1e4620"/>
+  <!-- Mid green clusters layer -->
+  <path d="M28,22 C24,20 20,24 22,28 C20,32 22,36 26,38 C24,42 26,46 30,48 C28,52 30,56 34,58 C32,62 36,66 40,64 C44,68 50,68 54,64 C58,66 64,64 66,60 C70,58 72,54 70,50 C72,46 70,42 66,40 C68,36 66,32 62,30 C64,26 60,22 56,24 C52,20 46,20 42,24 C38,20 32,20 28,22 Z" fill="#2f6b33"/>
+  <ellipse cx="36" cy="34" rx="10" ry="8" fill="#2f6b33" opacity="0.9"/>
+  <ellipse cx="58" cy="38" rx="9" ry="7" fill="#2f6b33" opacity="0.85"/>
+  <ellipse cx="44" cy="56" rx="11" ry="8" fill="#2f6b33" opacity="0.9"/>
+  <ellipse cx="64" cy="54" rx="8" ry="7" fill="#2f6b33" opacity="0.85"/>
+  <ellipse cx="32" cy="64" rx="9" ry="7" fill="#2f6b33" opacity="0.8"/>
+  <ellipse cx="52" cy="72" rx="10" ry="7" fill="#2f6b33" opacity="0.85"/>
+  <ellipse cx="70" cy="44" rx="7" ry="6" fill="#2f6b33" opacity="0.8"/>
+  <ellipse cx="26" cy="48" rx="7" ry="6" fill="#2f6b33" opacity="0.8"/>
+  <!-- Lighter sunlit patches -->
+  <ellipse cx="40" cy="30" rx="7" ry="5" fill="#4f8f3f" opacity="0.85"/>
+  <ellipse cx="56" cy="44" rx="6" ry="5" fill="#4f8f3f" opacity="0.8"/>
+  <ellipse cx="34" cy="52" rx="6" ry="4" fill="#4f8f3f" opacity="0.75"/>
+  <ellipse cx="62" cy="62" rx="5" ry="4" fill="#4f8f3f" opacity="0.8"/>
+  <ellipse cx="48" cy="68" rx="6" ry="4" fill="#4f8f3f" opacity="0.7"/>
+  <ellipse cx="28" cy="40" rx="5" ry="4" fill="#4f8f3f" opacity="0.7"/>
+  <ellipse cx="68" cy="36" rx="5" ry="4" fill="#4f8f3f" opacity="0.75"/>
+  <ellipse cx="44" cy="44" rx="5" ry="4" fill="#4f8f3f" opacity="0.8"/>
+  <!-- Yellow-green highlights -->
+  <ellipse cx="42" cy="28" rx="3" ry="2.5" fill="#7ab648" opacity="0.7"/>
+  <ellipse cx="58" cy="42" rx="3" ry="2" fill="#7ab648" opacity="0.65"/>
+  <ellipse cx="36" cy="50" rx="2.5" ry="2" fill="#7ab648" opacity="0.6"/>
+  <ellipse cx="52" cy="64" rx="3" ry="2" fill="#7ab648" opacity="0.65"/>
+  <ellipse cx="66" cy="52" rx="2.5" ry="2" fill="#7ab648" opacity="0.6"/>
+  <ellipse cx="30" cy="36" rx="2" ry="2" fill="#7ab648" opacity="0.55"/>
+  <ellipse cx="48" cy="54" rx="2.5" ry="2" fill="#7ab648" opacity="0.6"/>
+  <ellipse cx="60" cy="70" rx="2" ry="1.5" fill="#7ab648" opacity="0.55"/>
+  <!-- Dark shadow blobs for depth -->
+  <ellipse cx="38" cy="42" rx="5" ry="4" fill="#16381a" opacity="0.5"/>
+  <ellipse cx="54" cy="56" rx="5" ry="4" fill="#16381a" opacity="0.45"/>
+  <ellipse cx="28" cy="56" rx="4" ry="3" fill="#16381a" opacity="0.5"/>
+  <ellipse cx="66" cy="48" rx="4" ry="3" fill="#16381a" opacity="0.45"/>
+  <ellipse cx="46" cy="76" rx="4" ry="3" fill="#16381a" opacity="0.4"/>
+  <ellipse cx="72" cy="64" rx="3" ry="3" fill="#16381a" opacity="0.45"/>
+  <ellipse cx="22" cy="34" rx="3" ry="3" fill="#16381a" opacity="0.4"/>
+  <!-- Tiny gaps showing darker undergrowth -->
+  <ellipse cx="44" cy="38" rx="1.5" ry="1.2" fill="#0d1f0e" opacity="0.7"/>
+  <ellipse cx="58" cy="52" rx="1.2" ry="1" fill="#0d1f0e" opacity="0.65"/>
+  <ellipse cx="34" cy="62" rx="1" ry="1" fill="#0d1f0e" opacity="0.6"/>
+  <ellipse cx="68" cy="40" rx="1" ry="0.8" fill="#0d1f0e" opacity="0.6"/>
+  <ellipse cx="50" cy="78" rx="1.2" ry="1" fill="#0d1f0e" opacity="0.55"/>
+  <!-- Additional organic texture details -->
+  <path d="M32,26 C30,24 28,26 29,29 C28,31 30,33 32,32 C34,33 35,30 34,28 C35,26 33,25 32,26 Z" fill="#3a7a38" opacity="0.6"/>
+  <path d="M60,32 C58,30 56,32 57,35 C56,37 58,39 60,38 C62,39 63,36 62,34 C63,32 61,31 60,32 Z" fill="#3a7a38" opacity="0.55"/>
+  <path d="M46,60 C44,58 42,60 43,63 C42,65 44,67 46,66 C48,67 49,64 48,62 C49,60 47,59 46,60 Z" fill="#3a7a38" opacity="0.5"/>
+  <path d="M70,56 C68,54 66,56 67,59 C66,61 68,63 70,62 C72,63 73,60 72,58 C73,56 71,55 70,56 Z" fill="#3a7a38" opacity="0.5"/>
+  <!-- Edge irregularity - small bumps on canopy edge -->
+  <ellipse cx="16" cy="30" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="14" cy="52" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="18" cy="72" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="78" cy="28" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="82" cy="52" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="78" cy="72" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="36" cy="14" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="56" cy="14" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="44" cy="86" rx="3" ry="2.5" fill="#1e4620"/>
+  <ellipse cx="64" cy="84" rx="3" ry="2.5" fill="#1e4620"/>
+  <!-- Subtle leaf cluster texture dots -->
+  <circle cx="38" cy="36" r="1.5" fill="#2a5e2e" opacity="0.6"/>
+  <circle cx="52" cy="48" r="1.5" fill="#2a5e2e" opacity="0.55"/>
+  <circle cx="42" cy="62" r="1.5" fill="#2a5e2e" opacity="0.5"/>
+  <circle cx="64" cy="44" r="1.5" fill="#2a5e2e" opacity="0.55"/>
+  <circle cx="30" cy="54" r="1.2" fill="#2a5e2e" opacity="0.5"/>
+  <circle cx="56" cy="72" r="1.2" fill="#2a5e2e" opacity="0.5"/>
+  <circle cx="72" cy="56" r="1.2" fill="#2a5e2e" opacity="0.5"/>
+  <circle cx="48" cy="26" r="1.2" fill="#2a5e2e" opacity="0.55"/>
+</svg>

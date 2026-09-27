@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="100%" stop-color="#00aa55"/>
+    </linearGradient>
+  </defs>
+  <polygon points="30,16 23,28.12 9,28.12 2,16 9,3.88 23,3.88" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.5;0.15;0.5" dur="1.4s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="28,16 22,26.39 10,26.39 4,16 10,5.61 22,5.61" fill="url(#g)" stroke="#ffffff" stroke-width="1"/>
+</svg>

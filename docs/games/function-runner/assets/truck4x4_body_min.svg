@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80">
+  <defs>
+    <!-- Clip path for lower body dark trim -->
+    <clipPath id="truckBodyClip">
+      <path d="M12 56 L12 28 L92 28 L114 18 L148 18 L152 56 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Main 4x4 Truck Body Fill -->
+  <path d="M12 56 L12 28 L92 28 L114 18 L148 18 L152 56 Z" fill="#E8452A"/>
+
+  <!-- Dark Lower Trim Band -->
+  <g clip-path="url(#truckBodyClip)">
+    <rect x="0" y="44" width="160" height="20" fill="#C03520"/>
+  </g>
+
+  <!-- Side Windows (Cab & Rear Passenger) -->
+  <path d="M112 22 L96 30 L118 30 Z" fill="#A5D5F5" stroke="#1A2544" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="122" y="22" width="22" height="8" fill="#A5D5F5" stroke="#1A2544" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Roof Rack / Light Bar Accent -->
+  <rect x="116" y="13" width="28" height="5" rx="2" fill="#1A2544"/>
+
+  <!-- Headlight Accent (Front Right) -->
+  <path d="M12 34 L12 42 L16 42 Z" fill="#FFF28B" stroke="#1A2544" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Taillight Accent (Rear Left) -->
+  <rect x="148" y="34" width="4" height="10" fill="#FF4D4D" stroke="#1A2544" stroke-width="1.5"/>
+
+  <!-- Solid Outer Body Outline -->
+  <path d="M12 56 L12 28 L92 28 L114 18 L148 18 L152 56 Z" fill="none" stroke="#1A2544" stroke-width="3" stroke-linejoin="round"/>
+</svg>

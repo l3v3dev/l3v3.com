@@ -1,0 +1,35 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Lawn background -->
+  <rect x="0" y="0" width="128" height="128" fill="#6b8f4e"/>
+  <!-- Subtle lawn texture variation -->
+  <rect x="0" y="0" width="128" height="128" fill="#648a48" opacity="0.3"/>
+  <circle cx="20" cy="70" r="8" fill="#72965a" opacity="0.4"/>
+  <circle cx="90" cy="55" r="6" fill="#72965a" opacity="0.3"/>
+  <circle cx="50" cy="100" r="7" fill="#5e8544" opacity="0.3"/>
+  <circle cx="110" cy="20" r="5" fill="#72965a" opacity="0.3"/>
+  <!-- Diagonal walking path from bottom-left to top-right -->
+  <polygon points="0,128 128,0 128,18 0,146" fill="#d6c9a3"/>
+  <polygon points="0,128 128,0 128,18 0,146" fill="#cfc29e" opacity="0.5"/>
+  <!-- Path edge highlight -->
+  <line x1="0" y1="128" x2="128" y2="0" stroke="#c4b78f" stroke-width="1.5" opacity="0.6"/>
+  <line x1="0" y1="146" x2="128" y2="18" stroke="#c4b78f" stroke-width="1.5" opacity="0.6"/>
+  <!-- Tree 1: upper-left area -->
+  <circle cx="28" cy="28" r="14" fill="#2d5a27"/>
+  <circle cx="28" cy="28" r="11" fill="#346b2e"/>
+  <circle cx="25" cy="25" r="5" fill="#3d7a35" opacity="0.6"/>
+  <!-- Tree 2: upper-left area, closer to path -->
+  <circle cx="52" cy="48" r="12" fill="#2d5a27"/>
+  <circle cx="52" cy="48" r="9" fill="#346b2e"/>
+  <circle cx="49" cy="45" r="4" fill="#3d7a35" opacity="0.6"/>
+  <!-- Tree 3: lower-right area, closer to path -->
+  <circle cx="78" cy="82" r="12" fill="#2d5a27"/>
+  <circle cx="78" cy="82" r="9" fill="#346b2e"/>
+  <circle cx="75" cy="79" r="4" fill="#3d7a35" opacity="0.6"/>
+  <!-- Tree 4: lower-right area -->
+  <circle cx="102" cy="102" r="14" fill="#2d5a27"/>
+  <circle cx="102" cy="102" r="11" fill="#346b2e"/>
+  <circle cx="99" cy="99" r="5" fill="#3d7a35" opacity="0.6"/>
+  <!-- Clean square border -->
+  <rect x="0" y="0" width="128" height="128" fill="none" stroke="#4a6b3a" stroke-width="2"/>
+</svg>

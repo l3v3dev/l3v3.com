@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="128" height="128" fill="none"/>
+  <g fill="none" stroke="#3f3a34" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- low wedge body -->
+    <path d="M14 76 L14 66 L34 62 L52 46 L86 46 L104 62 L114 66 L114 76"/>
+    <!-- window -->
+    <path d="M56 52 L82 52 L94 62 L56 62 Z" fill="#3f3a34" stroke="none"/>
+    <!-- wheels -->
+    <circle cx="38" cy="82" r="13"/>
+    <circle cx="92" cy="82" r="13"/>
+    <circle cx="38" cy="82" r="3" fill="#3f3a34" stroke="none"/>
+    <circle cx="92" cy="82" r="3" fill="#3f3a34" stroke="none"/>
+  </g>
+</svg>

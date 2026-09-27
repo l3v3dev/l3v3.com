@@ -1,0 +1,23 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="160" viewBox="0 0 340 160">
+  <!-- Main ramp wedge triangle -->
+  <polygon points="0,160 340,160 340,0" fill="#d69e2e" stroke="#2d3748" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Right vertical face shading -->
+  <polygon points="310,160 340,160 340,0" fill="#975a16" opacity="0.85"/>
+  <!-- Tread lines on slope -->
+  <line x1="85" y1="120" x2="310" y2="120" stroke="#975a16" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="170" y1="80" x2="310" y2="80" stroke="#975a16" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="255" y1="40" x2="310" y2="40" stroke="#975a16" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Chevron arrows pointing up-right on slope -->
+  <g transform="translate(110,128) rotate(-25)" stroke="#f6e05e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="-5,-6 5,0 -5,6"/>
+  </g>
+  <g transform="translate(195,90) rotate(-25)" stroke="#f6e05e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="-5,-6 5,0 -5,6"/>
+  </g>
+  <g transform="translate(275,52) rotate(-25)" stroke="#f6e05e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="-5,-6 5,0 -5,6"/>
+  </g>
+  <!-- Bottom edge accent -->
+  <line x1="0" y1="158" x2="340" y2="158" stroke="#975a16" stroke-width="3" stroke-linecap="round"/>
+</svg>

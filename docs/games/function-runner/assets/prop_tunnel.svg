@@ -1,0 +1,15 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="220" viewBox="0 0 340 220">
+  <defs>
+    <pattern id="hazard" patternUnits="userSpaceOnUse" width="22" height="22" patternTransform="rotate(45)">
+      <rect width="11" height="22" fill="#f6e05e"/>
+      <rect x="11" width="11" height="22" fill="#1a202c"/>
+    </pattern>
+  </defs>
+  <path d="M0,0 L340,0 L340,220 L285,220 L285,150 Q170,118 55,150 L55,220 L0,220 Z" fill="#718096" stroke="#2d3748" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="42" y="0" width="13" height="220" fill="#4a5568"/>
+  <rect x="285" y="0" width="13" height="220" fill="#4a5568"/>
+  <path d="M285,150 Q170,118 55,150 L55,156 Q170,124 285,156 Z" fill="#4a5568"/>
+  <path d="M285,150 Q170,118 55,150 L55,166 Q170,134 285,166 Z" fill="url(#hazard)" stroke="#2d3748" stroke-width="2"/>
+  <path d="M0,0 L340,0 L340,220 L285,220 L285,150 Q170,118 55,150 L55,220 L0,220 Z" fill="none" stroke="#2d3748" stroke-width="4" stroke-linejoin="round"/>
+</svg>

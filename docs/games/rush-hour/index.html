@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>l3v3 | Rush Hour | Traffic logic puzzle game</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: #111;
+      font-family: system-ui, sans-serif;
+      -webkit-user-select: none;
+      user-select: none;
+      touch-action: manipulation;
+    }
+
+    #wrap {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #000;
+    }
+
+    #loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      color: #eee;
+      font-size: 1.5rem;
+      z-index: 10;
+    }
+
+    #loading.hidden {
+      display: none;
+    }
+
+    /* Timer HUD */
+    #timer {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 4px 16px;
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    #timer.low {
+      color: #ff5252;
+      animation: flash 0.5s steps(2, start) infinite;
+    }
+
+    @keyframes flash {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    /* End screen */
+    #end {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: rgba(0, 0, 0, 0.72);
+      color: #fff;
+      text-align: center;
+      z-index: 6;
+    }
+
+    #end.show {
+      display: flex;
+    }
+
+    #end h1 {
+      font-size: 34px;
+      margin: 0;
+    }
+
+    #end p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    #restart-btn {
+      font-size: 20px;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 10px;
+      background: #F5C542;
+      color: #222;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* City label (HUD) */
+    #city-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 4px 12px;
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* City select screen */
+    #city-select {
+      position: fixed;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      background: radial-gradient(circle at 50% 30%, #1d2733 0%, #0c1117 70%);
+      color: #fff;
+      z-index: 20;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    #city-select.show {
+      display: flex;
+    }
+
+    #city-select h1 {
+      font-size: 40px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    #city-select .subtitle {
+      font-size: 18px;
+      color: #aab;
+      margin: -12px 0 0;
+    }
+
+    #city-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .city-card {
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 18px 16px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+      text-align: left;
+    }
+
+    .city-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .city-card .cname {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .city-card .ctag {
+      font-size: 13px;
+      color: #99a;
+      margin-bottom: 10px;
+      min-height: 16px;
+    }
+
+    .city-card .cmeta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #ccd;
+    }
+
+    .city-card .cdiff {
+      font-weight: 700;
+    }
+
+    /* Menu button (HUD, always visible) */
+    #menu-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 16px;
+      padding: 4px 14px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    #menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    #change-city-btn {
+      font-size: 16px;
+      padding: 8px 20px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      background: transparent;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #change-city-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* D-pad (touch only) */
+    #dpad {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      display: none;
+      grid-template-columns: repeat(3, 56px);
+      grid-template-rows: repeat(3, 56px);
+      gap: 6px;
+      z-index: 7;
+    }
+
+    #dpad.show {
+      display: grid;
+    }
+
+    #dpad button {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #dpad button:active {
+      background: rgba(245, 197, 66, 0.6);
+    }
+
+    #dpad .center {
+      visibility: hidden;
+    }
+  </style>
+<script src="../analytics.js?v=b97dd21a-e656-4348-ad05-502b986a85c3"></script>
+  <meta name="description" content="Solve a timed traffic puzzle by planning routes around moving vehicles and obstacles in Rush Hour, a browser game that builds logic and spatial reasoning.">
+  <meta name="keywords" content="traffic puzzle game, logic puzzle, spatial reasoning game, route planning puzzle, browser puzzle game">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.l3v3.com/games/rush-hour/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="l3v3">
+  <meta property="og:title" content="l3v3 | Rush Hour | Traffic logic puzzle game">
+  <meta property="og:description" content="Solve a timed traffic puzzle by planning routes around moving vehicles and obstacles in Rush Hour, a browser game that builds logic and spatial reasoning.">
+  <meta property="og:url" content="https://www.l3v3.com/games/rush-hour/">
+  <meta property="og:image" content="https://www.l3v3.com/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="l3v3 | Rush Hour | Traffic logic puzzle game">
+  <meta name="twitter:description" content="Solve a timed traffic puzzle by planning routes around moving vehicles and obstacles in Rush Hour, a browser game that builds logic and spatial reasoning.">
+  <meta name="twitter:image" content="https://www.l3v3.com/favicon.png">
+</head>
+
+<body>
+  <div id="loading" class="hidden">Loading ...</div>
+  <div id="city-select">
+    <h1>Rush Hour</h1>
+    <p class="subtitle">Choose your city.</p>
+    <div id="city-grid">
+      <div class="city-card" data-city="nyc">
+        <div class="cname" style="color:#F5C542">New York</div>
+        <div class="ctag">The concrete jungle</div>
+        <div class="cmeta"><span>50s</span><span class="cdiff"></span></div>
+      </div>
+      <div class="city-card" data-city="london">
+        <div class="cname" style="color:#E74C3C">London</div>
+        <div class="ctag">Fog, brick and red buses</div>
+        <div class="cmeta"><span>55s</span><span class="cdiff"></span></div>
+      </div>
+      <div class="city-card" data-city="paris">
+        <div class="cname" style="color:#9B59B6">Paris</div>
+        <div class="ctag">The city of light</div>
+        <div class="cmeta"><span>55s</span><span class="cdiff"></span></div>
+      </div>
+      <div class="city-card" data-city="sydney">
+        <div class="cname" style="color:#3498DB">Sydney</div>
+        <div class="ctag">Harbour city sunshine</div>
+        <div class="cmeta"><span>60s</span><span class="cdiff"></span></div>
+      </div>
+      <div class="city-card" data-city="tokyo">
+        <div class="cname" style="color:#E91E63">Tokyo</div>
+        <div class="ctag">Neon nights, endless lanes</div>
+        <div class="cmeta"><span>60s</span><span class="cdiff"></span></div>
+      </div>
+      <div class="city-card" data-city="random">
+        <div class="cname" style="color:#2ECC71">Random</div>
+        <div class="ctag">Real grid city · live traffic lights · beat your best time</div>
+        <div class="cmeta"><span>∞</span><span class="cdiff">Realism</span></div>
+      </div>
+    </div>
+  </div>
+  <div id="wrap">
+    <canvas id="game-canvas" width="720" height="528"></canvas>
+    <div id="city-label"></div>
+    <div id="timer">50</div>
+    <button id="menu-btn" title="Back to main menu (Esc)">Menu</button>
+    <div id="end">
+      <h1 id="end-title"></h1>
+      <p id="end-sub"></p>
+      <button id="restart-btn">Restart</button>
+      <button id="change-city-btn">Change City</button>
+    </div>
+    <div id="dpad">
+      <span></span>
+      <button data-dir="up" aria-label="Up">&#9650;</button>
+      <span></span>
+      <button data-dir="left" aria-label="Left">&#9664;</button>
+      <button class="center" tabindex="-1"></button>
+      <button data-dir="right" aria-label="Right">&#9654;</button>
+      <span></span>
+      <button data-dir="down" aria-label="Down">&#9660;</button>
+      <span></span>
+    </div>
+  </div>
+  <script data-l3v3-game-src="game.min.js?v=b97dd21a-e656-4348-ad05-502b986a85c3"></script>
+<a id="back-to-home" href="../../index.html?v=b97dd21a-e656-4348-ad05-502b986a85c3" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
+</body>
+
+</html>

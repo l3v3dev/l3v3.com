@@ -1,0 +1,8 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200">
+  <rect x="0" y="0" width="320" height="200" rx="12" fill="#0a0a1a" opacity="0.9" stroke="#00e5ff" stroke-width="2"/>
+  <text x="160" y="70" font-size="28" fill="#00e5ff" font-family="sans-serif" font-weight="bold" text-anchor="middle">YOU WIN</text>
+  <text x="160" y="110" font-size="16" fill="#ffffff" font-family="sans-serif" text-anchor="middle">Score: 0</text>
+  <rect x="100" y="132" width="120" height="36" rx="6" fill="#00e5ff"/>
+  <text x="160" y="155" font-size="14" fill="#0a0a1a" font-family="sans-serif" font-weight="bold" text-anchor="middle">Play Again</text>
+</svg>

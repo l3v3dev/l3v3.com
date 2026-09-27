@@ -1,0 +1,29 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <!-- Background circle -->
+  <circle cx="36" cy="36" r="33" fill="#f3efe8" stroke="#b8b0a2" stroke-width="1.5"/>
+
+  <!-- Motion lines (behind the figure, to the left) -->
+  <line x1="15" y1="27" x2="23" y2="27" stroke="#c9c2b4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="13" y1="33" x2="21" y2="33" stroke="#c9c2b4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="15" y1="39" x2="23" y2="39" stroke="#c9c2b4" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Running figure - sprinting to the right -->
+  <!-- Body (leaning forward) -->
+  <line x1="43" y1="24" x2="40" y2="37" stroke="#8a8172" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Front arm (reaching forward) -->
+  <line x1="42" y1="29" x2="50" y2="25" stroke="#8a8172" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Back arm (swinging back) -->
+  <line x1="42" y1="29" x2="34" y2="34" stroke="#8a8172" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Front leg (extended forward) -->
+  <line x1="40" y1="37" x2="50" y2="49" stroke="#8a8172" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Back leg (trailing) -->
+  <line x1="40" y1="37" x2="32" y2="45" stroke="#8a8172" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Head (amber accent dot) -->
+  <circle cx="44" cy="20" r="3" fill="#d9a441"/>
+</svg>

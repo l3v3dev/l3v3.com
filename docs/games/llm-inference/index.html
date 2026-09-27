@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>l3v3 | The GPT Language Model Maze | AI Puzzle Game</title>
+  <!-- Mobile/touch: render at device width so the canvas fills the screen
+     instead of the ~980px virtual viewport; lock zoom so gameplay taps
+     don't accidentally pinch/double-tap zoom. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>l3v3 | LLM Inference | Token prediction AI maze</title>
   <style>
     html,
     body {
@@ -26,38 +30,142 @@
       height: auto;
       touch-action: manipulation;
     }
+      #loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0e1a;
+      color: #e8ecf5;
+      font-family: system-ui, sans-serif;
+      font-size: 1.25rem;
+      z-index: 10;
+    }
+    /* Tokenizer tool: paste box shown over the canvas while entering text. */
+    #tokenizer-panel {
+      position: fixed;
+      left: 50%;
+      bottom: 12px;
+      transform: translateX(-50%);
+      width: min(720px, 92vw);
+      background: rgba(6, 10, 26, 0.96);
+      border: 1.5px solid rgba(125, 249, 255, 0.7);
+      border-radius: 12px;
+      padding: 12px;
+      box-sizing: border-box;
+      font-family: 'Courier New', monospace;
+      z-index: 5;
+    }
+    #tokenizer-panel[hidden] {
+      display: none;
+    }
+    #tokenizer-input {
+      width: 100%;
+      height: 120px;
+      resize: vertical;
+      background: #0a0e1a;
+      color: #e8ecf5;
+      border: 1px solid rgba(125, 249, 255, 0.4);
+      border-radius: 8px;
+      padding: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    #tokenizer-panel .tz-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    #tokenizer-count {
+      color: rgba(230, 246, 255, 0.7);
+      font-size: 13px;
+      margin-right: auto;
+    }
+    #tokenizer-panel button {
+      background: rgba(125, 249, 255, 0.15);
+      color: #ffd27a;
+      border: 1.5px solid #7df9ff;
+      border-radius: 8px;
+      padding: 6px 16px;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #tokenizer-panel button:hover {
+      background: rgba(125, 249, 255, 0.3);
+    }
+    /* Sample-sentence chips: tap one to fill the paste box. */
+    #tokenizer-samples {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    #tokenizer-samples .tz-label {
+      color: rgba(230, 246, 255, 0.7);
+      font-size: 8px;
+    }
+    #tokenizer-samples button {
+      background: rgba(125, 249, 255, 0.08);
+      color: #e8ecf5;
+      border: 1px solid rgba(125, 249, 255, 0.45);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: 'Courier New', monospace;
+      font-weight: normal;
+      font-size: 8px;
+      cursor: pointer;
+    }
+    #tokenizer-samples button:hover {
+      background: rgba(125, 249, 255, 0.25);
+    }
   </style>
-<script src="../analytics.js?v=176a3774-7b7e-45d8-a668-d147da5c53cc"></script>
-<script src="../analytics.js?v=176a3774-7b7e-45d8-a668-d147da5c53cc"></script>
-<script src="../analytics.js?v=176a3774-7b7e-45d8-a668-d147da5c53cc"></script>
-<script src="../analytics.js?v=176a3774-7b7e-45d8-a668-d147da5c53cc"></script>
-<script src="../analytics.js?v=176a3774-7b7e-45d8-a668-d147da5c53cc"></script>  <meta name="description" content="Play The GPT Language Model Maze, an AI puzzle game on l3v3 where token prediction and maze navigation meet.">
+<script src="../analytics.js?v=b97dd21a-e656-4348-ad05-502b986a85c3"></script>
+  <meta name="description" content="Explore tokenization, next-token prediction and language-model concepts in The GPT Language Model Maze, an interactive browser AI game.">
+  <meta name="keywords" content="AI game, language model game, tokenization, next-token prediction, artificial intelligence education, browser AI puzzle">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.l3v3.com/games/llm-inference/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="l3v3">
-  <meta property="og:title" content="l3v3 | The GPT Language Model Maze | AI Puzzle Game">
-  <meta property="og:description" content="Play The GPT Language Model Maze, an AI puzzle game on l3v3 where token prediction and maze navigation meet.">
+  <meta property="og:title" content="l3v3 | LLM Inference | Token prediction AI maze">
+  <meta property="og:description" content="Explore tokenization, next-token prediction and language-model concepts in The GPT Language Model Maze, an interactive browser AI game.">
   <meta property="og:url" content="https://www.l3v3.com/games/llm-inference/">
   <meta property="og:image" content="https://www.l3v3.com/favicon.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="l3v3 | The GPT Language Model Maze | AI Puzzle Game">
-  <meta name="twitter:description" content="Play The GPT Language Model Maze, an AI puzzle game on l3v3 where token prediction and maze navigation meet.">
+  <meta name="twitter:title" content="l3v3 | LLM Inference | Token prediction AI maze">
+  <meta name="twitter:description" content="Explore tokenization, next-token prediction and language-model concepts in The GPT Language Model Maze, an interactive browser AI game.">
   <meta name="twitter:image" content="https://www.l3v3.com/favicon.png">
 </head>
 
 <body>
+  <div id="loading">Loading ...</div>
   <canvas id="game-canvas" width="960" height="640"></canvas>
-  <script data-l3v3-game-src="game.min.js?v=176a3774-7b7e-45d8-a668-d147da5c53cc"></script>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
-<a id="back-to-home" href="../../index.html?v=176a3774-7b7e-45d8-a668-d147da5c53cc" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
+  <div id="tokenizer-panel" hidden>
+    <textarea
+      id="tokenizer-input"
+      maxlength="1000"
+      placeholder="Paste a paragraph here (max 1000 characters)..."
+    ></textarea>
+    <div id="tokenizer-samples">
+      <span class="tz-label">Try a sample:</span>
+      <button class="tz-sample" data-sentence="The cat sat on the mat.">The cat sat on the mat.</button>
+      <button class="tz-sample" data-sentence="The dog ran to the park.">The dog ran to the park.</button>
+      <button class="tz-sample" data-sentence="The bird flew over the river.">The bird flew over the river.</button>
+      <button class="tz-sample" data-sentence="All the great things are simple, and many can be expressed in a single word: freedom, justice, honour, duty, mercy, hope.">All the great things are simple, and many can be expressed in a single word: freedom, justice, honour, duty, mercy, hope.</button>
+    </div>
+    <div class="tz-row">
+      <span id="tokenizer-count">0 / 1000</span>
+      <button id="tokenizer-go">Tokenize</button>
+      <button id="tokenizer-back">Back</button>
+    </div>
+  </div>
+  <script data-l3v3-game-src="game.min.js?v=b97dd21a-e656-4348-ad05-502b986a85c3"></script>
+<a id="back-to-home" href="../../index.html?v=b97dd21a-e656-4348-ad05-502b986a85c3" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
 </body>
 
 </html>

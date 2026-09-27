@@ -1,0 +1,25 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="glossGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="hexClip">
+      <path d="M70,17.5 L101,35.5 Q107,39 107,46 L107,82 Q107,89 101,92.5 L70,110.5 Q64,114 58,110.5 L27,92.5 Q21,89 21,82 L21,46 Q21,39 27,35.5 L58,17.5 Q64,14 70,17.5 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Main rounded hexagon body -->
+  <path d="M70,17.5 L101,35.5 Q107,39 107,46 L107,82 Q107,89 101,92.5 L70,110.5 Q64,114 58,110.5 L27,92.5 Q21,89 21,82 L21,46 Q21,39 27,35.5 L58,17.5 Q64,14 70,17.5 Z"
+        fill="url(#redGrad)" stroke="#7f1d1d" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Glossy highlight at top -->
+  <ellipse cx="64" cy="32" rx="32" ry="16" fill="url(#glossGrad)" clip-path="url(#hexClip)"/>
+  <!-- Center flat mid-red disc -->
+  <circle cx="64" cy="64" r="22" fill="#d64545"/>
+  <!-- Subtle inner ring on disc for depth -->
+  <circle cx="64" cy="64" r="22" fill="none" stroke="#b83a3a" stroke-width="1.5"/>
+</svg>

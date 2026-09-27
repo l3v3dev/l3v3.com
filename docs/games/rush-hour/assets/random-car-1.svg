@@ -1,0 +1,29 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Car body -->
+  <rect x="43" y="18" width="42" height="92" rx="10" ry="10" fill="#FFFFFF" stroke="#C8C8C8" stroke-width="1.5"/>
+  <!-- Hood line -->
+  <line x1="48" y1="28" x2="80" y2="28" stroke="#E0E0E0" stroke-width="1"/>
+  <!-- Windshield -->
+  <polygon points="52,30 76,30 78,43 50,43" fill="#3A3A3A" stroke="#2A2A2A" stroke-width="0.8"/>
+  <!-- Left side window -->
+  <rect x="44" y="45" width="5" height="34" rx="1.5" fill="#3A3A3A" stroke="#2A2A2A" stroke-width="0.5"/>
+  <!-- Right side window -->
+  <rect x="79" y="45" width="5" height="34" rx="1.5" fill="#3A3A3A" stroke="#2A2A2A" stroke-width="0.5"/>
+  <!-- Rear window -->
+  <polygon points="50,81 78,81 76,94 52,94" fill="#3A3A3A" stroke="#2A2A2A" stroke-width="0.8"/>
+  <!-- Trunk line -->
+  <line x1="48" y1="98" x2="80" y2="98" stroke="#E0E0E0" stroke-width="1"/>
+  <!-- Door line left -->
+  <line x1="44" y1="62" x2="50" y2="62" stroke="#D8D8D8" stroke-width="0.8"/>
+  <!-- Door line right -->
+  <line x1="78" y1="62" x2="84" y2="62" stroke="#D8D8D8" stroke-width="0.8"/>
+  <!-- Headlight left -->
+  <rect x="48" y="20" width="8" height="4" rx="2" fill="#F5F5F5" stroke="#B0B0B0" stroke-width="0.6"/>
+  <!-- Headlight right -->
+  <rect x="72" y="20" width="8" height="4" rx="2" fill="#F5F5F5" stroke="#B0B0B0" stroke-width="0.6"/>
+  <!-- Taillight left -->
+  <rect x="48" y="104" width="8" height="4" rx="2" fill="#E8E8E8" stroke="#B0B0B0" stroke-width="0.6"/>
+  <!-- Taillight right -->
+  <rect x="72" y="104" width="8" height="4" rx="2" fill="#E8E8E8" stroke="#B0B0B0" stroke-width="0.6"/>
+</svg>

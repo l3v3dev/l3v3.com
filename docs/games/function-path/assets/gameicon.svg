@@ -1,0 +1,41 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0a1628"/>
+  <!-- Gridlines -->
+  <g stroke="#1a2a44" stroke-width="1">
+    <line x1="64" y1="0" x2="64" y2="512"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="192" y1="0" x2="192" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="320" y1="0" x2="320" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+    <line x1="448" y1="0" x2="448" y2="512"/>
+    <line x1="0" y1="64" x2="512" y2="64"/>
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="192" x2="512" y2="192"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="320" x2="512" y2="320"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="0" y1="448" x2="512" y2="448"/>
+  </g>
+  <!-- Ceiling hazard line (jagged red) -->
+  <polyline points="56,130 86,108 116,130 146,108 176,130 206,108 236,130 266,108 296,130 326,108 356,130 386,108 416,130 446,108 456,130" fill="none" stroke="#e53935" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Floor hazard line (jagged red) -->
+  <polyline points="56,462 86,484 116,462 146,484 176,462 206,484 236,462 266,484 296,462 326,484 356,462 386,484 416,462 446,484 456,462" fill="none" stroke="#e53935" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Glow layer for curve -->
+  <path d="M 80,400 Q 256,80 432,400" fill="none" stroke="#00e5ff" stroke-width="16" stroke-linecap="round" opacity="0.25"/>
+  <!-- Main cyan curve (downward parabola) -->
+  <path d="M 80,400 Q 256,80 432,400" fill="none" stroke="#00e5ff" stroke-width="6" stroke-linecap="round"/>
+  <!-- Robot body (rounded square) sitting on curve near peak -->
+  <rect x="234" y="198" width="44" height="44" rx="10" fill="#00e5ff"/>
+  <!-- Robot eyes -->
+  <circle cx="248" cy="218" r="5" fill="#ffffff"/>
+  <circle cx="264" cy="218" r="5" fill="#ffffff"/>
+  <!-- Robot antenna -->
+  <line x1="256" y1="198" x2="256" y2="186" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="256" cy="183" r="4" fill="#00e5ff"/>
+  <!-- Green flag at right end of curve -->
+  <line x1="432" y1="400" x2="432" y2="352" stroke="#4caf50" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="432,352 462,364 432,376" fill="#4caf50"/>
+</svg>

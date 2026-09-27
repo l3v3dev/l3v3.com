@@ -1,0 +1,102 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <!-- Dark navy background -->
+  <rect width="400" height="500" fill="#0a1628"/>
+
+  <!-- Circuit traces background -->
+  <g stroke="#1a3a5c" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M 20 30 L 80 30 L 80 70 L 120 70"/>
+    <path d="M 380 50 L 320 50 L 320 90 L 280 90"/>
+    <path d="M 30 470 L 90 470 L 90 430 L 130 430"/>
+    <path d="M 370 460 L 310 460 L 310 420 L 270 420"/>
+    <path d="M 10 200 L 50 200 L 50 240 L 10 240"/>
+    <path d="M 390 250 L 350 250 L 350 290 L 390 290"/>
+    <path d="M 150 10 L 150 50 L 200 50 L 200 10"/>
+    <path d="M 250 490 L 250 450 L 300 450 L 300 490"/>
+    <path d="M 0 100 L 40 100 L 40 140 L 0 140"/>
+    <path d="M 400 350 L 360 350 L 360 390 L 400 390"/>
+    <path d="M 100 480 L 100 440 L 160 440 L 160 480"/>
+    <path d="M 300 20 L 300 60 L 350 60 L 350 20"/>
+  </g>
+  <!-- Circuit trace dots -->
+  <g fill="#1a3a5c" opacity="0.7">
+    <circle cx="20" cy="30" r="2"/>
+    <circle cx="120" cy="70" r="2"/>
+    <circle cx="380" cy="50" r="2"/>
+    <circle cx="280" cy="90" r="2"/>
+    <circle cx="30" cy="470" r="2"/>
+    <circle cx="130" cy="430" r="2"/>
+    <circle cx="370" cy="460" r="2"/>
+    <circle cx="270" cy="420" r="2"/>
+    <circle cx="10" cy="200" r="2"/>
+    <circle cx="390" cy="250" r="2"/>
+    <circle cx="150" cy="10" r="2"/>
+    <circle cx="200" cy="10" r="2"/>
+    <circle cx="250" cy="490" r="2"/>
+    <circle cx="300" cy="490" r="2"/>
+    <circle cx="0" cy="100" r="2"/>
+    <circle cx="400" cy="350" r="2"/>
+    <circle cx="100" cy="480" r="2"/>
+    <circle cx="160" cy="480" r="2"/>
+    <circle cx="300" cy="20" r="2"/>
+    <circle cx="350" cy="20" r="2"/>
+  </g>
+
+  <!-- Title: ALL SIGNALS DELIVERED -->
+  <text x="200" y="70" text-anchor="middle" font-family="monospace" font-size="24" font-weight="bold" fill="#00e5ff">ALL SIGNALS DELIVERED</text>
+
+  <!-- Subtle separator line -->
+  <line x1="60" y1="95" x2="340" y2="95" stroke="#1a3a5c" stroke-width="1"/>
+
+  <!-- Row 1: Dijkstra path icon + text -->
+  <g transform="translate(50, 140)">
+    <!-- Small path/graph icon -->
+    <g stroke="#00e5ff" stroke-width="1.5" fill="none">
+      <circle cx="5" cy="18" r="3" fill="#00e5ff" stroke="none"/>
+      <circle cx="18" cy="5" r="3" fill="#00e5ff" stroke="none"/>
+      <circle cx="18" cy="18" r="3" fill="#00e5ff" stroke="none"/>
+      <circle cx="30" cy="10" r="3" fill="#00e5ff" stroke="none"/>
+      <line x1="5" y1="18" x2="18" y2="5"/>
+      <line x1="5" y1="18" x2="18" y2="18"/>
+      <line x1="18" y1="5" x2="30" y2="10"/>
+      <line x1="18" y1="18" x2="30" y2="10"/>
+    </g>
+    <text x="42" y="14" font-family="monospace" font-size="12" fill="#ffffff">Dijkstra: GPS, delivery routing, network data.</text>
+  </g>
+
+  <!-- Row 2: Sine wave icon + text -->
+  <g transform="translate(50, 220)">
+    <!-- Small sine wave icon -->
+    <path d="M 2 12 Q 8 2, 14 12 Q 20 22, 26 12 Q 32 2, 38 12" stroke="#00e5ff" stroke-width="1.5" fill="none"/>
+    <text x="42" y="14" font-family="monospace" font-size="12" fill="#ffffff">Trigonometry: radio, music, light, audio processing.</text>
+  </g>
+
+  <!-- Row 3: Probability tree icon + text -->
+  <g transform="translate(50, 300)">
+    <!-- Small probability tree icon -->
+    <g stroke="#00e5ff" stroke-width="1.5" fill="none">
+      <line x1="18" y1="4" x2="10" y2="14"/>
+      <line x1="18" y1="4" x2="26" y2="14"/>
+      <line x1="10" y1="14" x2="5" y2="24"/>
+      <line x1="10" y1="14" x2="15" y2="24"/>
+      <line x1="26" y1="14" x2="21" y2="24"/>
+      <line x1="26" y1="14" x2="31" y2="24"/>
+    </g>
+    <g fill="#00e5ff">
+      <circle cx="18" cy="4" r="2.5"/>
+      <circle cx="10" cy="14" r="2.5"/>
+      <circle cx="26" cy="14" r="2.5"/>
+      <circle cx="5" cy="24" r="2.5"/>
+      <circle cx="15" cy="24" r="2.5"/>
+      <circle cx="21" cy="24" r="2.5"/>
+      <circle cx="31" cy="24" r="2.5"/>
+    </g>
+    <text x="42" y="14" font-family="monospace" font-size="12" fill="#ffffff">Bayes: medical tests, spam filters, AI.</text>
+  </g>
+
+  <!-- Subtle separator line -->
+  <line x1="60" y1="350" x2="340" y2="350" stroke="#1a3a5c" stroke-width="1"/>
+
+  <!-- Bottom: Press Enter or Tap to Play Again -->
+  <text x="200" y="460" text-anchor="middle" font-family="monospace" font-size="12" fill="#888888">Press Enter or Tap to Play Again</text>
+</svg>

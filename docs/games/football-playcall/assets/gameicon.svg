@@ -1,0 +1,84 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="iconClip">
+      <rect x="0" y="0" width="512" height="512" rx="48" ry="48"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#iconClip)">
+    <!-- Field background -->
+    <rect x="0" y="0" width="512" height="512" fill="#4CAF50"/>
+    <!-- Mowing stripes -->
+    <rect x="0" y="0" width="512" height="64" fill="#43A047"/>
+    <rect x="0" y="128" width="512" height="64" fill="#43A047"/>
+    <rect x="0" y="256" width="512" height="64" fill="#43A047"/>
+    <rect x="0" y="384" width="512" height="64" fill="#43A047"/>
+    <!-- Yard lines -->
+    <line x1="102" y1="0" x2="102" y2="512" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+    <line x1="204" y1="0" x2="204" y2="512" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+    <line x1="306" y1="0" x2="306" y2="512" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+    <line x1="408" y1="0" x2="408" y2="512" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+    <!-- Route line (dashed, curving from bottom-left to ball) -->
+    <path d="M 72 410 Q 120 360 170 300 Q 210 255 248 218" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round"/>
+    <!-- Arrowhead at ball -->
+    <polygon points="252,214 234,232 250,236" fill="#FFFFFF"/>
+    <!-- Quarterback figure (behind ball, throwing pose) -->
+    <g transform="translate(175,265)">
+      <!-- Legs -->
+      <line x1="-8" y1="32" x2="-14" y2="58" stroke="#1565C0" stroke-width="9" stroke-linecap="round"/>
+      <line x1="8" y1="32" x2="14" y2="58" stroke="#1565C0" stroke-width="9" stroke-linecap="round"/>
+      <!-- Body / jersey -->
+      <rect x="-16" y="-8" width="32" height="42" rx="6" fill="#1565C0"/>
+      <!-- Throwing arm (extended up-right) -->
+      <line x1="16" y1="-2" x2="42" y2="-24" stroke="#1565C0" stroke-width="9" stroke-linecap="round"/>
+      <!-- Off arm -->
+      <line x1="-16" y1="2" x2="-32" y2="18" stroke="#1565C0" stroke-width="9" stroke-linecap="round"/>
+      <!-- Helmet -->
+      <circle cx="0" cy="-22" r="15" fill="#FFFFFF"/>
+      <!-- Helmet stripe -->
+      <rect x="-2" y="-37" width="4" height="14" rx="2" fill="#1565C0"/>
+    </g>
+    <!-- Defender figure (chasing, to the right) -->
+    <g transform="translate(365,285)">
+      <!-- Legs (running stride) -->
+      <line x1="-8" y1="32" x2="-22" y2="58" stroke="#D32F2F" stroke-width="9" stroke-linecap="round"/>
+      <line x1="8" y1="32" x2="22" y2="52" stroke="#D32F2F" stroke-width="9" stroke-linecap="round"/>
+      <!-- Body / jersey -->
+      <rect x="-16" y="-8" width="32" height="42" rx="6" fill="#D32F2F"/>
+      <!-- Arms reaching forward (chasing) -->
+      <line x1="16" y1="-2" x2="38" y2="-14" stroke="#D32F2F" stroke-width="9" stroke-linecap="round"/>
+      <line x1="-16" y1="4" x2="-34" y2="14" stroke="#D32F2F" stroke-width="9" stroke-linecap="round"/>
+      <!-- Helmet -->
+      <circle cx="0" cy="-22" r="15" fill="#D32F2F"/>
+      <!-- Helmet stripe -->
+      <rect x="-2" y="-37" width="4" height="14" rx="2" fill="#FFFFFF"/>
+    </g>
+    <!-- Football (center, tilted 30 degrees) -->
+    <g transform="translate(256,205) rotate(-30)">
+      <ellipse cx="0" cy="0" rx="58" ry="32" fill="#8B4513"/>
+      <!-- Laces -->
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="-16" y1="-5" x2="-16" y2="5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="-9" y1="-5" x2="-9" y2="5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="-2" y1="-5" x2="-2" y2="5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="5" y1="-5" x2="5" y2="5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="12" y1="-5" x2="12" y2="5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="19" y1="-5" x2="19" y2="5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <!-- Timing bar at bottom -->
+    <g transform="translate(56,448)">
+      <!-- Bar background -->
+      <rect x="0" y="0" width="400" height="26" rx="5" fill="#263238"/>
+      <!-- Green zone -->
+      <rect x="2" y="2" width="128" height="22" rx="4" fill="#4CAF50"/>
+      <!-- Amber zone -->
+      <rect x="132" y="2" width="128" height="22" fill="#FFC107"/>
+      <!-- Red zone -->
+      <rect x="262" y="2" width="136" height="22" rx="4" fill="#D32F2F"/>
+      <!-- White marker -->
+      <rect x="128" y="-4" width="7" height="34" rx="3" fill="#FFFFFF"/>
+    </g>
+  </g>
+  <!-- Outer rounded border -->
+  <rect x="2" y="2" width="508" height="508" rx="46" ry="46" fill="none" stroke="#2E7D32" stroke-width="5"/>
+</svg>

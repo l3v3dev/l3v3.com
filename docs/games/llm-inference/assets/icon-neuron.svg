@@ -1,0 +1,76 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="magentaGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="lineGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="hiddenGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#ff40ff"/>
+      <stop offset="100%" stop-color="#cc00cc"/>
+    </radialGradient>
+    <radialGradient id="inputGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#aaffff"/>
+      <stop offset="100%" stop-color="#00c8e0"/>
+    </radialGradient>
+    <radialGradient id="outputGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#aaffff"/>
+      <stop offset="100%" stop-color="#00c8e0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded square badge background -->
+  <rect x="6" y="6" width="116" height="116" rx="18" ry="18" fill="#0a0e2a" stroke="#1a2050" stroke-width="2"/>
+
+  <!-- Subtle inner border glow -->
+  <rect x="10" y="10" width="108" height="108" rx="14" ry="14" fill="none" stroke="#151d45" stroke-width="1" opacity="0.6"/>
+
+  <!-- Connection lines: Input1 to Hidden -->
+  <line x1="34" y1="42" x2="62" y2="64" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" filter="url(#lineGlow)" opacity="0.9"/>
+  <!-- Connection lines: Input2 to Hidden -->
+  <line x1="34" y1="86" x2="62" y2="64" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" filter="url(#lineGlow)" opacity="0.9"/>
+  <!-- Connection line: Hidden to Output -->
+  <line x1="68" y1="64" x2="94" y2="64" stroke="#ff40ff" stroke-width="2.5" stroke-linecap="round" filter="url(#lineGlow)" opacity="0.95"/>
+
+  <!-- Input Node 1 (top-left) -->
+  <circle cx="30" cy="42" r="7" fill="url(#inputGrad)" filter="url(#cyanGlow)"/>
+  <circle cx="30" cy="42" r="3" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Input Node 2 (bottom-left) -->
+  <circle cx="30" cy="86" r="7" fill="url(#inputGrad)" filter="url(#cyanGlow)"/>
+  <circle cx="30" cy="86" r="3" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Hidden Neuron (center, bright pulsing magenta) -->
+  <circle cx="64" cy="64" r="12" fill="url(#hiddenGrad)" filter="url(#magentaGlow)"/>
+  <circle cx="64" cy="64" r="5" fill="#ffffff" opacity="0.85"/>
+  <!-- Pulse ring -->
+  <circle cx="64" cy="64" r="16" fill="none" stroke="#ff40ff" stroke-width="1" opacity="0.4"/>
+
+  <!-- Output Node (right) -->
+  <circle cx="98" cy="64" r="8" fill="url(#outputGrad)" filter="url(#cyanGlow)"/>
+  <circle cx="98" cy="64" r="3.5" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Small decorative dots on lines -->
+  <circle cx="48" cy="53" r="1.5" fill="#00e5ff" opacity="0.8"/>
+  <circle cx="48" cy="75" r="1.5" fill="#00e5ff" opacity="0.8"/>
+  <circle cx="81" cy="64" r="1.5" fill="#ff40ff" opacity="0.8"/>
+</svg>

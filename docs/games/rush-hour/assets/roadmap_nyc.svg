@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="528" viewBox="0 0 720 528">
+  <defs>
+    <g id="hroad">
+      <rect width="720" height="48" fill="#b7b2a6"/>
+      <rect y="5" width="720" height="38" fill="#383d43"/>
+      <line x1="0" y1="17" x2="720" y2="17" stroke="#e8eaec" stroke-width="1.5" opacity="0.4"/>
+      <line x1="0" y1="31" x2="720" y2="31" stroke="#e8eaec" stroke-width="1.5" opacity="0.4"/>
+      <line x1="0" y1="24" x2="720" y2="24" stroke="#f2c94c" stroke-width="2" stroke-dasharray="14 10"/>
+    </g>
+    <g id="vroad">
+      <rect width="48" height="528" fill="#b7b2a6"/>
+      <rect x="5" width="38" height="528" fill="#383d43"/>
+      <line x1="17" y1="0" x2="17" y2="528" stroke="#e8eaec" stroke-width="1.5" opacity="0.4"/>
+      <line x1="31" y1="0" x2="31" y2="528" stroke="#e8eaec" stroke-width="1.5" opacity="0.4"/>
+      <line x1="24" y1="0" x2="24" y2="528" stroke="#f2c94c" stroke-width="2" stroke-dasharray="14 10"/>
+    </g>
+    <g id="xint">
+      <rect x="5" y="5" width="38" height="38" fill="#383d43"/>
+      <g fill="#e8eaec" opacity="0.8">
+        <rect x="8" y="0" width="4" height="6"/><rect x="14" y="0" width="4" height="6"/><rect x="20" y="0" width="4" height="6"/><rect x="26" y="0" width="4" height="6"/><rect x="32" y="0" width="4" height="6"/><rect x="38" y="0" width="4" height="6"/>
+        <rect x="8" y="42" width="4" height="6"/><rect x="14" y="42" width="4" height="6"/><rect x="20" y="42" width="4" height="6"/><rect x="26" y="42" width="4" height="6"/><rect x="32" y="42" width="4" height="6"/><rect x="38" y="42" width="4" height="6"/>
+        <rect x="0" y="8" width="6" height="4"/><rect x="0" y="14" width="6" height="4"/><rect x="0" y="20" width="6" height="4"/><rect x="0" y="26" width="6" height="4"/><rect x="0" y="32" width="6" height="4"/><rect x="0" y="38" width="6" height="4"/>
+        <rect x="42" y="8" width="6" height="4"/><rect x="42" y="14" width="6" height="4"/><rect x="42" y="20" width="6" height="4"/><rect x="42" y="26" width="6" height="4"/><rect x="42" y="32" width="6" height="4"/><rect x="42" y="38" width="6" height="4"/>
+      </g>
+    </g>
+    <g id="blkA">
+      <rect width="96" height="48" fill="#cfc9bb"/>
+      <rect x="3" y="3" width="44" height="42" fill="#a89f92" stroke="#857d72"/>
+      <rect x="51" y="3" width="42" height="19" fill="#9c948a" stroke="#857d72"/>
+      <rect x="51" y="26" width="42" height="19" fill="#b0a89b" stroke="#857d72"/>
+      <rect x="9" y="9" width="9" height="7" fill="#8f877b"/>
+      <rect x="30" y="30" width="9" height="7" fill="#8f877b"/>
+      <rect x="57" y="8" width="9" height="6" fill="#8a8276"/>
+      <rect x="79" y="31" width="9" height="6" fill="#8a8276"/>
+    </g>
+    <g id="blkB">
+      <rect width="96" height="48" fill="#cfc9bb"/>
+      <rect x="3" y="3" width="29" height="42" fill="#9c948a" stroke="#857d72"/>
+      <rect x="36" y="3" width="29" height="42" fill="#b0a89b" stroke="#857d72"/>
+      <rect x="69" y="3" width="24" height="42" fill="#a89f92" stroke="#857d72"/>
+      <rect x="8" y="8" width="8" height="6" fill="#8a8276"/>
+      <rect x="42" y="32" width="8" height="6" fill="#8a8276"/>
+      <rect x="74" y="10" width="8" height="6" fill="#8a8276"/>
+    </g>
+    <g id="blkC">
+      <rect width="96" height="48" fill="#cfc9bb"/>
+      <rect x="3" y="3" width="90" height="19" fill="#a39a8d" stroke="#857d72"/>
+      <rect x="3" y="26" width="44" height="19" fill="#a89f92" stroke="#857d72"/>
+      <rect x="51" y="26" width="42" height="19" fill="#9c948a" stroke="#857d72"/>
+      <rect x="10" y="8" width="10" height="6" fill="#8a8276"/>
+      <rect x="70" y="8" width="10" height="6" fill="#8a8276"/>
+      <rect x="20" y="31" width="8" height="6" fill="#8a8276"/>
+    </g>
+    <g id="park">
+      <rect width="96" height="48" fill="#9dbb84"/>
+      <circle cx="14" cy="13" r="8" fill="#7ba05e"/>
+      <circle cx="34" cy="30" r="9" fill="#6d9455"/>
+      <circle cx="58" cy="14" r="8" fill="#7ba05e"/>
+      <circle cx="80" cy="32" r="9" fill="#6d9455"/>
+      <path d="M0 40 Q 24 34 48 40 T 96 40" stroke="#c9d8b4" stroke-width="2" fill="none"/>
+    </g>
+  </defs>
+
+  <!-- ground -->
+  <rect width="720" height="528" fill="#d7d1c3"/>
+
+  <!-- Hudson River (west) and East River (east) -->
+  <rect width="64" height="528" fill="#79aecd"/>
+  <rect x="60" width="4" height="528" fill="#5d92b4"/>
+  <path d="M10 60 q8 6 16 0 M14 180 q8 6 16 0 M10 320 q8 6 16 0 M14 440 q8 6 16 0" stroke="#8fbcd9" stroke-width="2" fill="none"/>
+  <rect x="656" width="64" height="528" fill="#79aecd"/>
+  <rect x="656" width="4" height="528" fill="#5d92b4"/>
+  <path d="M690 100 q8 6 16 0 M694 260 q8 6 16 0 M690 420 q8 6 16 0" stroke="#8fbcd9" stroke-width="2" fill="none"/>
+
+  <!-- road network: even rows horizontal, even cols vertical -->
+  <use href="#hroad" y="0"/><use href="#hroad" y="96"/><use href="#hroad" y="192"/>
+  <use href="#hroad" y="288"/><use href="#hroad" y="384"/><use href="#hroad" y="480"/>
+  <use href="#vroad" x="0"/><use href="#vroad" x="96"/><use href="#vroad" x="192"/><use href="#vroad" x="288"/>
+  <use href="#vroad" x="384"/><use href="#vroad" x="480"/><use href="#vroad" x="576"/><use href="#vroad" x="672"/>
+
+  <!-- intersections with zebra crossings -->
+  <use href="#xint" x="0" y="0"/><use href="#xint" x="96" y="0"/><use href="#xint" x="192" y="0"/><use href="#xint" x="288" y="0"/><use href="#xint" x="384" y="0"/><use href="#xint" x="480" y="0"/><use href="#xint" x="576" y="0"/><use href="#xint" x="672" y="0"/>
+  <use href="#xint" x="0" y="96"/><use href="#xint" x="96" y="96"/><use href="#xint" x="192" y="96"/><use href="#xint" x="288" y="96"/><use href="#xint" x="384" y="96"/><use href="#xint" x="480" y="96"/><use href="#xint" x="576" y="96"/><use href="#xint" x="672" y="96"/>
+  <use href="#xint" x="0" y="192"/><use href="#xint" x="96" y="192"/><use href="#xint" x="192" y="192"/><use href="#xint" x="288" y="192"/><use href="#xint" x="384" y="192"/><use href="#xint" x="480" y="192"/><use href="#xint" x="576" y="192"/><use href="#xint" x="672" y="192"/>
+  <use href="#xint" x="0" y="288"/><use href="#xint" x="96" y="288"/><use href="#xint" x="192" y="288"/><use href="#xint" x="288" y="288"/><use href="#xint" x="384" y="288"/><use href="#xint" x="480" y="288"/><use href="#xint" x="576" y="288"/><use href="#xint" x="672" y="288"/>
+  <use href="#xint" x="0" y="384"/><use href="#xint" x="96" y="384"/><use href="#xint" x="192" y="384"/><use href="#xint" x="288" y="384"/><use href="#xint" x="384" y="384"/><use href="#xint" x="480" y="384"/><use href="#xint" x="576" y="384"/><use href="#xint" x="672" y="384"/>
+  <use href="#xint" x="0" y="480"/><use href="#xint" x="96" y="480"/><use href="#xint" x="192" y="480"/><use href="#xint" x="288" y="480"/><use href="#xint" x="384" y="480"/><use href="#xint" x="480" y="480"/><use href="#xint" x="576" y="480"/><use href="#xint" x="672" y="480"/>
+
+  <!-- building blocks -->
+  <use href="#blkA" x="48" y="48"/><use href="#blkB" x="192" y="48"/><use href="#blkC" x="336" y="48"/><use href="#blkA" x="480" y="48"/>
+  <use href="#blkC" x="48" y="144"/><use href="#blkA" x="192" y="144"/><use href="#park" x="336" y="144"/><use href="#blkB" x="480" y="144"/><use href="#blkC" x="624" y="144"/>
+  <use href="#blkB" x="48" y="240"/><use href="#blkC" x="192" y="240"/><use href="#park" x="336" y="240"/><use href="#blkA" x="480" y="240"/><use href="#blkB" x="624" y="240"/>
+  <use href="#blkA" x="48" y="336"/><use href="#blkB" x="192" y="336"/><use href="#blkC" x="336" y="336"/><use href="#blkC" x="480" y="336"/><use href="#blkA" x="624" y="336"/>
+  <use href="#blkC" x="48" y="432"/><use href="#blkA" x="192" y="432"/><use href="#blkB" x="336" y="432"/><use href="#blkB" x="480" y="432"/><use href="#blkC" x="624" y="432"/>
+
+  <!-- Central Park pond -->
+  <ellipse cx="384" cy="196" rx="20" ry="12" fill="#79aecd"/>
+
+  <!-- destination plaza (tile 13,1) -->
+  <rect x="624" y="48" width="96" height="48" fill="#cfc9bb"/>
+  <rect x="628" y="52" width="40" height="40" fill="#c2bbae" stroke="#b7b2a6"/>
+  <rect x="676" y="52" width="40" height="40" fill="#a89f92" stroke="#857d72"/>
+  <rect x="684" y="60" width="9" height="7" fill="#8f877b"/>
+
+  <!-- bridge railings over the rivers -->
+  <line x1="3" y1="0" x2="3" y2="528" stroke="#dfe3e7" stroke-width="1.5" opacity="0.7"/>
+  <line x1="45" y1="0" x2="45" y2="528" stroke="#dfe3e7" stroke-width="1.5" opacity="0.7"/>
+  <line x1="675" y1="0" x2="675" y2="528" stroke="#dfe3e7" stroke-width="1.5" opacity="0.7"/>
+  <line x1="717" y1="0" x2="717" y2="528" stroke="#dfe3e7" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- street names -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#dfe3e7" opacity="0.75" text-anchor="middle" letter-spacing="1.5">
+    <text x="216" y="27">W 155TH ST</text>
+    <text x="504" y="123">W 145TH ST</text>
+    <text x="216" y="219">W 135TH ST</text>
+    <text x="504" y="315">W 125TH ST</text>
+    <text x="216" y="411">W 115TH ST</text>
+    <text x="504" y="507">W 105TH ST</text>
+    <text x="24" y="300" transform="rotate(-90 24 300)">12TH AVE</text>
+    <text x="120" y="140" transform="rotate(-90 120 140)">9TH AVE</text>
+    <text x="216" y="380" transform="rotate(-90 216 380)">BROADWAY</text>
+    <text x="312" y="120" transform="rotate(-90 312 120)">7TH AVE</text>
+    <text x="408" y="340" transform="rotate(-90 408 340)">5TH AVE</text>
+    <text x="504" y="160" transform="rotate(-90 504 160)">3RD AVE</text>
+    <text x="600" y="400" transform="rotate(-90 600 400)">PARK AVE</text>
+    <text x="696" y="240" transform="rotate(-90 696 240)">1ST AVE</text>
+  </g>
+</svg>

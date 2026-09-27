@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Wheels -->
+  <rect x="18" y="28" width="10" height="22" rx="4" fill="#1a1a1a"/>
+  <rect x="100" y="28" width="10" height="22" rx="4" fill="#1a1a1a"/>
+  <rect x="18" y="78" width="10" height="22" rx="4" fill="#1a1a1a"/>
+  <rect x="100" y="78" width="10" height="22" rx="4" fill="#1a1a1a"/>
+  <!-- Car body -->
+  <rect x="28" y="10" width="72" height="108" rx="18" fill="#d42a2a"/>
+  <!-- Body shading -->
+  <rect x="32" y="14" width="64" height="100" rx="15" fill="#e03535"/>
+  <!-- Front bumper / hood -->
+  <rect x="34" y="14" width="60" height="18" rx="8" fill="#c22222"/>
+  <!-- Headlights -->
+  <rect x="36" y="14" width="14" height="7" rx="3" fill="#fff3b0"/>
+  <rect x="78" y="14" width="14" height="7" rx="3" fill="#fff3b0"/>
+  <!-- Windshield -->
+  <path d="M38 34 L90 34 L86 50 L42 50 Z" fill="#222831"/>
+  <!-- Roof -->
+  <rect x="42" y="50" width="44" height="26" rx="6" fill="#b81f1f"/>
+  <!-- Rear window -->
+  <path d="M42 76 L86 76 L90 90 L38 90 Z" fill="#222831"/>
+  <!-- Rear bumper -->
+  <rect x="34" y="92" width="60" height="14" rx="7" fill="#c22222"/>
+  <!-- Taillights -->
+  <rect x="38" y="96" width="12" height="6" rx="3" fill="#ff6b6b"/>
+  <rect x="78" y="96" width="12" height="6" rx="3" fill="#ff6b6b"/>
+  <!-- Side mirrors -->
+  <rect x="24" y="36" width="6" height="10" rx="2" fill="#c22222"/>
+  <rect x="98" y="36" width="6" height="10" rx="2" fill="#c22222"/>
+</svg>

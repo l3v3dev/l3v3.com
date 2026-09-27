@@ -1,0 +1,127 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Warm off-white paper background -->
+  <rect width="512" height="512" fill="#F5F0E6" rx="12"/>
+  
+  <!-- Subtle paper texture lines -->
+  <line x1="0" y1="80" x2="512" y2="82" stroke="#EDE8DC" stroke-width="1"/>
+  <line x1="0" y1="200" x2="512" y2="198" stroke="#EDE8DC" stroke-width="1"/>
+  <line x1="0" y1="350" x2="512" y2="352" stroke="#EDE8DC" stroke-width="1"/>
+  <line x1="0" y1="440" x2="512" y2="438" stroke="#EDE8DC" stroke-width="1"/>
+
+  <!-- Ink splatter dots - scattered -->
+  <circle cx="120" cy="140" r="4" fill="#1A1A1A"/>
+  <circle cx="105" cy="155" r="2.5" fill="#1A1A1A"/>
+  <circle cx="135" cy="128" r="3" fill="#1A1A1A"/>
+  <circle cx="95" cy="132" r="1.8" fill="#1A1A1A"/>
+  <circle cx="380" cy="130" r="3.5" fill="#1A1A1A"/>
+  <circle cx="395" cy="145" r="2" fill="#1A1A1A"/>
+  <circle cx="370" cy="118" r="2.5" fill="#1A1A1A"/>
+  <circle cx="410" cy="125" r="1.5" fill="#1A1A1A"/>
+  <circle cx="250" cy="380" r="3" fill="#1A1A1A"/>
+  <circle cx="265" cy="395" r="2" fill="#1A1A1A"/>
+  <circle cx="240" cy="398" r="1.5" fill="#1A1A1A"/>
+  <circle cx="155" cy="370" r="2.5" fill="#1A1A1A"/>
+  <circle cx="350" cy="385" r="3" fill="#1A1A1A"/>
+  <circle cx="365" cy="372" r="1.8" fill="#1A1A1A"/>
+  <circle cx="200" cy="110" r="2" fill="#1A1A1A"/>
+  <circle cx="310" cy="105" r="2.5" fill="#1A1A1A"/>
+  <circle cx="180" cy="400" r="2" fill="#1A1A1A"/>
+  <circle cx="330" cy="405" r="2.5" fill="#1A1A1A"/>
+
+  <!-- PUNCHING FIGURE (left) - dynamic forward lean -->
+  <!-- Head -->
+  <circle cx="168" cy="168" r="24" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/>
+  <!-- Head sketchy double stroke -->
+  <path d="M 148 162 Q 155 142 172 144 Q 190 146 192 165 Q 193 182 178 190 Q 160 194 148 180" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Body - leaning forward -->
+  <path d="M 172 192 Q 178 230 188 275" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Punching arm - extended forward with fist -->
+  <path d="M 180 215 Q 210 205 245 198 Q 265 194 278 196" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  <!-- Fist -->
+  <circle cx="282" cy="196" r="10" fill="#1A1A1A"/>
+  <!-- Fist sketchy outline -->
+  <path d="M 274 188 Q 282 182 292 188 Q 296 196 290 204 Q 280 208 274 202" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Back arm - pulled back -->
+  <path d="M 178 218 Q 155 235 138 252" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/>
+  <!-- Back fist -->
+  <circle cx="135" cy="255" r="8" fill="#1A1A1A"/>
+  
+  <!-- Front leg - stepping forward -->
+  <path d="M 188 275 Q 205 310 225 345" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  <!-- Front foot -->
+  <path d="M 225 345 Q 235 348 242 345" fill="none" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Back leg - pushing off -->
+  <path d="M 185 278 Q 165 315 142 350" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  <!-- Back foot -->
+  <path d="M 142 350 Q 132 352 125 348" fill="none" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Motion lines near punch impact -->
+  <path d="M 295 185 Q 305 182 312 180" fill="none" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 298 196 Q 310 196 318 195" fill="none" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 295 207 Q 305 210 312 212" fill="none" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 300 175 Q 308 170 314 168" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 300 215 Q 308 220 314 222" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- RECOILING FIGURE (right) - leaning back, arms up -->
+  <!-- Head - tilted back -->
+  <circle cx="352" cy="158" r="24" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/>
+  <!-- Head sketchy double stroke -->
+  <path d="M 334 150 Q 340 132 358 134 Q 375 137 376 155 Q 375 172 360 178 Q 342 180 334 168" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Body - leaning back -->
+  <path d="M 355 182 Q 362 225 372 270" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Left arm - raised defensively -->
+  <path d="M 358 210 Q 340 190 325 172" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/>
+  <!-- Left fist -->
+  <circle cx="322" cy="168" r="8" fill="#1A1A1A"/>
+  
+  <!-- Right arm - raised up -->
+  <path d="M 362 212 Q 385 195 400 178" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/>
+  <!-- Right fist -->
+  <circle cx="403" cy="175" r="8" fill="#1A1A1A"/>
+  
+  <!-- Front leg - stumbling forward -->
+  <path d="M 372 270 Q 390 310 405 348" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  <!-- Front foot -->
+  <path d="M 405 348 Q 415 350 422 347" fill="none" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Back leg - trailing -->
+  <path d="M 368 272 Q 355 315 338 352" fill="none" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round"/>
+  <!-- Back foot -->
+  <path d="M 338 352 Q 328 355 320 352" fill="none" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Recoil impact lines on right figure -->
+  <path d="M 310 155 Q 302 150 296 148" fill="none" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 308 168 Q 298 168 290 168" fill="none" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 310 180 Q 302 185 296 188" fill="none" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Large Red Hand-drawn X in top-right corner -->
+  <path d="M 388 38 Q 405 55 420 72 Q 438 92 455 112 Q 465 125 472 138" fill="none" stroke="#C41E1E" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 472 38 Q 455 55 440 72 Q 422 92 405 112 Q 395 125 388 138" fill="none" stroke="#C41E1E" stroke-width="14" stroke-linecap="round"/>
+  <!-- X sketchy overlay for hand-drawn feel -->
+  <path d="M 392 42 Q 408 58 422 75 Q 440 95 458 115 Q 468 128 474 140" fill="none" stroke="#C41E1E" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 468 42 Q 452 58 438 75 Q 420 95 402 115 Q 392 128 386 140" fill="none" stroke="#C41E1E" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Additional ink splatters near the X -->
+  <circle cx="380" cy="50" r="3" fill="#C41E1E"/>
+  <circle cx="480" cy="55" r="2.5" fill="#C41E1E"/>
+  <circle cx="475" cy="145" r="2" fill="#C41E1E"/>
+  <circle cx="385" cy="148" r="2.5" fill="#C41E1E"/>
+
+  <!-- Ground line - rough sketchy -->
+  <path d="M 80 370 Q 120 368 160 370 Q 200 372 240 370 Q 280 368 320 370 Q 360 372 400 370 Q 430 369 440 370" fill="none" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Title text "INK DUEL" at bottom -->
+  <text x="256" y="445" font-family="Arial Black, Arial, sans-serif" font-size="38" font-weight="900" fill="#1A1A1A" text-anchor="middle" letter-spacing="4">INK DUEL</text>
+  <!-- Underline sketch -->
+  <path d="M 148 458 Q 180 460 220 458 Q 260 456 300 458 Q 340 460 364 458" fill="none" stroke="#C41E1E" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Small "1v1" tag -->
+  <text x="256" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A" text-anchor="middle" letter-spacing="2">1 v 1</text>
+</svg>

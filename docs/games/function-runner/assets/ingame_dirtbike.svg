@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 160" width="256" height="160">
+  <rect width="256" height="160" fill="none"/>
+
+  <defs>
+    <style>
+      .outline { stroke:#252525; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
+      .thin { stroke:#252525; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+    </style>
+  </defs>
+
+  <!-- DIRT BIKE: side profile -->
+
+  <!-- rear and front knobby tires -->
+  <g fill="#242424" class="outline">
+    <circle cx="48" cy="113" r="29"/>
+    <circle cx="208" cy="113" r="29"/>
+  </g>
+
+  <!-- tire tread blocks -->
+  <g fill="#333" class="thin">
+    <path d="M28 91l-7-6 5-6 9 4"/>
+    <path d="M39 85l-4-9 7-4 7 8"/>
+    <path d="M52 83l1-10 8 1 3 10"/>
+    <path d="M66 89l6-8 7 5-3 10"/>
+    <path d="M75 101l9-3 3 8-8 5"/>
+    <path d="M77 117l9 3-2 8-10-1"/>
+    <path d="M69 133l6 7-6 6-8-7"/>
+    <path d="M54 140l-1 10-8-1-2-10"/>
+    <path d="M39 137l-6 8-7-5 3-10"/>
+    <path d="M27 126l-9 2-3-8 9-5"/>
+    <path d="M20 110l-9-3 2-8 10 1"/>
+
+    <path d="M188 91l-7-6 5-6 9 4"/>
+    <path d="M199 85l-4-9 7-4 7 8"/>
+    <path d="M212 83l1-10 8 1 3 10"/>
+    <path d="M226 89l6-8 7 5-3 10"/>
+    <path d="M235 101l9-3 3 8-8 5"/>
+    <path d="M237 117l9 3-2 8-10-1"/>
+    <path d="M229 133l6 7-6 6-8-7"/>
+    <path d="M214 140l-1 10-8-1-2-10"/>
+    <path d="M199 137l-6 8-7-5 3-10"/>
+    <path d="M187 126l-9 2-3-8 9-5"/>
+    <path d="M180 110l-9-3 2-8 10 1"/>
+  </g>
+
+  <!-- wheel hubs and spokes -->
+  <g fill="none" class="thin">
+    <circle cx="48" cy="113" r="19" fill="#d5d5d5"/>
+    <circle cx="208" cy="113" r="19" fill="#d5d5d5"/>
+    <circle cx="48" cy="113" r="5" fill="#555"/>
+    <circle cx="208" cy="113" r="5" fill="#555"/>
+    <path d="M48 94v38M29 113h38M35 100l26 26M61 100l-26 26"/>
+    <path d="M208 94v38M189 113h38M195 100l26 26M221 100l-26 26"/>
+  </g>
+
+  <!-- rear disc brake -->
+  <circle cx="48" cy="113" r="11" fill="none" stroke="#777" stroke-width="3"/>
+  <circle cx="48" cy="113" r="3" fill="#252525"/>
+
+  <!-- main motocross frame -->
+  <g fill="none" class="outline">
+    <path d="M48 113 L91 76 L137 78 L169 111"/>
+    <path d="M91 76 L119 111 L48 113"/>
+    <path d="M119 111 L169 111"/>
+    <path d="M91 76 L137 78"/>
+    <path d="M137 78 L169 111"/>
+  </g>
+
+  <!-- rear swingarm -->
+  <path d="M48 113 L119 111 L111 121 L48 118 Z"
+        fill="#9a9a9a" class="outline"/>
+
+  <!-- rear suspension -->
+  <g fill="none" class="thin">
+    <path d="M103 83 L116 108"/>
+    <path d="M106 84 L120 108"/>
+  </g>
+  <path d="M102 82 C94 87 108 91 101 96 C94 101 108 105 101 110 C96 114 108 117 103 121"
+        fill="none" stroke="#e87518" stroke-width="5"/>
+
+  <!-- engine -->
+  <path d="M105 88 L139 86 L151 106 L140 119 L111 116 L99 103 Z"
+        fill="#555" class="outline"/>
+  <circle cx="127" cy="104" r="13" fill="#aaa" class="thin"/>
+  <circle cx="127" cy="104" r="4" fill="#555"/>
+  <path d="M109 94l18 5M109 111l15-5" fill="none" class="thin"/>
+
+  <!-- exhaust pipe -->
+  <path d="M107 94 C93 91 91 101 98 108 C104 114 110 116 116 116"
+        fill="none" stroke="#b8b8b8" stroke-width="7"/>
+  <path d="M107 94 C93 91 91 101 98 108"
+        fill="none" stroke="#e0e0e0" stroke-width="3"/>
+
+  <!-- fuel tank -->
+  <path d="M91 76 L113 59 L146 61 L158 76 L138 88 L108 84 Z"
+        fill="#e86f16" class="outline"/>
+
+  <!-- aggressive side fairing -->
+  <path d="M78 76 L102 64 L135 77 L120 93 L88 89 Z"
+        fill="#f28a1d" class="outline"/>
+  <path d="M91 76 L113 70 L129 78 L112 82 Z" fill="#fff"/>
+
+  <!-- long motocross seat -->
+  <path d="M68 63 C80 58 101 57 119 60 L139 64 L134 71 L91 69 L70 70 Z"
+        fill="#252525" class="outline"/>
+  <path d="M73 63 L117 62" fill="none" stroke="#666" stroke-width="3"/>
+
+  <!-- rear fender -->
+  <path d="M69 68 C51 63 36 70 27 81 L48 82 L75 73 Z"
+        fill="#f28a1d" class="outline"/>
+
+  <!-- front steering head -->
+  <path d="M145 61 L158 48 L173 58 L165 78 L151 75 Z"
+        fill="#e86f16" class="outline"/>
+
+  <!-- front fork -->
+  <path d="M164 62 L194 111" fill="none" stroke="#d9a52a" stroke-width="8"/>
+  <path d="M173 58 L201 108" fill="none" stroke="#eee" stroke-width="5"/>
+  <path d="M164 62 L194 111" fill="none" stroke="#555" stroke-width="2"/>
+
+  <!-- fork guards -->
+  <path d="M183 80 L196 76 L210 105 L199 111 Z"
+        fill="#fff" class="outline"/>
+  <path d="M194 82 L203 80 L208 91" fill="none" stroke="#e86f16" stroke-width="5"/>
+
+  <!-- front fender -->
+  <path d="M171 61 C191 51 214 58 235 76 L224 80 L198 72 L175 70 Z"
+        fill="#f28a1d" class="outline"/>
+
+  <!-- number plate -->
+  <path d="M153 46 L171 37 L185 44 L181 64 L160 62 Z"
+        fill="#fff" class="outline"/>
+  <path d="M169 40 L180 45 L178 54 L163 51 Z" fill="#f28a1d"/>
+
+  <!-- handlebars -->
+  <path d="M157 43 L151 31 L135 29 L130 33 L146 37"
+        fill="none" class="outline"/>
+  <path d="M130 33 L123 29" fill="none" class="outline"/>
+  <rect x="119" y="26" width="14" height="7" rx="3" fill="#252525"/>
+
+  <!-- handlebar clamps -->
+  <circle cx="155" cy="43" r="5" fill="#555" class="thin"/>
+
+  <!-- front disc brake -->
+  <circle cx="208" cy="113" r="12" fill="none" stroke="#777" stroke-width="3"/>
+  <circle cx="208" cy="113" r="3" fill="#252525"/>
+
+  <!-- chain -->
+  <path d="M53 119 C70 125 92 125 111 119"
+        fill="none" stroke="#333" stroke-width="4" stroke-dasharray="3 3"/>
+
+  <!-- foot peg -->
+  <path d="M116 119h16" fill="none" stroke="#252525" stroke-width="5"/>
+  <circle cx="113" cy="118" r="4" fill="#555"/>
+
+  <!-- kick starter -->
+  <path d="M143 111 L151 124 L160 124" fill="none" class="thin"/>
+
+  <!-- small details -->
+  <path d="M84 91 L91 96" fill="none" class="thin"/>
+  <path d="M153 72 L161 80" fill="none" class="thin"/>
+</svg>

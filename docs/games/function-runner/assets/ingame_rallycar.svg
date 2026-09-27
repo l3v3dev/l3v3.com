@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180">
+  <rect width="320" height="180" fill="none"/>
+  <defs>
+    <style>
+      .o{stroke:#242424;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .t{stroke:#242424;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- RALLY CAR / SIDE PROFILE -->
+
+  <!-- chunky rally tires -->
+  <g fill="#252525" class="o">
+    <circle cx="73" cy="132" r="31"/>
+    <circle cx="248" cy="132" r="31"/>
+  </g>
+
+  <!-- tire tread -->
+  <g fill="#3a3a3a" class="t">
+    <path d="M51 107l-10-4 2-8 11 2"/>
+    <path d="M62 102l-5-10 7-5 8 9"/>
+    <path d="M76 101l1-11 8 1 3 11"/>
+    <path d="M90 105l8-8 7 6-6 9"/>
+    <path d="M101 116l10-1 2 8-10 4"/>
+    <path d="M103 132l10 4-2 8-11-1"/>
+    <path d="M96 147l7 8-6 6-9-7"/>
+    <path d="M82 157l-1 11-8-1-3-11"/>
+    <path d="M66 157l-8 8-7-5 5-10"/>
+    <path d="M53 148l-10 3-3-8 10-5"/>
+    <path d="M46 133l-11-2v-8l11-1"/>
+
+    <path d="M226 107l-10-4 2-8 11 2"/>
+    <path d="M237 102l-5-10 7-5 8 9"/>
+    <path d="M251 101l1-11 8 1 3 11"/>
+    <path d="M265 105l8-8 7 6-6 9"/>
+    <path d="M276 116l10-1 2 8-10 4"/>
+    <path d="M278 132l10 4-2 8-11-1"/>
+    <path d="M271 147l7 8-6 6-9-7"/>
+    <path d="M256 157l-1 11-8-1-3-11"/>
+    <path d="M241 157l-8 8-7-5 5-10"/>
+    <path d="M228 148l-10 3-3-8 10-5"/>
+    <path d="M221 133l-11-2v-8l11-1"/>
+  </g>
+
+  <!-- wheels -->
+  <g fill="none" class="t">
+    <circle cx="73" cy="132" r="21" fill="#bcbcbc"/>
+    <circle cx="248" cy="132" r="21" fill="#bcbcbc"/>
+    <circle cx="73" cy="132" r="5" fill="#444"/>
+    <circle cx="248" cy="132" r="5" fill="#444"/>
+    <path d="M73 111v42M52 132h42M58 117l30 30M88 117l-30 30"/>
+    <path d="M248 111v42M227 132h42M233 117l30 30M263 117l-30 30"/>
+  </g>
+
+  <!-- body silhouette -->
+  <path d="M34 119
+           L45 101
+           L76 94
+           L105 65
+           L145 53
+           L191 55
+           L223 73
+           L255 88
+           L282 98
+           L294 112
+           L291 121
+           L276 121
+           L269 104
+           L235 103
+           L226 121
+           L94 121
+           L86 104
+           L58 105
+           L52 121 Z"
+        fill="#e43f25" class="o"/>
+
+  <!-- roof / cabin -->
+  <path d="M101 66 L117 42 L150 32 L190 35 L220 72 L194 76 L157 67 Z"
+        fill="#eedd11" class="o"/>
+
+  <!-- windshield -->
+  <path d="M153 37 L187 39 L207 67 L177 64 Z"
+        fill="#303931" class="o"/>
+
+  <!-- rear side window -->
+  <path d="M119 44 L148 36 L153 63 L108 67 Z"
+        fill="#303931" class="o"/>
+
+  <!-- window separator -->
+  <path d="M153 37 L153 64" fill="#ecdc12" class="t"/>
+
+  <!-- roof spoiler -->
+  <path d="M187 34 L207 28 L226 35 L218 42 L195 39 Z"
+        fill="#efdf22" class="o"/>
+
+  <!-- wide fenders -->
+  <path d="M38 105 Q55 88 84 94 L91 104 L82 110 L51 109 Z"
+        fill="#f25b32" class="o"/>
+  <path d="M216 101 Q246 84 278 97 L291 111 L277 113 L268 103 L232 105 Z"
+        fill="#f25b32" class="o"/>
+
+  <!-- hood -->
+  <path d="M72 94 L104 66 L128 68 L111 91 L92 99 Z"
+        fill="#f25b32" class="o"/>
+
+  <!-- hood vents -->
+  <path d="M92 79l19-7-4 9-18 6z" fill="#252525"/>
+  <path d="M101 86l15-5-3 7-14 5z" fill="#252525"/>
+
+  <!-- front bumper -->
+  <path d="M277 99 L300 104 L307 117 L295 124 L278 120 L286 111 Z"
+        fill="#252525" class="o"/>
+
+  <!-- rear bumper -->
+  <path d="M34 111 L20 116 L22 126 L42 126 L51 118 Z"
+        fill="#252525" class="o"/>
+
+  <!-- rally side skirt -->
+  <path d="M91 111 L224 111 L232 121 L88 121 Z"
+        fill="#252525" class="o"/>
+
+  <!-- door -->
+  <path d="M119 69 L169 68 L177 108 L111 108 Z"
+        fill="#d93622" class="t"/>
+
+  <!-- door handle -->
+  <path d="M151 74h12" fill="none" stroke="#eee" stroke-width="3"/>
+
+  <!-- racing number -->
+  <path d="M176 75 L214 75 L217 104 L181 104 Z"
+        fill="#fff" class="o"/>
+  <text x="196" y="98" text-anchor="middle"
+        font-family="Arial,sans-serif" font-size="22"
+        font-weight="900" fill="#252525">7</text>
+
+  <!-- rally stripe -->
+  <path d="M42 91 L100 68 L112 69 L63 101 Z" fill="#fff"/>
+  <path d="M58 98 L111 69 L120 70 L74 104 Z" fill="#f5c62e"/>
+
+  <!-- lower accent -->
+  <path d="M91 108 L226 108 L230 115 L88 115 Z" fill="#f5c62e"/>
+
+  <!-- front grille -->
+  <path d="M289 106 L300 109 L302 116 L290 118 Z" fill="#111"/>
+  <path d="M292 109v8M296 110v7M300 111v5" fill="none" stroke="#777" stroke-width="2"/>
+
+  <!-- headlights -->
+  <path d="M274 94 L290 99 L285 106 L270 103 Z"
+        fill="#f5f1c8" class="t"/>
+  <path d="M46 96 L61 91 L66 98 L52 103 Z"
+        fill="#f5f1c8" class="t"/>
+
+  <!-- rally auxiliary lamps -->
+  <g fill="#eee" class="o">
+    <circle cx="270" cy="76" r="7"/>
+    <circle cx="287" cy="80" r="7"/>
+  </g>
+  <g fill="#ffd85a">
+    <circle cx="270" cy="76" r="3"/>
+    <circle cx="287" cy="80" r="3"/>
+  </g>
+
+  <!-- mirrors -->
+  <path d="M143 48 L132 43 L128 48 L140 52 Z"
+        fill="#252525" class="t"/>
+  <path d="M202 49 L214 44 L218 49 L207 53 Z"
+        fill="#252525" class="t"/>
+
+  <!-- suspension hints -->
+  <path d="M72 101 L73 120 M248 101 L248 120"
+        fill="none" stroke="#888" stroke-width="4"/>
+  <path d="M65 111l16 0 M240 111l16 0"
+        fill="none" stroke="#666" stroke-width="3"/>
+
+  <!-- wheel arch inner lines -->
+  <path d="M47 119 Q73 91 98 119"
+        fill="none" stroke="#242424" stroke-width="5"/>
+  <path d="M222 119 Q248 91 274 119"
+        fill="none" stroke="#242424" stroke-width="5"/>
+
+  <!-- side exhaust -->
+  <path d="M95 117 L111 117 L119 124"
+        fill="none" stroke="#777" stroke-width="5"/>
+  <ellipse cx="122" cy="125" rx="8" ry="4" fill="#444" class="t"/>
+
+  <!-- door seam -->
+  <path d="M168 69 L175 107" fill="none" class="t"/>
+
+  <!-- small rally mud flaps -->
+  <path d="M45 115 L53 115 L51 132 L43 132 Z" fill="#151515"/>
+  <path d="M269 115 L278 115 L280 132 L271 132 Z" fill="#151515"/>
+</svg>

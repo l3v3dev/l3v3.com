@@ -1,0 +1,56 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a1a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#060612" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#00e5ff" stop-opacity="0.3"/>
+      <stop offset="85%" stop-color="#00e5ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-2%" y="-2%" width="104%" height="104%">
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rectangle -->
+  <rect x="0" y="0" width="400" height="80" rx="8" ry="8"
+        fill="url(#bgGrad)" opacity="0.85"
+        stroke="#00e5ff" stroke-width="1"/>
+
+  <!-- Subtle inner border for depth -->
+  <rect x="1.5" y="1.5" width="397" height="77" rx="7" ry="7"
+        fill="none" stroke="#00e5ff" stroke-width="0.25" opacity="0.15"/>
+
+  <!-- Horizontal divider line at y=50 -->
+  <line x1="10" y1="50" x2="390" y2="50"
+        stroke="url(#dividerGrad)" stroke-width="1" opacity="0.3"/>
+
+  <!-- Small accent dots at divider endpoints -->
+  <circle cx="10" cy="50" r="1.5" fill="#00e5ff" opacity="0.4"/>
+  <circle cx="390" cy="50" r="1.5" fill="#00e5ff" opacity="0.4"/>
+
+  <!-- Subtle corner accents - top left -->
+  <path d="M 4 12 L 4 4 L 12 4" fill="none" stroke="#00e5ff" stroke-width="0.75" opacity="0.35"/>
+  <!-- Subtle corner accents - top right -->
+  <path d="M 388 4 L 396 4 L 396 12" fill="none" stroke="#00e5ff" stroke-width="0.75" opacity="0.35"/>
+  <!-- Subtle corner accents - bottom left -->
+  <path d="M 4 68 L 4 76 L 12 76" fill="none" stroke="#00e5ff" stroke-width="0.75" opacity="0.35"/>
+  <!-- Subtle corner accents - bottom right -->
+  <path d="M 388 76 L 396 76 L 396 68" fill="none" stroke="#00e5ff" stroke-width="0.75" opacity="0.35"/>
+
+  <!-- Faint star-like dots for space aesthetic -->
+  <circle cx="52" cy="18" r="0.6" fill="#ffffff" opacity="0.12"/>
+  <circle cx="180" cy="12" r="0.5" fill="#ffffff" opacity="0.10"/>
+  <circle cx="310" cy="22" r="0.7" fill="#ffffff" opacity="0.14"/>
+  <circle cx="355" cy="15" r="0.4" fill="#ffffff" opacity="0.10"/>
+  <circle cx="120" cy="65" r="0.5" fill="#ffffff" opacity="0.08"/>
+  <circle cx="260" cy="70" r="0.6" fill="#ffffff" opacity="0.10"/>
+</svg>

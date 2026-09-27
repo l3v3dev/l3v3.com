@@ -1,0 +1,20 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <g opacity="0.8">
+    <!-- Up button -->
+    <rect x="42" y="2" width="36" height="36" rx="6" ry="6" fill="#2a2a3a" stroke="#4a4a5a" stroke-width="1"/>
+    <polygon points="60,12 53,26 67,26" fill="#ffffff"/>
+
+    <!-- Down button -->
+    <rect x="42" y="82" width="36" height="36" rx="6" ry="6" fill="#2a2a3a" stroke="#4a4a5a" stroke-width="1"/>
+    <polygon points="60,108 53,94 67,94" fill="#ffffff"/>
+
+    <!-- Left button -->
+    <rect x="2" y="42" width="36" height="36" rx="6" ry="6" fill="#2a2a3a" stroke="#4a4a5a" stroke-width="1"/>
+    <polygon points="12,60 26,53 26,67" fill="#ffffff"/>
+
+    <!-- Right button -->
+    <rect x="82" y="42" width="36" height="36" rx="6" ry="6" fill="#2a2a3a" stroke="#4a4a5a" stroke-width="1"/>
+    <polygon points="108,60 94,53 94,67" fill="#ffffff"/>
+  </g>
+</svg>

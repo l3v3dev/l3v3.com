@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="96" viewBox="0 0 104 96">
+  <!-- Main boulder body -->
+  <path d="M14,96 L10,80 L16,64 L12,50 L24,34 L38,20 L52,14 L66,18 L78,30 L86,46 L90,62 L93,78 L94,96 Z" fill="#718096" stroke="#2d3748" stroke-width="3" stroke-linejoin="miter"/>
+  <!-- Highlight facet upper left -->
+  <path d="M24,34 L38,20 L52,14 L46,32 L34,44 Z" fill="#a0aec0" stroke="#2d3748" stroke-width="1.5" stroke-linejoin="miter"/>
+  <!-- Shadow facet right side -->
+  <path d="M66,18 L78,30 L86,46 L90,62 L93,78 L94,96 L74,96 L68,70 L62,48 L60,32 Z" fill="#4a5568" stroke="#2d3748" stroke-width="1.5" stroke-linejoin="miter"/>
+  <!-- Shadow facet lower center -->
+  <path d="M34,44 L46,32 L62,48 L68,70 L74,96 L42,96 L30,78 L28,60 Z" fill="#4a5568" stroke="#2d3748" stroke-width="1.5" stroke-linejoin="miter"/>
+</svg>

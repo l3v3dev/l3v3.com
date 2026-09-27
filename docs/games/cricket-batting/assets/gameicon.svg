@@ -1,0 +1,113 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="iconClip">
+      <rect x="16" y="16" width="480" height="480" rx="72" ry="72"/>
+    </clipPath>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#ffdd44" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffdd44" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a3a1a"/>
+      <stop offset="100%" stop-color="#0d1f0d"/>
+    </radialGradient>
+    <linearGradient id="batGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4a056"/>
+      <stop offset="50%" stop-color="#c48b3a"/>
+      <stop offset="100%" stop-color="#a06d2a"/>
+    </linearGradient>
+    <linearGradient id="ballGrad" x1="30%" y1="30%" x2="70%" y2="70%">
+      <stop offset="0%" stop-color="#ff4444"/>
+      <stop offset="100%" stop-color="#cc1111"/>
+    </linearGradient>
+    <linearGradient id="fieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d8a2d"/>
+      <stop offset="100%" stop-color="#1e6b1e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon frame background -->
+  <rect x="16" y="16" width="480" height="480" rx="72" ry="72" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#iconClip)">
+    <!-- Cricket oval - slightly tilted -->
+    <g transform="translate(256,256) rotate(-12)">
+      <!-- Outer boundary rope -->
+      <ellipse cx="0" cy="0" rx="210" ry="160" fill="none" stroke="#ffffff" stroke-width="5" stroke-opacity="0.9"/>
+      <!-- Green field -->
+      <ellipse cx="0" cy="0" rx="200" ry="150" fill="url(#fieldGrad)"/>
+      <!-- Inner boundary line -->
+      <ellipse cx="0" cy="0" rx="185" ry="135" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.4"/>
+      <!-- Pitch strip -->
+      <rect x="-22" y="-95" width="44" height="190" rx="6" ry="6" fill="#c8b87a" opacity="0.85"/>
+      <!-- Pitch creases -->
+      <line x1="-18" y1="-75" x2="18" y2="-75" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.7"/>
+      <line x1="-18" y1="75" x2="18" y2="75" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.7"/>
+      <!-- Mowing stripes on field -->
+      <ellipse cx="0" cy="0" rx="160" ry="115" fill="none" stroke="#3a9a3a" stroke-width="18" stroke-opacity="0.3"/>
+      <ellipse cx="0" cy="0" rx="120" ry="85" fill="none" stroke="#3a9a3a" stroke-width="18" stroke-opacity="0.3"/>
+    </g>
+
+    <!-- Radial glow at impact point -->
+    <circle cx="248" cy="238" r="80" fill="url(#glow)"/>
+
+    <!-- Motion arc (bat swing path) -->
+    <path d="M 340 340 Q 310 260 260 230" fill="none" stroke="#ffffff" stroke-width="4" stroke-opacity="0.6" stroke-linecap="round" stroke-dasharray="8 6"/>
+
+    <!-- Cricket bat -->
+    <g transform="translate(290, 290) rotate(-40)">
+      <!-- Bat blade -->
+      <path d="M -12 -80 L 12 -80 L 16 40 Q 16 55 0 58 Q -16 55 -16 40 Z" fill="url(#batGrad)" stroke="#8b5e1a" stroke-width="2"/>
+      <!-- Bat edge highlight -->
+      <path d="M -8 -75 L -8 35" stroke="#e8c878" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+      <!-- Bat handle -->
+      <rect x="-5" y="55" width="10" height="45" rx="4" ry="4" fill="#6b4420"/>
+      <!-- Handle grip lines -->
+      <line x1="-4" y1="62" x2="4" y2="62" stroke="#4a2e12" stroke-width="1.5"/>
+      <line x1="-4" y1="70" x2="4" y2="70" stroke="#4a2e12" stroke-width="1.5"/>
+      <line x1="-4" y1="78" x2="4" y2="78" stroke="#4a2e12" stroke-width="1.5"/>
+      <line x1="-4" y1="86" x2="4" y2="86" stroke="#4a2e12" stroke-width="1.5"/>
+    </g>
+
+    <!-- Speed lines trailing behind ball -->
+    <g stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.7">
+      <line x1="280" y1="270" x2="310" y2="295" stroke-width="3"/>
+      <line x1="290" y1="255" x2="325" y2="278" stroke-width="2.5"/>
+      <line x1="275" y1="285" x2="300" y2="315" stroke-width="2"/>
+      <line x1="295" y1="240" x2="330" y2="260" stroke-width="2"/>
+      <line x1="265" y1="295" x2="285" y2="325" stroke-width="1.5"/>
+    </g>
+
+    <!-- Cricket ball -->
+    <g transform="translate(248, 238)">
+      <circle cx="0" cy="0" r="22" fill="url(#ballGrad)" stroke="#990000" stroke-width="1.5"/>
+      <!-- White seam -->
+      <path d="M -14 -14 Q 0 -20 14 -14" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M -14 14 Q 0 20 14 14" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Seam stitching dots -->
+      <circle cx="-8" cy="-16" r="1" fill="#ffffff"/>
+      <circle cx="0" cy="-18" r="1" fill="#ffffff"/>
+      <circle cx="8" cy="-16" r="1" fill="#ffffff"/>
+      <circle cx="-8" cy="16" r="1" fill="#ffffff"/>
+      <circle cx="0" cy="18" r="1" fill="#ffffff"/>
+      <circle cx="8" cy="16" r="1" fill="#ffffff"/>
+      <!-- Ball highlight -->
+      <ellipse cx="-6" cy="-8" rx="7" ry="5" fill="#ffffff" opacity="0.3"/>
+    </g>
+
+    <!-- Impact spark lines -->
+    <g stroke="#ffdd44" stroke-linecap="round" stroke-opacity="0.8">
+      <line x1="232" y1="222" x2="222" y2="212" stroke-width="2.5"/>
+      <line x1="264" y1="222" x2="274" y2="212" stroke-width="2.5"/>
+      <line x1="232" y1="254" x2="222" y2="264" stroke-width="2"/>
+      <line x1="264" y1="254" x2="274" y2="264" stroke-width="2"/>
+      <line x1="248" y1="210" x2="248" y2="198" stroke-width="2"/>
+      <line x1="248" y1="266" x2="248" y2="278" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Icon border -->
+  <rect x="16" y="16" width="480" height="480" rx="72" ry="72" fill="none" stroke="#ffffff" stroke-width="3" stroke-opacity="0.3"/>
+</svg>

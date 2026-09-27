@@ -1,0 +1,62 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <defs>
+    <radialGradient id="glowDot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#88ddff" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#88ddff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#88ddff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="#0a1628"/>
+
+  <!-- Faint circuit traces -->
+  <g stroke="#122240" stroke-width="1" fill="none" opacity="0.5">
+    <path d="M 20 50 L 80 50 L 80 120 L 140 120"/>
+    <path d="M 380 80 L 320 80 L 320 150 L 260 150"/>
+    <path d="M 30 450 L 90 450 L 90 380 L 150 380"/>
+    <path d="M 370 420 L 310 420 L 310 350 L 250 350"/>
+    <path d="M 50 250 L 50 200 L 100 200"/>
+    <path d="M 350 250 L 350 300 L 300 300"/>
+    <path d="M 15 150 L 60 150 L 60 100"/>
+    <path d="M 385 350 L 340 350 L 340 400"/>
+    <path d="M 100 470 L 100 430 L 160 430"/>
+    <path d="M 300 30 L 300 70 L 240 70"/>
+  </g>
+  <g fill="#122240" opacity="0.5">
+    <circle cx="140" cy="120" r="2"/>
+    <circle cx="260" cy="150" r="2"/>
+    <circle cx="150" cy="380" r="2"/>
+    <circle cx="250" cy="350" r="2"/>
+    <circle cx="100" cy="200" r="2"/>
+    <circle cx="300" cy="300" r="2"/>
+    <circle cx="60" cy="100" r="2"/>
+    <circle cx="340" cy="400" r="2"/>
+    <circle cx="160" cy="430" r="2"/>
+    <circle cx="240" cy="70" r="2"/>
+  </g>
+
+  <!-- Cyan glowing dot (16px diameter) above title -->
+  <circle cx="200" cy="165" r="8" fill="url(#glowDot)" filter="url(#dotGlow)"/>
+  <circle cx="200" cy="165" r="4" fill="#88ddff"/>
+
+  <!-- Title: SIGNAL PATH -->
+  <text x="200" y="225" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#ffffff">SIGNAL PATH PvNP</text>
+
+  <!-- Thin 1px cyan line, 200px wide, separating title from tagline -->
+  <line x1="100" y1="248" x2="300" y2="248" stroke="#88ddff" stroke-width="1" opacity="0.7"/>
+
+  <!-- Tagline -->
+  <text x="200" y="278" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#88ddff">why you learn what you learn</text>
+
+  <!-- Press Enter or Tap to Start -->
+  <text x="200" y="315" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#888899">Press Enter or Tap to Start</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="68" viewBox="0 0 168 68">
+  <defs>
+    <clipPath id="bodyClipNoWheels">
+      <path d="M156,52 L160,38 L118,32 L100,20 L58,18 L50,18 L16,42 L14,52 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Main car body fill -->
+  <path d="M156,52 L160,38 L118,32 L100,20 L58,18 L50,18 L16,42 L14,52 Z" fill="#FFD700"/>
+
+  <!-- Lower body shadow band -->
+  <g clip-path="url(#bodyClipNoWheels)">
+    <rect x="0" y="38" width="168" height="20" fill="#D4A800"/>
+  </g>
+
+  <!-- Roof spoiler -->
+  <path d="M62,18 L62,11 L42,11 L42,18 Z" fill="#FFD700" stroke="#1B2A4A" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Window area -->
+  <path d="M104,22 L98,20 L62,19 L66,31 L102,33 Z" fill="#A8D8F0" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Door race number badge -->
+  <circle cx="86" cy="43" r="7" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="2"/>
+  <text x="86" y="46.5" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1B2A4A" text-anchor="middle">82</text>
+
+  <!-- Front headlight accent -->
+  <path d="M152,42 L158,40 L156,46 Z" fill="#FFF28B" stroke="#1B2A4A" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Rear taillight accent -->
+  <path d="M16,42 L14,46 L18,47 Z" fill="#FF4D4D" stroke="#1B2A4A" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Main body outline -->
+  <path d="M156,52 L160,38 L118,32 L100,20 L58,18 L50,18 L16,42 L14,52 Z" fill="none" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Taxi body -->
+  <rect x="38" y="14" width="52" height="100" rx="14" fill="#FFD200" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- Front bumper -->
+  <rect x="42" y="14" width="44" height="8" rx="4" fill="#FFDD33"/>
+  <!-- Rear bumper -->
+  <rect x="42" y="106" width="44" height="8" rx="4" fill="#FFDD33"/>
+  <!-- Windshield (front, top) -->
+  <path d="M44 26 Q64 20 84 26 L82 40 Q64 36 46 40 Z" fill="#111111"/>
+  <!-- Rear window (bottom) -->
+  <path d="M46 92 Q64 88 82 92 L84 104 Q64 108 44 104 Z" fill="#111111"/>
+  <!-- Roof panel -->
+  <rect x="48" y="44" width="32" height="44" rx="6" fill="#FFDD33" stroke="#E6B800" stroke-width="1.5"/>
+  <!-- Taxi sign on roof -->
+  <rect x="54" y="58" width="20" height="12" rx="3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+  <text x="64" y="67.5" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#1A1A1A">TAXI</text>
+  <!-- Headlights -->
+  <rect x="42" y="18" width="8" height="5" rx="2" fill="#FFF9C4" stroke="#1A1A1A" stroke-width="1"/>
+  <rect x="78" y="18" width="8" height="5" rx="2" fill="#FFF9C4" stroke="#1A1A1A" stroke-width="1"/>
+  <!-- Taillights -->
+  <rect x="42" y="105" width="8" height="5" rx="2" fill="#FF5252" stroke="#1A1A1A" stroke-width="1"/>
+  <rect x="78" y="105" width="8" height="5" rx="2" fill="#FF5252" stroke="#1A1A1A" stroke-width="1"/>
+  <!-- Side mirrors -->
+  <rect x="32" y="30" width="8" height="6" rx="2" fill="#FFD200" stroke="#1A1A1A" stroke-width="2"/>
+  <rect x="88" y="30" width="8" height="6" rx="2" fill="#FFD200" stroke="#1A1A1A" stroke-width="2"/>
+</svg>

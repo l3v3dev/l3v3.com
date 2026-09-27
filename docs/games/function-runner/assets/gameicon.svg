@@ -1,0 +1,134 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="badge">
+      <rect x="0" y="0" width="512" height="512" rx="48" ry="48"/>
+    </clipPath>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#40ffff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#2a1f6e"/>
+      <stop offset="100%" stop-color="#0d0a2b"/>
+    </radialGradient>
+  </defs>
+
+  <g clip-path="url(#badge)">
+    <!-- Background -->
+    <rect x="0" y="0" width="512" height="512" fill="url(#bgGrad)"/>
+
+    <!-- Grid lines - vertical -->
+    <g stroke="#3a2d8a" stroke-width="0.8" opacity="0.35">
+      <line x1="64" y1="0" x2="64" y2="512"/>
+      <line x1="128" y1="0" x2="128" y2="512"/>
+      <line x1="192" y1="0" x2="192" y2="512"/>
+      <line x1="256" y1="0" x2="256" y2="512"/>
+      <line x1="320" y1="0" x2="320" y2="512"/>
+      <line x1="384" y1="0" x2="384" y2="512"/>
+      <line x1="448" y1="0" x2="448" y2="512"/>
+    </g>
+    <!-- Grid lines - horizontal -->
+    <g stroke="#3a2d8a" stroke-width="0.8" opacity="0.35">
+      <line x1="0" y1="64" x2="512" y2="64"/>
+      <line x1="0" y1="128" x2="512" y2="128"/>
+      <line x1="0" y1="192" x2="512" y2="192"/>
+      <line x1="0" y1="256" x2="512" y2="256"/>
+      <line x1="0" y1="320" x2="512" y2="320"/>
+      <line x1="0" y1="384" x2="512" y2="384"/>
+      <line x1="0" y1="448" x2="512" y2="448"/>
+    </g>
+
+    <!-- Sine wave glow layer (wide, soft) -->
+    <path d="M -20 340 C 40 340, 64 270, 128 270 C 192 270, 192 410, 256 410 C 320 410, 320 270, 384 270 C 448 270, 448 410, 532 410"
+          fill="none" stroke="#00e5ff" stroke-width="18" opacity="0.15" stroke-linecap="round"/>
+    <!-- Sine wave glow layer (medium) -->
+    <path d="M -20 340 C 40 340, 64 270, 128 270 C 192 270, 192 410, 256 410 C 320 410, 320 270, 384 270 C 448 270, 448 410, 532 410"
+          fill="none" stroke="#00e5ff" stroke-width="10" opacity="0.3" stroke-linecap="round" filter="url(#glow)"/>
+    <!-- Sine wave main -->
+    <path d="M -20 340 C 40 340, 64 270, 128 270 C 192 270, 192 410, 256 410 C 320 410, 320 270, 384 270 C 448 270, 448 410, 532 410"
+          fill="none" stroke="url(#waveGrad)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Sine wave highlight -->
+    <path d="M -20 340 C 40 340, 64 270, 128 270 C 192 270, 192 410, 256 410 C 320 410, 320 270, 384 270 C 448 270, 448 410, 532 410"
+          fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+
+    <!-- Golden stars -->
+    <g filter="url(#starGlow)">
+      <!-- Star 1 -->
+      <polygon points="90,180 94,190 104,190 96,197 99,207 90,201 81,207 84,197 76,190 86,190" fill="#ffd700"/>
+      <!-- Star 2 -->
+      <polygon points="200,140 203,148 211,148 205,153 207,161 200,156 193,161 195,153 189,148 197,148" fill="#ffdd33"/>
+      <!-- Star 3 -->
+      <polygon points="340,160 343,168 351,168 345,173 347,181 340,176 333,181 335,173 329,168 337,168" fill="#ffd700"/>
+      <!-- Star 4 -->
+      <polygon points="430,130 433,138 441,138 435,143 437,151 430,146 423,151 425,143 419,138 427,138" fill="#ffdd33"/>
+      <!-- Star 5 (small) -->
+      <polygon points="160,210 162,215 167,215 163,218 164,223 160,220 156,223 157,218 153,215 158,215" fill="#ffd700" opacity="0.8"/>
+      <!-- Star 6 (small) -->
+      <polygon points="470,200 472,205 477,205 473,208 474,213 470,210 466,213 467,208 463,205 468,205" fill="#ffdd33" opacity="0.7"/>
+    </g>
+
+    <!-- Runner character at peak of sine wave (x=128, y=270) -->
+    <g transform="translate(128, 270)">
+      <!-- Shadow on wave -->
+      <ellipse cx="0" cy="2" rx="14" ry="3" fill="#000000" opacity="0.3"/>
+
+      <!-- Back leg (extended behind) -->
+      <line x1="-2" y1="-8" x2="-16" y2="0" stroke="#ff6600" stroke-width="4" stroke-linecap="round"/>
+      <!-- Back foot -->
+      <line x1="-16" y1="0" x2="-20" y2="1" stroke="#ff6600" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Front leg (bent forward) -->
+      <line x1="2" y1="-8" x2="12" y2="-2" stroke="#ff6600" stroke-width="4" stroke-linecap="round"/>
+      <line x1="12" y1="-2" x2="14" y2="4" stroke="#ff6600" stroke-width="4" stroke-linecap="round"/>
+      <!-- Front foot -->
+      <line x1="14" y1="4" x2="19" y2="4" stroke="#ff6600" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Body (torso, leaning forward) -->
+      <line x1="0" y1="-8" x2="4" y2="-22" stroke="#ff6600" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Back arm (swinging back) -->
+      <line x1="2" y1="-18" x2="-10" y2="-12" stroke="#ff6600" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Back hand -->
+      <circle cx="-10" cy="-12" r="2" fill="#ff8833"/>
+
+      <!-- Front arm (swinging forward) -->
+      <line x1="3" y1="-18" x2="14" y2="-24" stroke="#ff6600" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Front hand -->
+      <circle cx="14" cy="-24" r="2" fill="#ff8833"/>
+
+      <!-- Head -->
+      <circle cx="6" cy="-28" r="5.5" fill="#ff6600"/>
+      <!-- Head highlight -->
+      <circle cx="7.5" cy="-29.5" r="2" fill="#ff9944" opacity="0.7"/>
+
+      <!-- Motion lines behind runner -->
+      <line x1="-22" y1="-20" x2="-30" y2="-20" stroke="#ff6600" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+      <line x1="-20" y1="-14" x2="-28" y2="-14" stroke="#ff6600" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+      <line x1="-22" y1="-8" x2="-29" y2="-8" stroke="#ff6600" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Subtle math symbols floating -->
+    <text x="420" y="310" font-family="monospace" font-size="18" fill="#6a5fcf" opacity="0.4">∫</text>
+    <text x="50" y="150" font-family="monospace" font-size="16" fill="#6a5fcf" opacity="0.35">π</text>
+    <text x="300" y="100" font-family="monospace" font-size="14" fill="#6a5fcf" opacity="0.3">√x</text>
+  </g>
+
+  <!-- Badge border -->
+  <rect x="2" y="2" width="508" height="508" rx="46" ry="46" fill="none" stroke="#4a3faa" stroke-width="3" opacity="0.6"/>
+</svg>
