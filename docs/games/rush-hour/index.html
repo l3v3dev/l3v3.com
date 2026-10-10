@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <title>l3v3 | Rush Hour | Traffic logic puzzle game</title>
   <style>
     html,
@@ -17,11 +17,17 @@
       touch-action: manipulation;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      overscroll-behavior: none; /* no pull-to-refresh while swiping */
+    }
+
     #wrap {
       position: relative;
       width: 100%;
       max-width: 720px;
-      margin: 0 auto;
+      margin: auto; /* centered vertically + horizontally by body flex */
     }
 
     canvas {
@@ -29,6 +35,7 @@
       width: 100%;
       height: auto;
       background: #000;
+      touch-action: none; /* swipes steer, never scroll/zoom */
     }
 
     #loading {
@@ -54,7 +61,7 @@
       left: 50%;
       transform: translateX(-50%);
       color: #fff;
-      font-size: 28px;
+      font-size: clamp(18px, 4vw, 28px);
       font-weight: 700;
       background: rgba(0, 0, 0, 0.55);
       padding: 4px 16px;
@@ -94,17 +101,19 @@
     }
 
     #end h1 {
-      font-size: 34px;
+      font-size: clamp(22px, 5vw, 34px);
       margin: 0;
+      padding: 0 16px;
     }
 
     #end p {
-      font-size: 20px;
+      font-size: clamp(14px, 3.5vw, 20px);
       margin: 0;
+      padding: 0 16px;
     }
 
     #restart-btn {
-      font-size: 20px;
+      font-size: clamp(16px, 3.5vw, 20px);
       padding: 10px 28px;
       border: none;
       border-radius: 10px;
@@ -120,7 +129,7 @@
       top: 8px;
       left: 8px;
       color: #fff;
-      font-size: 18px;
+      font-size: clamp(12px, 3vw, 18px);
       font-weight: 700;
       letter-spacing: 0.5px;
       background: rgba(0, 0, 0, 0.55);
@@ -143,7 +152,11 @@
       color: #fff;
       z-index: 20;
       padding: 24px;
+      padding-top: calc(24px + env(safe-area-inset-top));
+      padding-bottom: calc(24px + env(safe-area-inset-bottom));
       box-sizing: border-box;
+      overflow-y: auto; /* phones: 6 cards can exceed the viewport height */
+      -webkit-overflow-scrolling: touch;
     }
 
     #city-select.show {
@@ -151,13 +164,13 @@
     }
 
     #city-select h1 {
-      font-size: 40px;
+      font-size: clamp(28px, 7vw, 40px);
       margin: 0;
       letter-spacing: 1px;
     }
 
     #city-select .subtitle {
-      font-size: 18px;
+      font-size: clamp(14px, 3.5vw, 18px);
       color: #aab;
       margin: -12px 0 0;
     }
@@ -214,7 +227,7 @@
       position: absolute;
       top: 8px;
       right: 8px;
-      font-size: 16px;
+      font-size: clamp(12px, 3vw, 16px);
       padding: 4px 14px;
       border: 2px solid rgba(255, 255, 255, 0.4);
       border-radius: 8px;
@@ -247,8 +260,8 @@
     /* D-pad (touch only) */
     #dpad {
       position: absolute;
-      left: 16px;
-      bottom: 16px;
+      left: calc(16px + env(safe-area-inset-left));
+      bottom: calc(16px + env(safe-area-inset-bottom));
       display: none;
       grid-template-columns: repeat(3, 56px);
       grid-template-rows: repeat(3, 56px);
@@ -265,10 +278,13 @@
       height: 56px;
       border-radius: 50%;
       border: none;
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.22);
       color: #fff;
       font-size: 24px;
       cursor: pointer;
+      touch-action: none; /* no scroll/zoom while steering */
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #dpad button:active {
@@ -278,8 +294,25 @@
     #dpad .center {
       visibility: hidden;
     }
+
+    /* Phones: compact D-pad so it doesn't cover most of the board. */
+    @media (max-width: 480px) {
+      #dpad {
+        grid-template-columns: repeat(3, 44px);
+        grid-template-rows: repeat(3, 44px);
+        gap: 4px;
+        left: calc(10px + env(safe-area-inset-left));
+        bottom: calc(10px + env(safe-area-inset-bottom));
+      }
+
+      #dpad button {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+    }
   </style>
-<script src="../analytics.js?v=37466213-00c6-4693-b4ca-9e71cc9ecd92"></script>
+<script src="../analytics.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
   <meta name="description" content="Solve a timed traffic puzzle by planning routes around moving vehicles and obstacles in Rush Hour, a browser game that builds logic and spatial reasoning.">
   <meta name="keywords" content="traffic puzzle game, logic puzzle, spatial reasoning game, route planning puzzle, browser puzzle game">
   <meta name="robots" content="index,follow">
@@ -357,8 +390,8 @@
       <span></span>
     </div>
   </div>
-  <script data-l3v3-game-src="game.min.js?v=37466213-00c6-4693-b4ca-9e71cc9ecd92"></script>
-<a id="back-to-home" href="../../index.html?v=37466213-00c6-4693-b4ca-9e71cc9ecd92" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
+  <script data-l3v3-game-src="game.min.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
+<style>#back-to-home{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease}#back-to-home:hover{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.5);box-shadow:0 3px 10px rgba(0,0,0,.35)}#back-to-home svg{width:18px;height:18px;display:block}</style><a id="back-to-home" href="../../index.html?v=a78e9f49-7cd7-4939-83dc-2213259cafbd" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 8px; left: 8px; z-index: 2147483647; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #aab4ad; background: transparent; border: 0; text-decoration: none; box-shadow: none; pointer-events: auto; touch-action: manipulation; isolation: isolate;"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8M5.5 9.5V21h13V9.5M9.5 21v-6h5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </body>
 
 </html>

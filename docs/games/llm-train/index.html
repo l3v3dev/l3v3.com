@@ -12,6 +12,37 @@
       height: 100%;
       background: #080a18 url('assets/bg-ambient.png') center / cover no-repeat;
       overscroll-behavior: none;
+      overflow: hidden; /* never let the page scroll on phones */
+      touch-action: manipulation; /* kill double-tap zoom outside the canvas */
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* center the play area on tall (portrait) screens */
+    }
+
+    /* Non-blocking hint for phones held in portrait: the game is 4:3 and is
+       much easier to play (and tap) in landscape. */
+    #rotate-hint {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+      background: rgba(8, 10, 24, 0.92);
+      color: #9fd8ff;
+      font: 13px system-ui, sans-serif;
+      text-align: center;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    @media (orientation: portrait) and (pointer: coarse) {
+      #rotate-hint {
+        display: block;
+      }
     }
 
     #loading-overlay {
@@ -32,12 +63,16 @@
       margin: 0 auto;
       background: #000;
       touch-action: none; /* keep touch gestures for the game, not the page */
-      /* Scale the 800x600 buffer to fit the viewport, preserving aspect ratio. */
+      /* Scale the 800x600 buffer to fit the viewport, preserving aspect ratio.
+         The dvh lines override the vh ones where supported so mobile browsers'
+         dynamic toolbars don't push the canvas off-screen. */
       width: min(100vw, calc(100vh * 4 / 3));
       height: min(100vh, calc(100vw * 3 / 4));
+      width: min(100vw, calc(100dvh * 4 / 3));
+      height: min(100dvh, calc(100vw * 3 / 4));
     }
   </style>
-<script src="../analytics.js?v=37466213-00c6-4693-b4ca-9e71cc9ecd92"></script>
+<script src="../analytics.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
   <meta name="description" content="Learn machine-learning concepts through play, including gradient descent, loss curves, learning rates, local minima, cross-entropy, masked-token prediction and backpropagation.">
   <meta name="keywords" content="machine learning game, gradient descent, loss function, learning rate, local minima, cross-entropy, masked language model, backpropagation, neural network education">
   <meta name="robots" content="index,follow">
@@ -57,8 +92,9 @@
 <body>
   <div id="loading-overlay">Loading ...</div>
   <canvas id="game-canvas" width="800" height="600"></canvas>
-  <script data-l3v3-game-src="game.min.js?v=37466213-00c6-4693-b4ca-9e71cc9ecd92"></script>
-<a id="back-to-home" href="../../index.html?v=37466213-00c6-4693-b4ca-9e71cc9ecd92" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
+  <div id="rotate-hint">&#8635; Rotate your phone for a better experience</div>
+  <script data-l3v3-game-src="game.min.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
+<style>#back-to-home{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease}#back-to-home:hover{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.5);box-shadow:0 3px 10px rgba(0,0,0,.35)}#back-to-home svg{width:18px;height:18px;display:block}</style><a id="back-to-home" href="../../index.html?v=a78e9f49-7cd7-4939-83dc-2213259cafbd" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 8px; left: 8px; z-index: 2147483647; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #aab4ad; background: transparent; border: 0; text-decoration: none; box-shadow: none; pointer-events: auto; touch-action: manipulation; isolation: isolate;"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8M5.5 9.5V21h13V9.5M9.5 21v-6h5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </body>
 
 </html>

@@ -14,12 +14,13 @@
       display: block;
       background: #000;
       /* Scale the 800x600 canvas to fit the screen (e.g. phones) while
-         keeping its aspect ratio; input.js maps touch coords via
+         keeping its 4:3 aspect ratio. width is capped at the intrinsic 800px
+         so it never upscales; aspect-ratio derives the height so the game is
+         never stretched. input.js maps pointer coords via
          getBoundingClientRect so CSS scaling stays accurate. */
-      max-width: 100vw;
-      max-height: 100vh;
-      width: auto;
+      width: min(800px, 100vw, calc(100vh * 4 / 3));
       height: auto;
+      aspect-ratio: 4 / 3;
       /* Block browser scroll/zoom gestures so drags always reach the game. */
       touch-action: none;
     }
@@ -56,7 +57,7 @@
       cursor: pointer;
     }
   </style>
-<script src="../analytics.js?v=37466213-00c6-4693-b4ca-9e71cc9ecd92"></script>
+<script src="../analytics.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
   <meta name="description" content="Play Lighthouse Keeper, a survival browser game on l3v3 where you manage light, safety, and endurance through shifting conditions.">
   <meta name="keywords" content="lighthouse survival game, browser survival game, arcade action game">
   <meta name="robots" content="index,follow">
@@ -93,7 +94,7 @@
       if (overlay) overlay.style.display = "none";
     }, { once: true });
   </script>
-  <script data-l3v3-game-src="game.min.js?v=37466213-00c6-4693-b4ca-9e71cc9ecd92"></script>
-<a id="back-to-home" href="../../index.html?v=37466213-00c6-4693-b4ca-9e71cc9ecd92" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
+  <script data-l3v3-game-src="game.min.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
+<style>#back-to-home{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease}#back-to-home:hover{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.5);box-shadow:0 3px 10px rgba(0,0,0,.35)}#back-to-home svg{width:18px;height:18px;display:block}</style><a id="back-to-home" href="../../index.html?v=a78e9f49-7cd7-4939-83dc-2213259cafbd" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 8px; left: 8px; z-index: 2147483647; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #aab4ad; background: transparent; border: 0; text-decoration: none; box-shadow: none; pointer-events: auto; touch-action: manipulation; isolation: isolate;"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8M5.5 9.5V21h13V9.5M9.5 21v-6h5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </body>
 </html>

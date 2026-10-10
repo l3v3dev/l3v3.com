@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>l3v3 | Function Runner | Function graph math game</title>
   <style>
     html,
@@ -14,13 +14,24 @@
       overflow: hidden;
     }
 
+    /* Center the canvas both ways so portrait phones don't strand it at the top. */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     canvas {
       display: block;
-      margin: 0 auto;
       background: #000;
       /* Scale to fit the viewport so no scrollbar ever appears. */
       max-width: 100vw;
       max-height: 100vh;
+      /* Mobile browsers: use the dynamic viewport so the URL bar doesn't clip the game. */
+      max-height: 100dvh;
+      /* We handle all gestures ourselves (preventDefault in input.js). */
+      touch-action: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #loading {
@@ -40,8 +51,76 @@
       display: none;
     }
     #loading .textblink{animation:animblink 1s infinite steps(4,start)}@keyframes animblink{to{visibility:hidden}}
+
+    /* Portrait-phone "rotate me" hint. Shown by JS only on touch devices in
+       portrait; a "Play anyway" button dismisses it. */
+    #rotate-hint {
+      position: fixed;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      background: rgba(10, 12, 18, 0.96);
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+      z-index: 20;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    #rotate-hint.show {
+      display: flex;
+    }
+
+    #rotate-hint .phone {
+      width: 64px;
+      height: 108px;
+      border: 4px solid #fbbf24;
+      border-radius: 14px;
+      position: relative;
+      animation: rotateme 1.6s ease-in-out infinite;
+    }
+
+    #rotate-hint .phone::after {
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 4px;
+      border-radius: 2px;
+      background: #fbbf24;
+    }
+
+    @keyframes rotateme {
+      0%, 20% { transform: rotate(0deg); }
+      60%, 100% { transform: rotate(90deg); }
+    }
+
+    #rotate-hint p {
+      margin: 0;
+      font-size: 18px;
+      max-width: 320px;
+      line-height: 1.4;
+    }
+
+    #rotate-anyway {
+      margin-top: 6px;
+      background: none;
+      border: 2px solid #8b95b5;
+      color: #8b95b5;
+      font-size: 14px;
+      font-family: monospace;
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
-<script src="../analytics.js?v=72801d3d-538d-411e-9062-0f76b692cd34"></script>
+<script src="../analytics.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
   <meta name="description" content="Explore function graphs through trigonometric, polynomial and exponential curves, Fourier series, signal processing and physics in Function Runner, a browser math game.">
   <meta name="keywords" content="function graph game, trigonometry, polynomial functions, exponential functions, Fourier series, signal processing, physics game, interactive math game">
   <meta name="robots" content="index,follow">
@@ -61,8 +140,37 @@
 <body>
   <div id="loading">Loading <span class="textblink">...</span></div>
   <canvas id="game-canvas" width="800" height="600"></canvas>
-  <script data-l3v3-game-src="game.min.js?v=72801d3d-538d-411e-9062-0f76b692cd34"></script>
-<a id="back-to-home" href="../../index.html?v=72801d3d-538d-411e-9062-0f76b692cd34" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>
+  <div id="rotate-hint">
+    <div class="phone"></div>
+    <p>Rotate your device for the best experience</p>
+    <button id="rotate-anyway">PLAY ANYWAY</button>
+  </div>
+  <script>
+    // Show the rotate hint on touch devices while the viewport is portrait.
+    (function () {
+      var el = document.getElementById("rotate-hint");
+      var btn = document.getElementById("rotate-anyway");
+      var dismissed = false;
+      function isTouch() {
+        return "ontouchstart" in window || (navigator.maxTouchPoints || 0) > 0;
+      }
+      function update() {
+        var portrait = window.innerHeight > window.innerWidth;
+        el.classList.toggle("show", !dismissed && isTouch() && portrait);
+      }
+      btn.addEventListener("click", function () {
+        dismissed = true;
+        update();
+      });
+      window.addEventListener("resize", update);
+      window.addEventListener("orientationchange", update);
+      update();
+      // Exposed for automated tests.
+      window._rotateHint = { update: update, el: el };
+    })();
+  </script>
+  <script data-l3v3-game-src="game.min.js?v=a78e9f49-7cd7-4939-83dc-2213259cafbd"></script>
+<style>#back-to-home{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease}#back-to-home:hover{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.5);box-shadow:0 3px 10px rgba(0,0,0,.35)}#back-to-home svg{width:18px;height:18px;display:block}</style><a id="back-to-home" href="../../index.html?v=a78e9f49-7cd7-4939-83dc-2213259cafbd" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 8px; left: 8px; z-index: 2147483647; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #aab4ad; background: transparent; border: 0; text-decoration: none; box-shadow: none; pointer-events: auto; touch-action: manipulation; isolation: isolate;"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8M5.5 9.5V21h13V9.5M9.5 21v-6h5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </body>
 
 </html>

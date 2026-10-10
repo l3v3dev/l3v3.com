@@ -11,8 +11,11 @@
 <path d="M74 80 A22 20 0 0 1 114 72" stroke-width="3"/>
     <!-- frame: rear axle to seat, seat to front, front fork to front axle -->
     <path d="M36 86 L58 62 L80 62 L94 86"/>
-    <!-- handlebar -->
-    <path d="M80 62 L88 44 L100 40"/>
+
+
+<!-- handlebar: stem rises to (86, 44) then sweeps BACK towards rider (78, 42) -->
+<path d="M80 62 L86 44 L78 42" />
+
     <!-- seat -->
     <path d="M54 62 L74 62" stroke-width="8"/>
   </g>

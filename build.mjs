@@ -24,7 +24,7 @@ const gameTitles = {
 
 const staticPageMeta = {
   "docs/index.html": {
-    title: "l3v3 | Local browser games",
+    title: "l3v3.com | l1v3 l0v3 l3v3",
     description: "Play browser games and interactive learning games covering algebra, function graphs, physics, probability, AI and machine learning, alongside sports and logic puzzles.",
     keywords: "browser games, educational browser games, STEM games, algebra games, function graph games, physics games, probability games, AI education games, machine learning games, logic puzzles, sports games",
     url: `${siteUrl}/`
@@ -201,13 +201,18 @@ function addConsentControlledGameLoader(html) {
 }
 
 function addBackToHomeIcon(html) {
-  const homeIcon = `<a id="back-to-home" href="../../index.html" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 12px; left: 12px; z-index: 2147483647; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; background: rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.85); font: 26px/1 Georgia, serif; text-decoration: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); pointer-events: auto; touch-action: manipulation; isolation: isolate;">⌂</a>`;
+  const managedBackToHomeStylePattern = /<style>\s*#back-to-home\{[^<]*\}<\/style>\s*/gi;
+  const managedBackToHomeAnchorPattern = /<a\s+id="back-to-home"\s+[^>]*>[\s\S]*?<\/a>\s*/gi;
+  const cleanHtml = html
+    .replace(managedBackToHomeStylePattern, "")
+    .replace(managedBackToHomeAnchorPattern, "");
+  const backToHomeButton = `<style>#back-to-home{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease}#back-to-home:hover{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.5);box-shadow:0 3px 10px rgba(0,0,0,.35)}#back-to-home svg{width:18px;height:18px;display:block}</style><a id="back-to-home" href="../../index.html" title="Back to Home" aria-label="Back to Home" style="position: fixed; top: 8px; left: 8px; z-index: 2147483647; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #aab4ad; background: transparent; border: 0; text-decoration: none; box-shadow: none; pointer-events: auto; touch-action: manipulation; isolation: isolate;"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8M5.5 9.5V21h13V9.5M9.5 21v-6h5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`;
 
-  if (/<\/body>/i.test(html)) {
-    return html.replace(/<\/body>/i, `${homeIcon}\n</body>`);
+  if (/<\/body>/i.test(cleanHtml)) {
+    return cleanHtml.replace(/<\/body>/i, `${backToHomeButton}\n</body>`);
   }
 
-  return `${html}\n${homeIcon}`;
+  return `${cleanHtml}\n${backToHomeButton}`;
 }
 
 await mkdir(outputRoot, { recursive: true });

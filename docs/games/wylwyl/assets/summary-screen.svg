@@ -61,14 +61,16 @@
       <line x1="18" y1="5" x2="30" y2="10"/>
       <line x1="18" y1="18" x2="30" y2="10"/>
     </g>
-    <text x="42" y="14" font-family="monospace" font-size="12" fill="#ffffff">Dijkstra: GPS, delivery routing, network data.</text>
+    <text x="42" y="10" font-family="monospace" font-size="12" fill="#ffffff">Dijkstra: GPS, delivery routing,</text>
+    <text x="42" y="26" font-family="monospace" font-size="12" fill="#ffffff">network data.</text>
   </g>
 
   <!-- Row 2: Sine wave icon + text -->
   <g transform="translate(50, 220)">
     <!-- Small sine wave icon -->
     <path d="M 2 12 Q 8 2, 14 12 Q 20 22, 26 12 Q 32 2, 38 12" stroke="#00e5ff" stroke-width="1.5" fill="none"/>
-    <text x="42" y="14" font-family="monospace" font-size="12" fill="#ffffff">Trigonometry: radio, music, light, audio processing.</text>
+    <text x="42" y="10" font-family="monospace" font-size="12" fill="#ffffff">Trigonometry: radio, music, light,</text>
+    <text x="42" y="26" font-family="monospace" font-size="12" fill="#ffffff">audio processing.</text>
   </g>
 
   <!-- Row 3: Probability tree icon + text -->

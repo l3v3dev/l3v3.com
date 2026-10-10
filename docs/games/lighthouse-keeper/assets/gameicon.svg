@@ -1,193 +1,119 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <defs>
-    <radialGradient id="skyGlow" cx="50%" cy="35%" r="60%">
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1a2744"/>
       <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a4a"/>
+      <stop offset="100%" stop-color="#0d1f2a"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f5a623" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#f5a623" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffe066" stop-opacity="1"/>
-      <stop offset="40%" stop-color="#ffcc33" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ff9900" stop-opacity="0"/>
+    <linearGradient id="beamL" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#66ccff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#66ccff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#66ccff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#66ccff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="wisp" cx="0.5" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#b0d0f0" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#b0d0f0" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffe066" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#ffcc33" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#ff9900" stop-opacity="0"/>
+    <linearGradient id="tower" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d8d8d8"/>
+      <stop offset="45%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c8c8c8"/>
     </linearGradient>
-    <linearGradient id="beamGrad2" x1="100%" y1="0%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#ffe066" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#ffcc33" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#ff9900" stop-opacity="0"/>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3a4a"/>
+      <stop offset="100%" stop-color="#151f2a"/>
     </linearGradient>
-    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1b2a"/>
-      <stop offset="50%" stop-color="#112240"/>
-      <stop offset="100%" stop-color="#0a1628"/>
-    </linearGradient>
-    <linearGradient id="rockGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1a2a3a"/>
-      <stop offset="100%" stop-color="#0d1520"/>
-    </linearGradient>
-    <linearGradient id="fogGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7fffbe" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7fffbe" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#7fffbe" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="fogGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#66ffaa" stop-opacity="0"/>
-      <stop offset="40%" stop-color="#66ffaa" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#66ffaa" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="creatureGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#88ffcc" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#88ffcc" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="lighthouseBody" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#e8e8e8"/>
-      <stop offset="50%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#cccccc"/>
-    </linearGradient>
-    <clipPath id="lighthouseClip">
-      <polygon points="218,120 294,120 310,380 202,380"/>
-    </clipPath>
   </defs>
 
-  <!-- Background sky -->
-  <rect width="512" height="512" fill="url(#skyGlow)"/>
+  <!-- Sky -->
+  <rect width="512" height="512" fill="url(#sky)"/>
 
   <!-- Stars -->
-  <circle cx="80" cy="45" r="1.5" fill="#ffffff" opacity="0.6"/>
-  <circle cx="150" cy="70" r="1" fill="#ffffff" opacity="0.5"/>
-  <circle cx="400" cy="35" r="1.5" fill="#ffffff" opacity="0.7"/>
-  <circle cx="450" cy="80" r="1" fill="#ffffff" opacity="0.4"/>
-  <circle cx="60" cy="100" r="1" fill="#ffffff" opacity="0.5"/>
-  <circle cx="470" cy="55" r="1.2" fill="#ffffff" opacity="0.6"/>
-  <circle cx="350" cy="25" r="1" fill="#ffffff" opacity="0.5"/>
-  <circle cx="120" cy="30" r="1.3" fill="#ffffff" opacity="0.6"/>
+  <circle cx="72" cy="52" r="2.2" fill="#fff" opacity="0.85"/>
+  <circle cx="148" cy="88" r="1.6" fill="#fff" opacity="0.6"/>
+  <circle cx="370" cy="44" r="2" fill="#fff" opacity="0.75"/>
+  <circle cx="445" cy="95" r="1.5" fill="#fff" opacity="0.5"/>
+  <circle cx="310" cy="68" r="1.8" fill="#fff" opacity="0.65"/>
+  <circle cx="55" cy="135" r="1.4" fill="#fff" opacity="0.5"/>
+  <circle cx="462" cy="155" r="1.5" fill="#fff" opacity="0.45"/>
+  <circle cx="200" cy="40" r="1.3" fill="#fff" opacity="0.55"/>
+  <circle cx="420" cy="180" r="1.2" fill="#fff" opacity="0.4"/>
 
   <!-- Sea -->
-  <rect x="0" y="320" width="512" height="192" fill="url(#seaGrad)"/>
+  <rect x="0" y="340" width="512" height="172" fill="url(#sea)"/>
 
-  <!-- Sea waves -->
-  <path d="M0,340 Q64,332 128,340 Q192,348 256,340 Q320,332 384,340 Q448,348 512,340 L512,360 Q448,352 384,360 Q320,368 256,360 Q192,352 128,360 Q64,368 0,360 Z" fill="#162d4a" opacity="0.7"/>
-  <path d="M0,370 Q80,362 160,370 Q240,378 320,370 Q400,362 512,370 L512,385 Q400,377 320,385 Q240,393 160,385 Q80,377 0,385 Z" fill="#0f2238" opacity="0.6"/>
-  <path d="M0,400 Q100,392 200,400 Q300,408 400,400 Q460,395 512,400 L512,415 Q460,410 400,415 Q300,423 200,415 Q100,407 0,415 Z" fill="#0c1d30" opacity="0.5"/>
+  <!-- Wave crests -->
+  <path d="M0,355 Q26,345 52,355 Q78,365 104,355 Q130,345 156,355 Q182,365 208,355 Q234,345 260,355 Q286,365 312,355 Q338,345 364,355 Q390,365 416,355 Q442,345 468,355 Q494,365 512,358 L512,368 Q494,375 468,368 Q442,360 416,368 Q390,375 364,368 Q338,360 312,368 Q286,375 260,368 Q234,360 208,368 Q182,375 156,368 Q130,360 104,368 Q78,375 52,368 Q26,360 0,368 Z" fill="#2a5a6a" opacity="0.55"/>
+  <path d="M0,385 Q35,375 70,385 Q105,395 140,385 Q175,375 210,385 Q245,395 280,385 Q315,375 350,385 Q385,395 420,385 Q455,375 490,385 Q505,388 512,385 L512,395 Q490,400 455,395 Q420,390 385,395 Q350,400 315,395 Q280,390 245,395 Q210,400 175,395 Q140,390 105,395 Q70,400 35,395 Q15,392 0,395 Z" fill="#1e4a5a" opacity="0.45"/>
 
   <!-- Rocky island -->
-  <path d="M140,380 Q150,350 170,345 Q185,340 200,348 Q210,342 225,340 Q240,338 256,340 Q272,338 287,340 Q302,342 312,348 Q327,340 342,345 Q362,350 372,380 Q365,395 350,400 Q320,410 256,412 Q192,410 162,400 Q147,395 140,380 Z" fill="url(#rockGrad)"/>
-  <!-- Rock details -->
-  <path d="M170,360 Q180,355 195,358 Q200,352 215,350 L210,370 Q195,368 180,372 Z" fill="#243a4f" opacity="0.6"/>
-  <path d="M290,355 Q305,350 320,355 Q330,358 335,365 L325,375 Q310,370 295,368 Z" fill="#243a4f" opacity="0.6"/>
-  <path d="M230,345 Q245,340 260,342 Q270,344 275,350 L265,358 Q250,355 235,355 Z" fill="#2a4055" opacity="0.5"/>
+  <path d="M155,430 Q165,395 185,382 Q205,372 225,376 Q240,370 256,367 Q272,370 287,376 Q307,372 327,382 Q347,395 357,430 Q360,442 355,450 L157,450 Q152,442 155,430 Z" fill="url(#rock)"/>
+  <path d="M172,428 Q182,400 202,388 Q222,380 242,383 Q256,379 270,383 Q290,380 310,388 Q330,400 340,428 L340,445 L172,445 Z" fill="#2e4050" opacity="0.7"/>
 
-  <!-- Lighthouse body - white and red stripes -->
-  <g clip-path="url(#lighthouseClip)">
-    <rect x="200" y="115" width="112" height="270" fill="#f5f5f5"/>
-    <!-- Red stripes -->
-    <rect x="200" y="120" width="112" height="30" fill="#cc2222"/>
-    <rect x="200" y="180" width="112" height="30" fill="#cc2222"/>
-    <rect x="200" y="240" width="112" height="30" fill="#cc2222"/>
-    <rect x="200" y="300" width="112" height="30" fill="#cc2222"/>
-    <rect x="200" y="360" width="112" height="25" fill="#cc2222"/>
-    <!-- Shading for 3D effect -->
-    <rect x="200" y="115" width="20" height="270" fill="#000000" opacity="0.15"/>
-    <rect x="292" y="115" width="20" height="270" fill="#000000" opacity="0.1"/>
-  </g>
+  <!-- Light beams (behind lighthouse) -->
+  <polygon points="242,148 12,95 12,215" fill="url(#beamL)" opacity="0.45"/>
+  <polygon points="270,148 500,95 500,215" fill="url(#beamR)" opacity="0.45"/>
 
-  <!-- Lighthouse base -->
-  <path d="M195,375 L317,375 L325,395 L187,395 Z" fill="#333340"/>
-  <path d="M195,375 L317,375 L317,380 L195,380 Z" fill="#444455"/>
+  <!-- Lamp radial glow -->
+  <circle cx="256" cy="142" r="90" fill="url(#lampGlow)"/>
 
-  <!-- Lighthouse gallery/platform -->
-  <rect x="205" y="110" width="102" height="12" rx="2" fill="#3a3a4a"/>
-  <rect x="200" y="108" width="112" height="5" rx="2" fill="#4a4a5a"/>
+  <!-- Lighthouse tower -->
+  <path d="M234,162 L228,382 L284,382 L278,162 Z" fill="url(#tower)"/>
 
-  <!-- Gallery railing -->
-  <rect x="208" y="95" width="96" height="15" rx="1" fill="none" stroke="#555568" stroke-width="2"/>
-  <line x1="218" y1="95" x2="218" y2="110" stroke="#555568" stroke-width="1.5"/>
-  <line x1="238" y1="95" x2="238" y2="110" stroke="#555568" stroke-width="1.5"/>
-  <line x1="258" y1="95" x2="258" y2="110" stroke="#555568" stroke-width="1.5"/>
-  <line x1="278" y1="95" x2="278" y2="110" stroke="#555568" stroke-width="1.5"/>
-  <line x1="294" y1="95" x2="294" y2="110" stroke="#555568" stroke-width="1.5"/>
+  <!-- Red-orange stripes -->
+  <path d="M233,192 L232,214 L280,214 L279,192 Z" fill="#e8543a" rx="2"/>
+  <path d="M232,242 L231,264 L281,264 L280,242 Z" fill="#e8543a"/>
+  <path d="M231,292 L230,314 L282,314 L281,292 Z" fill="#e8543a"/>
+  <path d="M230,342 L229,364 L283,364 L282,342 Z" fill="#e8543a"/>
+
+  <!-- Gallery platform -->
+  <rect x="226" y="158" width="60" height="7" fill="#3a4a5a" rx="2"/>
 
   <!-- Lamp room -->
-  <rect x="225" y="65" width="62" height="33" rx="3" fill="#2a2a3a"/>
-  <rect x="228" y="68" width="56" height="27" rx="2" fill="#1a1a2a"/>
+  <rect x="236" y="128" width="40" height="32" fill="#2a3545" rx="3"/>
+  <!-- Lamp glass -->
+  <rect x="241" y="132" width="30" height="24" fill="#f5a623" rx="2" opacity="0.92"/>
+  <!-- Inner bright core -->
+  <circle cx="256" cy="144" r="9" fill="#ffe080" opacity="0.85"/>
+  <circle cx="256" cy="144" r="5" fill="#fff8e0" opacity="0.9"/>
 
-  <!-- Lamp glass panes -->
-  <rect x="232" y="70" width="12" height="23" rx="1" fill="#ffdd44" opacity="0.9"/>
-  <rect x="248" y="70" width="12" height="23" rx="1" fill="#ffdd44" opacity="0.9"/>
-  <rect x="264" y="70" width="12" height="23" rx="1" fill="#ffdd44" opacity="0.9"/>
-  <rect x="278" y="70" width="6" height="23" rx="1" fill="#ffdd44" opacity="0.7"/>
+  <!-- Lamp room roof -->
+  <path d="M232,128 L256,106 L280,128 Z" fill="#3a4a5a"/>
+  <circle cx="256" cy="104" r="4" fill="#4a5a6a"/>
 
-  <!-- Lamp glow -->
-  <circle cx="256" cy="82" r="50" fill="url(#lampGlow)"/>
-  <circle cx="256" cy="82" r="25" fill="#ffe066" opacity="0.6"/>
-  <circle cx="256" cy="82" r="12" fill="#fff5cc" opacity="0.9"/>
+  <!-- Ghost wisps -->
+  <!-- Wisp 1 - left -->
+  <ellipse cx="115" cy="378" rx="24" ry="19" fill="url(#wisp)" opacity="0.6"/>
+  <path d="M95,384 Q78,392 68,404 Q64,410 66,416" stroke="#a8c8e8" stroke-width="3.5" fill="none" opacity="0.3" stroke-linecap="round"/>
 
-  <!-- Lamp roof -->
-  <polygon points="256,42 220,65 292,65" fill="#3a3a4a"/>
-  <polygon points="256,42 225,65 287,65" fill="#4a4a5a"/>
-  <!-- Roof finial -->
-  <line x1="256" y1="35" x2="256" y2="42" stroke="#555568" stroke-width="2"/>
-  <circle cx="256" cy="33" r="3" fill="#555568"/>
+  <!-- Wisp 2 - right -->
+  <ellipse cx="405" cy="368" rx="22" ry="17" fill="url(#wisp)" opacity="0.55"/>
+  <path d="M425,374 Q442,382 452,395 Q456,402 454,408" stroke="#a8c8e8" stroke-width="3" fill="none" opacity="0.28" stroke-linecap="round"/>
 
-  <!-- Light beam - right sweeping -->
-  <polygon points="280,78 512,40 512,120" fill="url(#beamGrad)" opacity="0.7"/>
-  <polygon points="280,82 512,55 512,105" fill="#ffe066" opacity="0.3"/>
+  <!-- Wisp 3 - center-left lower -->
+  <ellipse cx="165" cy="412" rx="17" ry="14" fill="url(#wisp)" opacity="0.45"/>
+  <path d="M150,418 Q136,424 128,434" stroke="#a8c8e8" stroke-width="2.5" fill="none" opacity="0.22" stroke-linecap="round"/>
 
-  <!-- Light beam - left sweeping -->
-  <polygon points="232,78 0,45 0,125" fill="url(#beamGrad2)" opacity="0.5"/>
-  <polygon points="232,82 0,60 0,110" fill="#ffe066" opacity="0.2"/>
+  <!-- Wisp 4 - center-right -->
+  <ellipse cx="355" cy="402" rx="19" ry="15" fill="url(#wisp)" opacity="0.5"/>
+  <path d="M374,408 Q388,415 396,426" stroke="#a8c8e8" stroke-width="2.5" fill="none" opacity="0.22" stroke-linecap="round"/>
 
-  <!-- Beam reflection on water -->
-  <ellipse cx="380" cy="350" rx="60" ry="8" fill="#ffcc33" opacity="0.15"/>
-  <ellipse cx="130" cy="355" rx="45" ry="6" fill="#ffcc33" opacity="0.1"/>
+  <!-- Wisp 5 - far left small -->
+  <ellipse cx="60" cy="405" rx="13" ry="11" fill="url(#wisp)" opacity="0.35"/>
+  <path d="M48,410 Q38,416 32,424" stroke="#a8c8e8" stroke-width="2" fill="none" opacity="0.18" stroke-linecap="round"/>
 
-  <!-- Fog wisps - pale green -->
-  <path d="M0,310 Q40,300 80,310 Q120,320 160,310 Q200,300 240,310 Q280,320 320,310 Q360,300 400,310 Q440,320 480,310 Q500,305 512,310 L512,330 Q480,325 440,330 Q400,335 360,330 Q320,325 280,330 Q240,335 200,330 Q160,325 120,330 Q80,335 40,330 Q20,328 0,330 Z" fill="url(#fogGrad)" opacity="0.8"/>
-
-  <path d="M0,335 Q50,325 100,335 Q150,345 200,335 Q250,325 300,335 Q350,345 400,335 Q450,325 512,335 L512,355 Q450,345 400,355 Q350,365 300,355 Q250,345 200,355 Q150,365 100,355 Q50,345 0,355 Z" fill="url(#fogGrad2)" opacity="0.7"/>
-
-  <!-- Additional fog wisps -->
-  <path d="M300,290 Q340,280 380,290 Q420,300 460,290 Q490,285 512,290 L512,310 Q490,305 460,310 Q420,320 380,310 Q340,300 300,310 Z" fill="#7fffbe" opacity="0.12"/>
-  <path d="M0,280 Q40,272 80,280 Q120,288 160,280 Q180,276 200,280 L200,298 Q180,294 160,298 Q120,306 80,298 Q40,290 0,298 Z" fill="#7fffbe" opacity="0.1"/>
-
-  <!-- Ghostly fog creature silhouette -->
-  <g opacity="0.7">
-    <!-- Creature body - amorphous ghostly shape -->
-    <path d="M380,310 Q370,295 375,280 Q380,265 390,258 Q400,250 415,252 Q430,254 438,265 Q445,275 442,290 Q440,300 435,310 Q430,320 420,328 Q410,335 395,335 Q385,332 380,325 Z" fill="#88ffcc" opacity="0.25"/>
-    <!-- Creature head -->
-    <ellipse cx="410" cy="262" rx="18" ry="14" fill="#88ffcc" opacity="0.3"/>
-    <!-- Creature eyes -->
-    <ellipse cx="404" cy="260" rx="4" ry="3" fill="#ccffee" opacity="0.7"/>
-    <ellipse cx="418" cy="260" rx="4" ry="3" fill="#ccffee" opacity="0.7"/>
-    <!-- Creature tendrils -->
-    <path d="M385,325 Q375,340 365,350 Q360,355 355,358" fill="none" stroke="#88ffcc" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
-    <path d="M400,335 Q395,350 388,360 Q385,365 380,368" fill="none" stroke="#88ffcc" stroke-width="2.5" opacity="0.25" stroke-linecap="round"/>
-    <path d="M420,330 Q425,345 430,355 Q432,360 435,365" fill="none" stroke="#88ffcc" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
-    <!-- Creature glow -->
-    <circle cx="410" cy="290" r="45" fill="url(#creatureGlow)"/>
-  </g>
-
-  <!-- Second smaller fog creature -->
-  <g opacity="0.4">
-    <path d="M460,320 Q455,310 458,300 Q462,292 470,290 Q478,288 484,294 Q490,300 488,312 Q486,322 480,328 Q472,332 465,330 Z" fill="#88ffcc" opacity="0.2"/>
-    <ellipse cx="472" cy="298" rx="3" ry="2.5" fill="#ccffee" opacity="0.5"/>
-    <ellipse cx="480" cy="298" rx="3" ry="2.5" fill="#ccffee" opacity="0.5"/>
-  </g>
-
-  <!-- Rim lighting on lighthouse -->
-  <line x1="294" y1="120" x2="310" y2="380" stroke="#ffdd66" stroke-width="2" opacity="0.4"/>
-  <line x1="218" y1="120" x2="202" y2="380" stroke="#ffdd66" stroke-width="1.5" opacity="0.2"/>
-
-  <!-- Rim light on rocks -->
-  <path d="M170,345 Q185,340 200,348 Q210,342 225,340 Q240,338 256,340 Q272,338 287,340 Q302,342 312,348" fill="none" stroke="#ffdd66" stroke-width="1.5" opacity="0.3"/>
-
-  <!-- Atmospheric vignette -->
-  <rect width="512" height="512" fill="none" stroke="#0a0f1e" stroke-width="40" opacity="0.3" rx="20"/>
-
-  <!-- Subtle top fog layer -->
-  <path d="M0,0 L512,0 L512,30 Q450,40 380,35 Q310,30 256,35 Q200,40 140,35 Q80,30 0,35 Z" fill="#0a0f1e" opacity="0.4"/>
+  <!-- Border frame -->
+  <rect x="8" y="8" width="496" height="496" rx="24" ry="24" fill="none" stroke="#4a5a7a" stroke-width="4" opacity="0.7"/>
 </svg>
