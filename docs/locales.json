@@ -1,0 +1,325 @@
+{
+  "ar": {
+    "consent": {
+      "title": "يلزم تقديم الموافقة على التحليلات",
+      "message": "وافق على Google Analytics لتفعيل اللعب.",
+      "accept": "أوافق وألعب",
+      "back": "العودة إلى الألعاب"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "حارس المنارة",
+      "function-runner": "عدّاء الدوال",
+      "function-path": "مسار الرياضيات",
+      "stickfigure-duel": "مبارزة الحبر",
+      "llm-inference": "التنبؤ بالرموز",
+      "football-playcall": "تكتيكات كرة القدم الأمريكية",
+      "football-soccer": "كرة القدم"
+    }
+  },
+  "es": {
+    "consent": {
+      "title": "Se requiere consentimiento para las analíticas",
+      "message": "Acepta Google Analytics para activar el juego.",
+      "accept": "Aceptar y jugar",
+      "back": "Volver a los juegos"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Guardián del faro",
+      "function-runner": "Corredor de funciones",
+      "function-path": "Ruta matemática",
+      "stickfigure-duel": "Duelo de tinta",
+      "llm-inference": "Predictor de tokens",
+      "football-playcall": "Estrategia de fútbol americano",
+      "football-soccer": "Fútbol"
+    }
+  },
+  "fr": {
+    "consent": {
+      "title": "Consentement aux statistiques requis",
+      "message": "Acceptez Google Analytics pour activer le jeu.",
+      "accept": "Accepter et jouer",
+      "back": "Retour aux jeux"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Gardien du phare",
+      "function-runner": "Course aux fonctions",
+      "function-path": "Parcours mathématique",
+      "stickfigure-duel": "Duel à l'encre",
+      "llm-inference": "Prédicteur de jetons",
+      "football-playcall": "Tactique de football américain",
+      "football-soccer": "Football"
+    }
+  },
+  "de": {
+    "consent": {
+      "title": "Zustimmung zur Analyse erforderlich",
+      "message": "Stimme Google Analytics zu, um das Spiel zu aktivieren.",
+      "accept": "Zustimmen und spielen",
+      "back": "Zurück zu den Spielen"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Leuchtturmwärter",
+      "function-runner": "Funktionen-Lauf",
+      "function-path": "Mathepfad",
+      "stickfigure-duel": "Tintenduell",
+      "llm-inference": "Token-Vorhersage",
+      "football-playcall": "American-Football-Taktik",
+      "football-soccer": "Fußball"
+    }
+  },
+  "it": {
+    "consent": {
+      "title": "È richiesto il consenso per le analisi",
+      "message": "Accetta Google Analytics per attivare il gioco.",
+      "accept": "Accetta e gioca",
+      "back": "Torna ai giochi"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Guardiano del faro",
+      "function-runner": "Corsa tra le funzioni",
+      "function-path": "Percorso matematico",
+      "stickfigure-duel": "Duello d'inchiostro",
+      "llm-inference": "Previsore di token",
+      "football-playcall": "Strategia di football americano",
+      "football-soccer": "Calcio"
+    }
+  },
+  "pt": {
+    "consent": {
+      "title": "É necessário consentimento para análise",
+      "message": "Aceite o Google Analytics para ativar o jogo.",
+      "accept": "Aceitar e jogar",
+      "back": "Voltar aos jogos"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Guardião do farol",
+      "function-runner": "Corrida das funções",
+      "function-path": "Caminho da matemática",
+      "stickfigure-duel": "Duelo de tinta",
+      "llm-inference": "Previsor de tokens",
+      "football-playcall": "Estratégia de futebol americano",
+      "football-soccer": "Futebol"
+    }
+  },
+  "nl": {
+    "consent": {
+      "title": "Toestemming voor analyse vereist",
+      "message": "Accepteer Google Analytics om het spel te starten.",
+      "accept": "Accepteren en spelen",
+      "back": "Terug naar de spellen"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Vuurtorenwachter",
+      "function-runner": "Functierace",
+      "function-path": "Wiskundepad",
+      "stickfigure-duel": "Inktduel",
+      "llm-inference": "Tokenvoorspeller",
+      "football-playcall": "Amerikaans-voetbaltactiek",
+      "football-soccer": "Voetbal"
+    }
+  },
+  "pl": {
+    "consent": {
+      "title": "Wymagana zgoda na analitykę",
+      "message": "Zaakceptuj Google Analytics, aby włączyć grę.",
+      "accept": "Akceptuję i gram",
+      "back": "Wróć do gier"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Strażnik latarni",
+      "function-runner": "Bieg funkcji",
+      "function-path": "Matematyczna ścieżka",
+      "stickfigure-duel": "Pojedynek tuszem",
+      "llm-inference": "Przewidywanie tokenów",
+      "football-playcall": "Taktyka futbolu amerykańskiego",
+      "football-soccer": "Piłka nożna"
+    }
+  },
+  "ru": {
+    "consent": {
+      "title": "Требуется согласие на сбор аналитики",
+      "message": "Примите Google Analytics, чтобы начать игру.",
+      "accept": "Принять и играть",
+      "back": "Назад к играм"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Хранитель маяка",
+      "function-runner": "Забег по функциям",
+      "function-path": "Математический путь",
+      "stickfigure-duel": "Чернильная дуэль",
+      "llm-inference": "Предсказание токенов",
+      "football-playcall": "Тактика американского футбола",
+      "football-soccer": "Футбол"
+    }
+  },
+  "uk": {
+    "consent": {
+      "title": "Потрібна згода на аналітику",
+      "message": "Прийміть Google Analytics, щоб увімкнути гру.",
+      "accept": "Прийняти й грати",
+      "back": "До ігор"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Доглядач маяка",
+      "function-runner": "Забіг функціями",
+      "function-path": "Математичний шлях",
+      "stickfigure-duel": "Двобій чорнилом",
+      "llm-inference": "Передбачення токенів",
+      "football-playcall": "Тактика американського футболу",
+      "football-soccer": "Футбол"
+    }
+  },
+  "tr": {
+    "consent": {
+      "title": "Analiz için onay gerekiyor",
+      "message": "Oyunu etkinleştirmek için Google Analytics'i kabul edin.",
+      "accept": "Kabul et ve oyna",
+      "back": "Oyunlara dön"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Deniz Feneri Bekçisi",
+      "function-runner": "Fonksiyon Koşusu",
+      "function-path": "Matematik Yolu",
+      "stickfigure-duel": "Mürekkep Düellosu",
+      "llm-inference": "Belirteç Tahmini",
+      "football-playcall": "Amerikan Futbolu Taktikleri",
+      "football-soccer": "Futbol"
+    }
+  },
+  "zh": {
+    "consent": {
+      "title": "需要同意数据分析",
+      "message": "接受 Google Analytics 以启用游戏。",
+      "accept": "接受并开始游戏",
+      "back": "返回游戏列表"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "灯塔守护者",
+      "function-runner": "函数跑者",
+      "function-path": "数学路径",
+      "stickfigure-duel": "墨迹对决",
+      "llm-inference": "词元预测",
+      "football-playcall": "美式橄榄球战术",
+      "football-soccer": "足球"
+    }
+  },
+  "zh-TW": {
+    "consent": {
+      "title": "需要同意數據分析",
+      "message": "接受 Google Analytics 以啟用遊戲。",
+      "accept": "接受並開始遊戲",
+      "back": "返回遊戲列表"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "燈塔守護者",
+      "function-runner": "函數奔跑者",
+      "function-path": "數學之路",
+      "stickfigure-duel": "墨水對決",
+      "llm-inference": "詞元預測",
+      "football-playcall": "美式足球戰術",
+      "football-soccer": "足球"
+    }
+  },
+  "ja": {
+    "consent": {
+      "title": "分析への同意が必要です",
+      "message": "ゲームを有効にするには Google Analytics に同意してください。",
+      "accept": "同意してプレイ",
+      "back": "ゲーム一覧に戻る"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "灯台守",
+      "function-runner": "関数ランナー",
+      "function-path": "数学の道",
+      "stickfigure-duel": "インクデュエル",
+      "llm-inference": "トークン予測",
+      "football-playcall": "アメフト作戦",
+      "football-soccer": "サッカー"
+    }
+  },
+  "ko": {
+    "consent": {
+      "title": "분석 동의가 필요합니다",
+      "message": "게임을 활성화하려면 Google Analytics에 동의하세요.",
+      "accept": "동의하고 플레이",
+      "back": "게임 목록으로 돌아가기"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "등대지기",
+      "function-runner": "함수 달리기",
+      "function-path": "수학 경로",
+      "stickfigure-duel": "잉크 결투",
+      "llm-inference": "토큰 예측기",
+      "football-playcall": "미식축구 작전",
+      "football-soccer": "축구"
+    }
+  },
+  "hi": {
+    "consent": {
+      "title": "विश्लेषण की सहमति आवश्यक है",
+      "message": "गेम शुरू करने के लिए Google Analytics स्वीकार करें।",
+      "accept": "स्वीकार करें और खेलें",
+      "back": "गेम सूची पर लौटें"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "प्रकाशस्तंभ रक्षक",
+      "function-runner": "फलन धावक",
+      "function-path": "गणित पथ",
+      "stickfigure-duel": "स्याही द्वंद्व",
+      "llm-inference": "टोकन पूर्वानुमान",
+      "football-playcall": "अमेरिकी फुटबॉल रणनीति",
+      "football-soccer": "फ़ुटबॉल"
+    }
+  },
+  "id": {
+    "consent": {
+      "title": "Persetujuan analitik diperlukan",
+      "message": "Setujui Google Analytics untuk mengaktifkan permainan.",
+      "accept": "Setuju dan mainkan",
+      "back": "Kembali ke daftar permainan"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Penjaga Mercusuar",
+      "function-runner": "Pelari Fungsi",
+      "function-path": "Jalur Matematika",
+      "stickfigure-duel": "Duel Tinta",
+      "llm-inference": "Prediksi Token",
+      "football-playcall": "Strategi Sepak Bola Amerika",
+      "football-soccer": "Sepak Bola"
+    }
+  },
+  "vi": {
+    "consent": {
+      "title": "Cần có sự đồng ý về phân tích",
+      "message": "Chấp nhận Google Analytics để bật trò chơi.",
+      "accept": "Chấp nhận và chơi",
+      "back": "Quay lại danh sách trò chơi"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "Người gác hải đăng",
+      "function-runner": "Đường đua hàm số",
+      "function-path": "Lối đi toán học",
+      "stickfigure-duel": "Đấu mực",
+      "llm-inference": "Dự đoán token",
+      "football-playcall": "Chiến thuật bóng bầu dục Mỹ",
+      "football-soccer": "Bóng đá"
+    }
+  },
+  "th": {
+    "consent": {
+      "title": "ต้องให้ความยินยอมในการวิเคราะห์",
+      "message": "ยอมรับ Google Analytics เพื่อเปิดใช้งานเกม",
+      "accept": "ยอมรับและเล่น",
+      "back": "กลับไปยังรายการเกม"
+    },
+    "gameNames": {
+      "lighthouse-keeper": "ผู้ดูแลประภาคาร",
+      "function-runner": "นักวิ่งฟังก์ชัน",
+      "function-path": "เส้นทางคณิตศาสตร์",
+      "stickfigure-duel": "ดวลหมึก",
+      "llm-inference": "ทำนายโทเค็น",
+      "football-playcall": "วางแผนอเมริกันฟุตบอล",
+      "football-soccer": "ฟุตบอล"
+    }
+  }
+}
