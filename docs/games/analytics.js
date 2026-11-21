@@ -82,7 +82,12 @@
 
   function getLanguageCode(language) {
     const parts = String(language || "").toLowerCase().split("-");
-    if (parts[0] === "zh" && ["tw", "hk", "mo", "hant"].includes(parts[1])) return "zh-TW";
+    if (parts[0] === "zh") {
+      const script = parts.find(function(part) { return ["hans", "hant", "chs", "cht"].includes(part); });
+      if (script) return script === "hant" || script === "cht" ? "zh-TW" : "zh";
+      const region = parts.find(function(part) { return ["tw", "hk", "mo", "cn", "sg"].includes(part); });
+      return ["tw", "hk", "mo"].includes(region) ? "zh-TW" : "zh";
+    }
     return parts[0];
   }
 

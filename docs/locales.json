@@ -1,5 +1,36 @@
 {
   "ar": {
+    "prototypeHeading": "ألعاب تجريبية مبنية على أوزان النماذج المحلية",
+    "more": "المزيد",
+    "pages": {
+      "site": {"games": "الألعاب", "privacy": "الخصوصية", "terms": "الشروط"},
+      "terms": {
+        "meta": "شروط الاستخدام",
+        "disclaimer": "يُقدَّم هذا الموقع ومحتواه على حالته الراهنة دون أي ضمان من أي نوع، صريح أو ضمني، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق أو الملاءمة لغرض معين أو الصحة أو الاكتمال أو الفائدة.",
+        "responsibility": "باستخدام هذا الموقع، فإنك تقر بأن الوصول إليه واستخدامه يتمان وفق تقديرك وعلى مسؤوليتك.",
+        "analytics": "يستخدم هذا الموقع Google Analytics. وتسري سياسة Google. راجع صفحة الخصوصية."
+      },
+      "privacy": {
+        "meta": "إشعار الخصوصية",
+        "intro": "l3v3 موقع ألعاب صغير ثابت.",
+        "analyticsHeading": "التحليلات",
+        "analytics": "يستخدم هذا الموقع Google Analytics وتسري سياسة Google."
+      },
+      "oauth": {
+        "underConstruction": "قيد الإنشاء",
+        "subtitle": "شكرًا لاهتمامك. لم يتم تفعيل تكامل تسجيل الدخول والميزات ذات الصلة بعد.",
+        "development": "ألعاب قيد التطوير",
+        "backGames": "العودة إلى الألعاب الافتراضية",
+        "games": {
+          "function-path-3d": "مسار الرياضيات ثلاثي الأبعاد",
+          "wylwyl": "لماذا تتعلم ما تتعلمه",
+          "llm-inference-3d": "متنبئ الرموز ثلاثي الأبعاد",
+          "llm-train": "الانحدار المتدرج",
+          "rush-hour": "ساعة الذروة",
+          "cricket-batting": "الكريكيت"
+        }
+      }
+    },
     "consent": {
       "title": "يلزم تقديم الموافقة على التحليلات",
       "message": "وافق على Google Analytics لتفعيل اللعب.",
@@ -17,6 +48,37 @@
     }
   },
   "es": {
+    "prototypeHeading": "Juegos prototipo creados con pesos de modelos locales",
+    "more": "Más",
+    "pages": {
+      "site": {"games": "Juegos", "privacy": "Privacidad", "terms": "Términos"},
+      "terms": {
+        "meta": "Términos de uso",
+        "disclaimer": "Este sitio y su contenido se ofrecen sin garantía de ningún tipo, expresa o implícita, incluidas, entre otras, las garantías de comerciabilidad, idoneidad para un fin particular, exactitud, integridad o utilidad.",
+        "responsibility": "Al usar este sitio, aceptas que el acceso y el uso se realizan bajo tu propio criterio y responsabilidad.",
+        "analytics": "Este sitio utiliza Google Analytics. Se aplica la política de Google. Consulta la página de Privacidad."
+      },
+      "privacy": {
+        "meta": "Aviso de privacidad",
+        "intro": "l3v3 es un pequeño sitio estático de juegos.",
+        "analyticsHeading": "Analítica",
+        "analytics": "Este sitio utiliza Google Analytics y se aplica esa política."
+      },
+      "oauth": {
+        "underConstruction": "En construcción",
+        "subtitle": "Gracias por tu interés. La integración de inicio de sesión y las funciones relacionadas aún no están habilitadas.",
+        "development": "Juegos en desarrollo",
+        "backGames": "Volver a los juegos predeterminados",
+        "games": {
+          "function-path-3d": "Ruta matemática 3D",
+          "wylwyl": "por qué aprendes lo que aprendes",
+          "llm-inference-3d": "Predictor de tokens 3D",
+          "llm-train": "Descenso de gradiente",
+          "rush-hour": "Hora punta",
+          "cricket-batting": "Críquet"
+        }
+      }
+    },
     "consent": {
       "title": "Se requiere consentimiento para las analíticas",
       "message": "Acepta Google Analytics para activar el juego.",
@@ -34,6 +96,37 @@
     }
   },
   "fr": {
+    "prototypeHeading": "Jeux prototypes créés avec des poids de modèles locaux",
+    "more": "Plus",
+    "pages": {
+      "site": {"games": "Jeux", "privacy": "Confidentialité", "terms": "Conditions"},
+      "terms": {
+        "meta": "Conditions d'utilisation",
+        "disclaimer": "Ce site et son contenu sont fournis « en l'état », sans garantie d'aucune sorte, expresse ou implicite, y compris, sans s'y limiter, les garanties de qualité marchande, d'adéquation à un usage particulier, d'exactitude, d'exhaustivité ou d'utilité.",
+        "responsibility": "En utilisant ce site, vous acceptez d'y accéder et de l'utiliser à votre discrétion et sous votre responsabilité.",
+        "analytics": "Ce site utilise Google Analytics. La politique de Google s'applique. Consultez la page Confidentialité."
+      },
+      "privacy": {
+        "meta": "Avis de confidentialité",
+        "intro": "l3v3 est un petit site de jeux statique.",
+        "analyticsHeading": "Statistiques",
+        "analytics": "Ce site utilise Google Analytics et sa politique s'applique."
+      },
+      "oauth": {
+        "underConstruction": "En construction",
+        "subtitle": "Merci de votre intérêt. L'intégration de la connexion et les fonctionnalités associées ne sont pas encore activées.",
+        "development": "Jeux en développement",
+        "backGames": "Retour aux jeux par défaut",
+        "games": {
+          "function-path-3d": "Parcours mathématique 3D",
+          "wylwyl": "pourquoi tu apprends ce que tu apprends",
+          "llm-inference-3d": "Prédicteur de jetons 3D",
+          "llm-train": "Descente de gradient",
+          "rush-hour": "Heure de pointe",
+          "cricket-batting": "Cricket"
+        }
+      }
+    },
     "consent": {
       "title": "Consentement aux statistiques requis",
       "message": "Acceptez Google Analytics pour activer le jeu.",
@@ -51,6 +144,37 @@
     }
   },
   "de": {
+    "prototypeHeading": "Prototyp-Spiele mit lokalen Modellgewichten",
+    "more": "Mehr",
+    "pages": {
+      "site": {"games": "Spiele", "privacy": "Datenschutz", "terms": "Nutzungsbedingungen"},
+      "terms": {
+        "meta": "Nutzungsbedingungen",
+        "disclaimer": "Diese Website und ihre Inhalte werden ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Dies umfasst unter anderem Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck, Richtigkeit, Vollständigkeit oder Nützlichkeit.",
+        "responsibility": "Mit der Nutzung dieser Website akzeptieren Sie, dass Sie nach eigenem Ermessen und auf eigene Verantwortung darauf zugreifen und sie nutzen.",
+        "analytics": "Diese Website verwendet Google Analytics. Es gilt die Richtlinie von Google. Siehe die Seite Datenschutz."
+      },
+      "privacy": {
+        "meta": "Datenschutzhinweis",
+        "intro": "l3v3 ist eine kleine statische Spiele-Website.",
+        "analyticsHeading": "Analyse",
+        "analytics": "Diese Website verwendet Google Analytics; dessen Richtlinie gilt."
+      },
+      "oauth": {
+        "underConstruction": "Im Aufbau",
+        "subtitle": "Vielen Dank für Ihr Interesse. Die Anmeldeintegration und zugehörige Funktionen sind noch nicht aktiviert.",
+        "development": "Spiele in Entwicklung",
+        "backGames": "Zurück zu den Standardspielen",
+        "games": {
+          "function-path-3d": "Mathepfad 3D",
+          "wylwyl": "warum du lernst, was du lernst",
+          "llm-inference-3d": "Token-Vorhersage 3D",
+          "llm-train": "Gradientenabstieg",
+          "rush-hour": "Rush Hour",
+          "cricket-batting": "Cricket"
+        }
+      }
+    },
     "consent": {
       "title": "Zustimmung zur Analyse erforderlich",
       "message": "Stimme Google Analytics zu, um das Spiel zu aktivieren.",
@@ -68,6 +192,37 @@
     }
   },
   "it": {
+    "prototypeHeading": "Giochi prototipo creati con pesi di modelli locali",
+    "more": "Altro",
+    "pages": {
+      "site": {"games": "Giochi", "privacy": "Privacy", "terms": "Termini"},
+      "terms": {
+        "meta": "Termini di utilizzo",
+        "disclaimer": "Questo sito e i suoi contenuti sono forniti senza garanzie di alcun tipo, espresse o implicite, incluse, a titolo esemplificativo, garanzie di commerciabilità, idoneità a uno scopo particolare, correttezza, completezza o utilità.",
+        "responsibility": "Utilizzando questo sito, accetti che l'accesso e l'uso avvengano a tua discrezione e sotto la tua responsabilità.",
+        "analytics": "Questo sito utilizza Google Analytics. Si applica la normativa di Google. Consulta la pagina Privacy."
+      },
+      "privacy": {
+        "meta": "Informativa sulla privacy",
+        "intro": "l3v3 è un piccolo sito statico di giochi.",
+        "analyticsHeading": "Analisi",
+        "analytics": "Questo sito utilizza Google Analytics e si applica la relativa normativa."
+      },
+      "oauth": {
+        "underConstruction": "In costruzione",
+        "subtitle": "Grazie per il tuo interesse. L'integrazione dell'accesso e le relative funzionalità non sono ancora abilitate.",
+        "development": "Giochi in sviluppo",
+        "backGames": "Torna ai giochi predefiniti",
+        "games": {
+          "function-path-3d": "Percorso matematico 3D",
+          "wylwyl": "perché impari ciò che impari",
+          "llm-inference-3d": "Previsore di token 3D",
+          "llm-train": "Discesa del gradiente",
+          "rush-hour": "Ora di punta",
+          "cricket-batting": "Cricket"
+        }
+      }
+    },
     "consent": {
       "title": "È richiesto il consenso per le analisi",
       "message": "Accetta Google Analytics per attivare il gioco.",
@@ -85,6 +240,37 @@
     }
   },
   "pt": {
+    "prototypeHeading": "Jogos protótipo criados com pesos de modelos locais",
+    "more": "Mais",
+    "pages": {
+      "site": {"games": "Jogos", "privacy": "Privacidade", "terms": "Termos"},
+      "terms": {
+        "meta": "Termos de uso",
+        "disclaimer": "Este site e seu conteúdo são fornecidos sem garantias de qualquer tipo, expressas ou implícitas, incluindo, entre outras, garantias de comercialização, adequação a uma finalidade específica, correção, integridade ou utilidade.",
+        "responsibility": "Ao usar este site, você aceita que o acesso e o uso são feitos a seu critério e sob sua responsabilidade.",
+        "analytics": "Este site usa o Google Analytics. A política do Google se aplica. Consulte a página Privacidade."
+      },
+      "privacy": {
+        "meta": "Aviso de privacidade",
+        "intro": "l3v3 é um pequeno site estático de jogos.",
+        "analyticsHeading": "Análise",
+        "analytics": "Este site usa o Google Analytics e essa política se aplica."
+      },
+      "oauth": {
+        "underConstruction": "Em construção",
+        "subtitle": "Agradecemos seu interesse. A integração de login e os recursos relacionados ainda não estão habilitados.",
+        "development": "Jogos em desenvolvimento",
+        "backGames": "Voltar aos jogos padrão",
+        "games": {
+          "function-path-3d": "Caminho matemático 3D",
+          "wylwyl": "por que você aprende o que aprende",
+          "llm-inference-3d": "Previsor de tokens 3D",
+          "llm-train": "Descida do gradiente",
+          "rush-hour": "Hora do rush",
+          "cricket-batting": "Críquete"
+        }
+      }
+    },
     "consent": {
       "title": "É necessário consentimento para análise",
       "message": "Aceite o Google Analytics para ativar o jogo.",
@@ -102,6 +288,37 @@
     }
   },
   "nl": {
+    "prototypeHeading": "Prototypegames gebouwd met lokale modelgewichten",
+    "more": "Meer",
+    "pages": {
+      "site": {"games": "Games", "privacy": "Privacy", "terms": "Voorwaarden"},
+      "terms": {
+        "meta": "Gebruiksvoorwaarden",
+        "disclaimer": "Deze site en de inhoud ervan worden zonder enige garantie, expliciet of impliciet, aangeboden, waaronder garanties van verhandelbaarheid, geschiktheid voor een bepaald doel, juistheid, volledigheid of bruikbaarheid.",
+        "responsibility": "Door deze site te gebruiken, accepteer je dat je er naar eigen inzicht en op eigen verantwoordelijkheid toegang toe hebt en gebruik van maakt.",
+        "analytics": "Deze site gebruikt Google Analytics. Het beleid van Google is van toepassing. Zie de pagina Privacy."
+      },
+      "privacy": {
+        "meta": "Privacyverklaring",
+        "intro": "l3v3 is een kleine statische gamesite.",
+        "analyticsHeading": "Analyse",
+        "analytics": "Deze site gebruikt Google Analytics en dat beleid is van toepassing."
+      },
+      "oauth": {
+        "underConstruction": "In aanbouw",
+        "subtitle": "Bedankt voor je belangstelling. De inlogintegratie en bijbehorende functies zijn nog niet ingeschakeld.",
+        "development": "Games in ontwikkeling",
+        "backGames": "Terug naar de standaardgames",
+        "games": {
+          "function-path-3d": "Wiskundepad 3D",
+          "wylwyl": "waarom je leert wat je leert",
+          "llm-inference-3d": "Tokenvoorspeller 3D",
+          "llm-train": "Gradiëntafdaling",
+          "rush-hour": "Spitsuur",
+          "cricket-batting": "Cricket"
+        }
+      }
+    },
     "consent": {
       "title": "Toestemming voor analyse vereist",
       "message": "Accepteer Google Analytics om het spel te starten.",
@@ -119,6 +336,37 @@
     }
   },
   "pl": {
+    "prototypeHeading": "Prototypowe gry stworzone na lokalnych wagach modeli",
+    "more": "Więcej",
+    "pages": {
+      "site": {"games": "Gry", "privacy": "Prywatność", "terms": "Warunki"},
+      "terms": {
+        "meta": "Warunki użytkowania",
+        "disclaimer": "Ta strona i jej treści są udostępniane bez jakiejkolwiek gwarancji, wyraźnej ani dorozumianej, w tym między innymi gwarancji przydatności handlowej, przydatności do określonego celu, poprawności, kompletności lub użyteczności.",
+        "responsibility": "Korzystając z tej strony, akceptujesz, że uzyskujesz do niej dostęp i korzystasz z niej według własnego uznania i na własną odpowiedzialność.",
+        "analytics": "Ta strona korzysta z Google Analytics. Obowiązuje polityka Google. Zobacz stronę Prywatność."
+      },
+      "privacy": {
+        "meta": "Informacja o prywatności",
+        "intro": "l3v3 to mała, statyczna strona z grami.",
+        "analyticsHeading": "Analityka",
+        "analytics": "Ta strona korzysta z Google Analytics i obowiązuje jej polityka."
+      },
+      "oauth": {
+        "underConstruction": "W budowie",
+        "subtitle": "Dziękujemy za zainteresowanie. Integracja logowania i powiązane funkcje nie są jeszcze dostępne.",
+        "development": "Gry w przygotowaniu",
+        "backGames": "Wróć do domyślnych gier",
+        "games": {
+          "function-path-3d": "Matematyczna ścieżka 3D",
+          "wylwyl": "dlaczego uczysz się tego, czego się uczysz",
+          "llm-inference-3d": "Przewidywanie tokenów 3D",
+          "llm-train": "Opadanie gradientu",
+          "rush-hour": "Godziny szczytu",
+          "cricket-batting": "Krykiet"
+        }
+      }
+    },
     "consent": {
       "title": "Wymagana zgoda na analitykę",
       "message": "Zaakceptuj Google Analytics, aby włączyć grę.",
@@ -136,6 +384,37 @@
     }
   },
   "ru": {
+    "prototypeHeading": "Прототипы игр, созданные на локальных весах моделей",
+    "more": "Ещё",
+    "pages": {
+      "site": {"games": "Игры", "privacy": "Конфиденциальность", "terms": "Условия"},
+      "terms": {
+        "meta": "Условия использования",
+        "disclaimer": "Этот сайт и его содержимое предоставляются «как есть» без каких-либо гарантий, явных или подразумеваемых, включая, помимо прочего, гарантии товарного качества, пригодности для определённой цели, точности, полноты или полезности.",
+        "responsibility": "Используя этот сайт, вы соглашаетесь получать доступ и пользоваться им по собственному усмотрению и под свою ответственность.",
+        "analytics": "На сайте используется Google Analytics. Применяется политика Google. См. страницу «Конфиденциальность»."
+      },
+      "privacy": {
+        "meta": "Уведомление о конфиденциальности",
+        "intro": "l3v3 — небольшой статический сайт с играми.",
+        "analyticsHeading": "Аналитика",
+        "analytics": "На сайте используется Google Analytics, и применяется соответствующая политика."
+      },
+      "oauth": {
+        "underConstruction": "В разработке",
+        "subtitle": "Спасибо за интерес. Интеграция входа и связанные функции пока не включены.",
+        "development": "Игры в разработке",
+        "backGames": "Назад к играм по умолчанию",
+        "games": {
+          "function-path-3d": "Математический путь 3D",
+          "wylwyl": "почему ты учишься тому, чему учишься",
+          "llm-inference-3d": "Предсказание токенов 3D",
+          "llm-train": "Градиентный спуск",
+          "rush-hour": "Час пик",
+          "cricket-batting": "Крикет"
+        }
+      }
+    },
     "consent": {
       "title": "Требуется согласие на сбор аналитики",
       "message": "Примите Google Analytics, чтобы начать игру.",
@@ -153,6 +432,37 @@
     }
   },
   "uk": {
+    "prototypeHeading": "Прототипи ігор, створені на локальних вагах моделей",
+    "more": "Ще",
+    "pages": {
+      "site": {"games": "Ігри", "privacy": "Конфіденційність", "terms": "Умови"},
+      "terms": {
+        "meta": "Умови використання",
+        "disclaimer": "Цей сайт і його вміст надаються «як є», без будь-яких явних чи неявних гарантій, зокрема гарантій товарної придатності, відповідності певній меті, правильності, повноти чи корисності.",
+        "responsibility": "Використовуючи цей сайт, ви погоджуєтеся, що отримуєте доступ до нього та користуєтеся ним на власний розсуд і під власну відповідальність.",
+        "analytics": "Цей сайт використовує Google Analytics. Застосовується політика Google. Див. сторінку «Конфіденційність»."
+      },
+      "privacy": {
+        "meta": "Повідомлення про конфіденційність",
+        "intro": "l3v3 — це невеликий статичний сайт з іграми.",
+        "analyticsHeading": "Аналітика",
+        "analytics": "Цей сайт використовує Google Analytics, і до нього застосовується відповідна політика."
+      },
+      "oauth": {
+        "underConstruction": "У розробці",
+        "subtitle": "Дякуємо за інтерес. Інтеграцію входу та пов’язані функції ще не ввімкнено.",
+        "development": "Ігри в розробці",
+        "backGames": "Назад до стандартних ігор",
+        "games": {
+          "function-path-3d": "Математичний шлях 3D",
+          "wylwyl": "чому ти вивчаєш те, що вивчаєш",
+          "llm-inference-3d": "Передбачення токенів 3D",
+          "llm-train": "Градієнтний спуск",
+          "rush-hour": "Година пік",
+          "cricket-batting": "Крикет"
+        }
+      }
+    },
     "consent": {
       "title": "Потрібна згода на аналітику",
       "message": "Прийміть Google Analytics, щоб увімкнути гру.",
@@ -170,6 +480,37 @@
     }
   },
   "tr": {
+    "prototypeHeading": "Yerel model ağırlıklarıyla geliştirilen prototip oyunlar",
+    "more": "Daha fazla",
+    "pages": {
+      "site": {"games": "Oyunlar", "privacy": "Gizlilik", "terms": "Koşullar"},
+      "terms": {
+        "meta": "Kullanım koşulları",
+        "disclaimer": "Bu site ve içeriği, ticarete elverişlilik, belirli bir amaca uygunluk, doğruluk, eksiksizlik veya kullanışlılık garantileri dahil ancak bunlarla sınırlı olmamak üzere, açık ya da zımni hiçbir garanti verilmeksizin sunulur.",
+        "responsibility": "Bu siteyi kullanarak erişimin ve kullanımın kendi takdiriniz ve sorumluluğunuz altında olduğunu kabul edersiniz.",
+        "analytics": "Bu site Google Analytics kullanır. Google politikası geçerlidir. Gizlilik sayfasına bakın."
+      },
+      "privacy": {
+        "meta": "Gizlilik bildirimi",
+        "intro": "l3v3, küçük ve statik bir oyun sitesidir.",
+        "analyticsHeading": "Analiz",
+        "analytics": "Bu site Google Analytics kullanır ve ilgili politika geçerlidir."
+      },
+      "oauth": {
+        "underConstruction": "Yapım aşamasında",
+        "subtitle": "İlginiz için teşekkürler. Oturum açma entegrasyonu ve ilgili özellikler henüz etkin değil.",
+        "development": "Geliştirme aşamasındaki oyunlar",
+        "backGames": "Varsayılan oyunlara dön",
+        "games": {
+          "function-path-3d": "Matematik Yolu 3D",
+          "wylwyl": "neden öğrendiğini öğreniyorsun",
+          "llm-inference-3d": "Belirteç Tahmini 3D",
+          "llm-train": "Gradyan inişi",
+          "rush-hour": "Yoğun Saat",
+          "cricket-batting": "Kriket"
+        }
+      }
+    },
     "consent": {
       "title": "Analiz için onay gerekiyor",
       "message": "Oyunu etkinleştirmek için Google Analytics'i kabul edin.",
@@ -187,6 +528,37 @@
     }
   },
   "zh": {
+    "prototypeHeading": "基于本地模型权重构建的游戏原型",
+    "more": "更多",
+    "pages": {
+      "site": {"games": "游戏", "privacy": "隐私", "terms": "条款"},
+      "terms": {
+        "meta": "使用条款",
+        "disclaimer": "本网站及其内容按“现状”提供，不附带任何明示或暗示的保证，包括但不限于适销性、特定用途适用性、正确性、完整性或实用性的保证。",
+        "responsibility": "使用本网站即表示您接受自行决定访问和使用本网站，并自行承担相关责任。",
+        "analytics": "本网站使用 Google Analytics，并适用 Google 的政策。请参阅隐私页面。"
+      },
+      "privacy": {
+        "meta": "隐私声明",
+        "intro": "l3v3 是一个小型静态游戏平台。",
+        "analyticsHeading": "数据分析",
+        "analytics": "本网站使用 Google Analytics，并适用其政策。"
+      },
+      "oauth": {
+        "underConstruction": "正在建设中",
+        "subtitle": "感谢您的关注。登录集成及相关功能尚未启用。",
+        "development": "开发中的游戏",
+        "backGames": "返回默认游戏",
+        "games": {
+          "function-path-3d": "数学路径 3D",
+          "wylwyl": "为什么学你所学的内容",
+          "llm-inference-3d": "词元预测 3D",
+          "llm-train": "梯度下降",
+          "rush-hour": "高峰时段",
+          "cricket-batting": "板球"
+        }
+      }
+    },
     "consent": {
       "title": "需要同意数据分析",
       "message": "接受 Google Analytics 以启用游戏。",
@@ -204,6 +576,37 @@
     }
   },
   "zh-TW": {
+    "prototypeHeading": "以本地模型權重打造的遊戲原型",
+    "more": "更多",
+    "pages": {
+      "site": {"games": "遊戲", "privacy": "隱私權", "terms": "條款"},
+      "terms": {
+        "meta": "使用條款",
+        "disclaimer": "本網站及其內容以「現況」提供，不附帶任何明示或默示的保證，包括但不限於適售性、特定用途適用性、正確性、完整性或實用性的保證。",
+        "responsibility": "使用本網站即表示您接受自行決定存取及使用本網站，並自行承擔相關責任。",
+        "analytics": "本網站使用 Google Analytics，並適用 Google 的政策。請參閱隱私權頁面。"
+      },
+      "privacy": {
+        "meta": "隱私權聲明",
+        "intro": "l3v3 是一個小型靜態遊戲網站。",
+        "analyticsHeading": "分析",
+        "analytics": "本網站使用 Google Analytics，並適用其政策。"
+      },
+      "oauth": {
+        "underConstruction": "建置中",
+        "subtitle": "感謝您的關注。登入整合及相關功能尚未啟用。",
+        "development": "開發中的遊戲",
+        "backGames": "返回預設遊戲",
+        "games": {
+          "function-path-3d": "數學路徑 3D",
+          "wylwyl": "為什麼學你所學的內容",
+          "llm-inference-3d": "詞元預測 3D",
+          "llm-train": "梯度下降",
+          "rush-hour": "尖峰時段",
+          "cricket-batting": "板球"
+        }
+      }
+    },
     "consent": {
       "title": "需要同意數據分析",
       "message": "接受 Google Analytics 以啟用遊戲。",
@@ -221,6 +624,37 @@
     }
   },
   "ja": {
+    "prototypeHeading": "ローカルモデルの重みで作られたゲームの試作",
+    "more": "もっと見る",
+    "pages": {
+      "site": {"games": "ゲーム", "privacy": "プライバシー", "terms": "利用規約"},
+      "terms": {
+        "meta": "利用条件",
+        "disclaimer": "本サイトおよびそのコンテンツは「現状有姿」で提供され、明示または黙示を問わず、商品性、特定目的への適合性、正確性、完全性、有用性などを含むいかなる保証もありません。",
+        "responsibility": "本サイトを利用することで、アクセスおよび利用はご自身の判断と責任で行うことに同意したものとします。",
+        "analytics": "本サイトでは Google Analytics を使用しており、Google のポリシーが適用されます。プライバシーページをご覧ください。"
+      },
+      "privacy": {
+        "meta": "プライバシーに関するお知らせ",
+        "intro": "l3v3 は小規模な静的ゲームサイトです。",
+        "analyticsHeading": "アクセス解析",
+        "analytics": "本サイトでは Google Analytics を使用し、そのポリシーが適用されます。"
+      },
+      "oauth": {
+        "underConstruction": "現在準備中です",
+        "subtitle": "ご関心をお寄せいただきありがとうございます。サインイン連携および関連機能はまだ有効になっていません。",
+        "development": "開発中のゲーム",
+        "backGames": "ゲーム一覧に戻る",
+        "games": {
+          "function-path-3d": "数学の道 3D",
+          "wylwyl": "なぜ学ぶのか、何を学ぶのか",
+          "llm-inference-3d": "トークン予測 3D",
+          "llm-train": "勾配降下法",
+          "rush-hour": "ラッシュアワー",
+          "cricket-batting": "クリケット"
+        }
+      }
+    },
     "consent": {
       "title": "分析への同意が必要です",
       "message": "ゲームを有効にするには Google Analytics に同意してください。",
@@ -238,6 +672,37 @@
     }
   },
   "ko": {
+    "prototypeHeading": "로컬 모델 가중치로 만든 프로토타입 게임",
+    "more": "더 보기",
+    "pages": {
+      "site": {"games": "게임", "privacy": "개인정보 보호", "terms": "이용 약관"},
+      "terms": {
+        "meta": "이용 약관",
+        "disclaimer": "이 사이트와 콘텐츠는 상품성, 특정 목적 적합성, 정확성, 완전성 또는 유용성에 대한 보증을 포함하되 이에 국한되지 않는 어떠한 명시적 또는 묵시적 보증 없이 '있는 그대로' 제공됩니다.",
+        "responsibility": "이 사이트를 이용하면 사이트 접근과 이용이 본인의 판단과 책임하에 이루어진다는 데 동의하는 것입니다.",
+        "analytics": "이 사이트는 Google Analytics를 사용하며 Google 정책이 적용됩니다. 개인정보 보호 페이지를 참조하세요."
+      },
+      "privacy": {
+        "meta": "개인정보 처리 안내",
+        "intro": "l3v3는 소규모 정적 게임 사이트입니다.",
+        "analyticsHeading": "분석",
+        "analytics": "이 사이트는 Google Analytics를 사용하며 해당 정책이 적용됩니다."
+      },
+      "oauth": {
+        "underConstruction": "준비 중",
+        "subtitle": "관심을 가져 주셔서 감사합니다. 로그인 연동 및 관련 기능은 아직 활성화되지 않았습니다.",
+        "development": "개발 중인 게임",
+        "backGames": "기본 게임으로 돌아가기",
+        "games": {
+          "function-path-3d": "수학 경로 3D",
+          "wylwyl": "왜 배우는 것을 배우는가",
+          "llm-inference-3d": "토큰 예측 3D",
+          "llm-train": "경사 하강법",
+          "rush-hour": "러시아워",
+          "cricket-batting": "크리켓"
+        }
+      }
+    },
     "consent": {
       "title": "분석 동의가 필요합니다",
       "message": "게임을 활성화하려면 Google Analytics에 동의하세요.",
@@ -255,6 +720,37 @@
     }
   },
   "hi": {
+    "prototypeHeading": "स्थानीय मॉडल वेट्स से बने प्रोटोटाइप गेम",
+    "more": "और देखें",
+    "pages": {
+      "site": {"games": "गेम", "privacy": "गोपनीयता", "terms": "शर्तें"},
+      "terms": {
+        "meta": "उपयोग की शर्तें",
+        "disclaimer": "यह साइट और इसकी सामग्री बिना किसी प्रकार की स्पष्ट या निहित वारंटी के 'जैसी है' के आधार पर प्रदान की जाती है। इसमें व्यापार-योग्यता, किसी विशेष उद्देश्य के लिए उपयुक्तता, शुद्धता, पूर्णता या उपयोगिता की वारंटी भी शामिल है, लेकिन इन्हीं तक सीमित नहीं है।",
+        "responsibility": "इस साइट का उपयोग करके आप स्वीकार करते हैं कि इसका उपयोग और इस तक पहुंच आपके विवेक और जिम्मेदारी पर है।",
+        "analytics": "यह साइट Google Analytics का उपयोग करती है और Google की नीति लागू होती है। गोपनीयता पृष्ठ देखें।"
+      },
+      "privacy": {
+        "meta": "गोपनीयता सूचना",
+        "intro": "l3v3 एक छोटी स्थिर गेम साइट है।",
+        "analyticsHeading": "विश्लेषण",
+        "analytics": "यह साइट Google Analytics का उपयोग करती है और उसकी नीति लागू होती है।"
+      },
+      "oauth": {
+        "underConstruction": "निर्माणाधीन",
+        "subtitle": "आपकी रुचि के लिए धन्यवाद। साइन-इन एकीकरण और संबंधित सुविधाएं अभी सक्षम नहीं हैं।",
+        "development": "विकासाधीन गेम",
+        "backGames": "डिफ़ॉल्ट गेम पर वापस जाएं",
+        "games": {
+          "function-path-3d": "गणित पथ 3D",
+          "wylwyl": "आप वही क्यों सीखते हैं जो सीखते हैं",
+          "llm-inference-3d": "टोकन पूर्वानुमान 3D",
+          "llm-train": "ग्रेडिएंट डिसेंट",
+          "rush-hour": "व्यस्त समय",
+          "cricket-batting": "क्रिकेट"
+        }
+      }
+    },
     "consent": {
       "title": "विश्लेषण की सहमति आवश्यक है",
       "message": "गेम शुरू करने के लिए Google Analytics स्वीकार करें।",
@@ -272,6 +768,37 @@
     }
   },
   "id": {
+    "prototypeHeading": "Game prototipe yang dibuat dengan bobot model lokal",
+    "more": "Lainnya",
+    "pages": {
+      "site": {"games": "Game", "privacy": "Privasi", "terms": "Ketentuan"},
+      "terms": {
+        "meta": "Ketentuan penggunaan",
+        "disclaimer": "Situs dan kontennya disediakan apa adanya tanpa jaminan apa pun, baik tersurat maupun tersirat, termasuk namun tidak terbatas pada jaminan kelayakan jual, kesesuaian untuk tujuan tertentu, kebenaran, kelengkapan, atau kegunaan.",
+        "responsibility": "Dengan menggunakan situs ini, Anda menerima bahwa akses dan penggunaannya dilakukan atas kebijaksanaan dan tanggung jawab Anda sendiri.",
+        "analytics": "Situs ini menggunakan Google Analytics. Kebijakan Google berlaku. Lihat halaman Privasi."
+      },
+      "privacy": {
+        "meta": "Pemberitahuan privasi",
+        "intro": "l3v3 adalah situs game statis kecil.",
+        "analyticsHeading": "Analitik",
+        "analytics": "Situs ini menggunakan Google Analytics dan kebijakannya berlaku."
+      },
+      "oauth": {
+        "underConstruction": "Sedang dalam pengembangan",
+        "subtitle": "Terima kasih atas minat Anda. Integrasi masuk dan fitur terkait belum diaktifkan.",
+        "development": "Game dalam pengembangan",
+        "backGames": "Kembali ke Game Default",
+        "games": {
+          "function-path-3d": "Jalur Matematika 3D",
+          "wylwyl": "mengapa kamu mempelajari yang kamu pelajari",
+          "llm-inference-3d": "Prediksi Token 3D",
+          "llm-train": "Penurunan Gradien",
+          "rush-hour": "Jam Sibuk",
+          "cricket-batting": "Kriket"
+        }
+      }
+    },
     "consent": {
       "title": "Persetujuan analitik diperlukan",
       "message": "Setujui Google Analytics untuk mengaktifkan permainan.",
@@ -289,6 +816,37 @@
     }
   },
   "vi": {
+    "prototypeHeading": "Trò chơi nguyên mẫu được tạo bằng trọng số mô hình cục bộ",
+    "more": "Xem thêm",
+    "pages": {
+      "site": {"games": "Trò chơi", "privacy": "Quyền riêng tư", "terms": "Điều khoản"},
+      "terms": {
+        "meta": "Điều khoản sử dụng",
+        "disclaimer": "Trang web và nội dung được cung cấp theo hiện trạng, không có bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý, bao gồm nhưng không giới hạn ở bảo đảm về khả năng thương mại, sự phù hợp cho mục đích cụ thể, tính chính xác, đầy đủ hoặc hữu ích.",
+        "responsibility": "Khi sử dụng trang web này, bạn chấp nhận rằng việc truy cập và sử dụng là theo quyết định và trách nhiệm của riêng bạn.",
+        "analytics": "Trang web này sử dụng Google Analytics và chính sách của Google được áp dụng. Xem trang Quyền riêng tư."
+      },
+      "privacy": {
+        "meta": "Thông báo quyền riêng tư",
+        "intro": "l3v3 là một trang trò chơi tĩnh nhỏ.",
+        "analyticsHeading": "Phân tích",
+        "analytics": "Trang web này sử dụng Google Analytics và chính sách tương ứng được áp dụng."
+      },
+      "oauth": {
+        "underConstruction": "Đang xây dựng",
+        "subtitle": "Cảm ơn bạn đã quan tâm. Tích hợp đăng nhập và các tính năng liên quan chưa được bật.",
+        "development": "Trò chơi đang phát triển",
+        "backGames": "Quay lại trò chơi mặc định",
+        "games": {
+          "function-path-3d": "Đường đi toán học 3D",
+          "wylwyl": "vì sao bạn học những gì bạn học",
+          "llm-inference-3d": "Dự đoán token 3D",
+          "llm-train": "Hạ gradient",
+          "rush-hour": "Giờ cao điểm",
+          "cricket-batting": "Cricket"
+        }
+      }
+    },
     "consent": {
       "title": "Cần có sự đồng ý về phân tích",
       "message": "Chấp nhận Google Analytics để bật trò chơi.",
@@ -306,6 +864,37 @@
     }
   },
   "th": {
+    "prototypeHeading": "เกมต้นแบบที่สร้างด้วยน้ำหนักโมเดลในเครื่อง",
+    "more": "เพิ่มเติม",
+    "pages": {
+      "site": {"games": "เกม", "privacy": "ความเป็นส่วนตัว", "terms": "ข้อกำหนด"},
+      "terms": {
+        "meta": "ข้อกำหนดการใช้งาน",
+        "disclaimer": "เว็บไซต์และเนื้อหานี้ให้บริการตามสภาพที่เป็นอยู่ โดยไม่มีการรับประกันใด ๆ ไม่ว่าโดยชัดแจ้งหรือโดยนัย รวมถึงแต่ไม่จำกัดเพียงการรับประกันด้านความสามารถในการค้า ความเหมาะสมต่อวัตถุประสงค์เฉพาะ ความถูกต้อง ความครบถ้วน หรือประโยชน์ใช้สอย",
+        "responsibility": "การใช้เว็บไซต์นี้ถือว่าคุณยอมรับว่าการเข้าถึงและใช้งานเป็นไปตามดุลยพินิจและความรับผิดชอบของคุณเอง",
+        "analytics": "เว็บไซต์นี้ใช้ Google Analytics และใช้นโยบายของ Google โปรดดูหน้าความเป็นส่วนตัว"
+      },
+      "privacy": {
+        "meta": "ประกาศความเป็นส่วนตัว",
+        "intro": "l3v3 เป็นเว็บไซต์เกมแบบสแตติกขนาดเล็ก",
+        "analyticsHeading": "การวิเคราะห์",
+        "analytics": "เว็บไซต์นี้ใช้ Google Analytics และใช้นโยบายที่เกี่ยวข้อง"
+      },
+      "oauth": {
+        "underConstruction": "กำลังจัดทำ",
+        "subtitle": "ขอบคุณที่สนใจ ระบบเข้าสู่ระบบและฟีเจอร์ที่เกี่ยวข้องยังไม่เปิดใช้งาน",
+        "development": "เกมที่กำลังพัฒนา",
+        "backGames": "กลับไปยังเกมเริ่มต้น",
+        "games": {
+          "function-path-3d": "เส้นทางคณิตศาสตร์ 3D",
+          "wylwyl": "ทำไมคุณจึงเรียนรู้สิ่งที่คุณเรียนรู้",
+          "llm-inference-3d": "ตัวทำนายโทเค็น 3D",
+          "llm-train": "เกรเดียนต์เดสเซนต์",
+          "rush-hour": "ชั่วโมงเร่งด่วน",
+          "cricket-batting": "คริกเก็ต"
+        }
+      }
+    },
     "consent": {
       "title": "ต้องให้ความยินยอมในการวิเคราะห์",
       "message": "ยอมรับ Google Analytics เพื่อเปิดใช้งานเกม",

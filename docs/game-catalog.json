@@ -1,0 +1,106 @@
+{
+  "featuredLimit": 7,
+  "games": [
+    {
+      "id": "lighthouse-keeper",
+      "title": "Lighthouse Keeper",
+      "category": "Action",
+      "group": "active",
+      "status": "",
+      "trailer": "WmJyZ3hWjfA",
+      "post": "https://x.com/L3v3Com/status/2110170679274267011?s=20"
+    },
+    {
+      "id": "function-runner",
+      "title": "Function Runner",
+      "category": "Educational",
+      "group": "active",
+      "status": "",
+      "trailer": "67Nk0T8U7So"
+    },
+    {
+      "id": "function-path",
+      "title": "Math Path",
+      "category": "Educational",
+      "group": "active",
+      "status": "",
+      "trailer": "otBqH3jMcXw",
+      "post": "https://x.com/L3v3Com/status/2111441207502991613?s=20"
+    },
+    {
+      "id": "stickfigure-duel",
+      "title": "Ink Duel",
+      "category": "Action",
+      "group": "active",
+      "status": "",
+      "trailer": "Dv-I9llIbV4"
+    },
+    {
+      "id": "llm-inference",
+      "title": "Token Predictor",
+      "category": "Educational",
+      "group": "active",
+      "status": ""
+    },
+    {
+      "id": "football-playcall",
+      "title": "Gridiron Playcall",
+      "category": "Sports",
+      "group": "active",
+      "status": "",
+      "trailer": "4NSjjPkv1p8"
+    },
+    {
+      "id": "football-soccer",
+      "title": "Soccer / Football",
+      "category": "Sports",
+      "group": "active",
+      "status": "",
+      "trailer": "7PWNU_hAvqc"
+    },
+    {
+      "id": "function-path-3d",
+      "title": "Math Path 3D",
+      "category": "Educational",
+      "group": "upcoming",
+      "status": ""
+    },
+    {
+      "id": "wylwyl",
+      "title": "wylwyl",
+      "tagline": "why you learn what you learn",
+      "category": "Educational",
+      "group": "upcoming",
+      "status": ""
+    },
+    {
+      "id": "llm-inference-3d",
+      "title": "Token Predictor 3D",
+      "category": "Educational",
+      "group": "upcoming",
+      "status": ""
+    },
+    {
+      "id": "llm-train",
+      "title": "Gradient Descent",
+      "category": "Educational",
+      "group": "upcoming",
+      "status": ""
+    },
+    {
+      "id": "rush-hour",
+      "title": "Rush Hour",
+      "category": "Action",
+      "group": "upcoming",
+      "status": ""
+    },
+    {
+      "id": "cricket-batting",
+      "title": "Cricket",
+      "category": "Sports",
+      "group": "upcoming",
+      "status": "",
+      "trailer": "WxKHBEMChOs"
+    }
+  ]
+}
